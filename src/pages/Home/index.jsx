@@ -1,8 +1,16 @@
 import MainLayout from "../../Layout/MainLayout";
+import FirstSide from "../../components/Dashboard/FirstSide";
+import "./style.css";
 const Home = () => {
   return (
     <div className="home-container">
-      <MainLayout />
+      <MainLayout>
+        <div className="main-containe">
+          <div className="left-side-container">
+            <FirstSide />
+          </div>
+        </div>
+      </MainLayout>
     </div>
   );
 };

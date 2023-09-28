@@ -19,7 +19,7 @@ body {
   background: var(--background-main-color);
 }
 :root {
-  --background-main-color: #fff;
+  --background-main-color: rgba(251, 248, 255, 0.95);
   --primary: #d23369;
   --primary-deep: #f06292;
 }

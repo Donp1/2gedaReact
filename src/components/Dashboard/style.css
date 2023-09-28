@@ -1,0 +1,21 @@
+.first-side-container {
+  background: #fff;
+  padding: 10px 20px;
+}
+.post-ead {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+.text-area {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 200px;
+  padding: 10px;
+  margin: 20px 0;
+}
+.icon-post-feed {
+  font-size: 20px;
+  gap: 10px;
+}
