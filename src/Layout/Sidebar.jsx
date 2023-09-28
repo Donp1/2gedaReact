@@ -1,4 +1,5 @@
 import { BiSolidHome } from "react-icons/bi";
+import { IoStorefrontOutline } from "react-icons/i05";
 import "./style.css";
 import { NavLink } from "react-router-dom";
 
@@ -24,7 +25,7 @@ const Sidebar = () => {
               isActive ? "active-link side-item" : "side-item"
             }
           >
-            <BiSolidHome className="side-icon " />
+            <IoStorefrontOutline className="side-icon " />
             <div className="sidebar-text">Business</div>
           </NavLink>
           <NavLink
