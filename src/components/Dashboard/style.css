@@ -1,7 +1,7 @@
 .first-side-container {
   background: #fff;
   padding: 10px 20px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 .post-ead {
   font-size: 16px;
@@ -36,4 +36,8 @@
   font-weight: 500;
   border: none;
   border-radius: 5px;
+}
+.ads-img {
+  margin: 10px 0;
+  width: 100%;
 }

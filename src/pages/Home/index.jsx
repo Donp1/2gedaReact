@@ -8,6 +8,7 @@ const Home = () => {
         <div className="main-containe">
           <div className="left-side-container">
             <FirstSide />
+            <img src="images/jumia.png" alt="" className="ads-img" />
           </div>
         </div>
       </MainLayout>
