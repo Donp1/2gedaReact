@@ -1,0 +1,98 @@
+.layout-container {
+  display: flex;
+  width: 100%;
+}
+.nav-cild {
+  width: 100%;
+}
+.sidebar-container {
+  background: #4f0da3;
+  width: 20%;
+  min-height: 100vh;
+  margin-top: 0;
+  padding-top: 60px;
+}
+.sidebar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.side-item {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  color: #fff;
+  gap: 5px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+.side-icon {
+  font-size: 23px;
+}
+.active-link {
+  color: #ff8a15;
+}
+li {
+  list-style: none;
+}
+.lout {
+  margin-top: 10rem;
+}
+
+/* Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #4f0da3;
+}
+.logo-container img {
+  width: 60px;
+}
+.searc-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.searc-container {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  height: 30px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+.searc-inp {
+  border: none;
+  outline: none;
+}
+.sea-icon {
+  font-size: 20px;
+  color: #0000009f;
+}
+.profile-container {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.profile-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
