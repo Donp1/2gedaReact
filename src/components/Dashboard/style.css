@@ -1,6 +1,7 @@
 .first-side-container {
   background: #fff;
   padding: 10px 20px;
+  margin-left: 10px;
 }
 .post-ead {
   font-size: 16px;
@@ -15,7 +16,24 @@
   padding: 10px;
   margin: 20px 0;
 }
+.down-post-feed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .icon-post-feed {
   font-size: 20px;
+  display: flex;
+  color: #c1c1c1;
   gap: 10px;
+}
+.post-btn {
+  background: #4f0da3;
+  color: #fff;
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
 }
