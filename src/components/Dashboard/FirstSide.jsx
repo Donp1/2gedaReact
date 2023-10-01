@@ -1,5 +1,6 @@
-import { BsCardImage, BsFillEmojiSmileFill } from "react-icons/bs";
-import { FaVideo } from "react-icons/fa";
+import { BsCardImage, BsMic } from "react-icons/bs";
+import { FaVideo, FaMusic, FaFileAlt } from "react-icons/fa";
+import { IoLocation } from "react-icons/io5";
 import "./style.css";
 
 const FirstSide = () => {
@@ -16,9 +17,12 @@ const FirstSide = () => {
 
         <div className="down-post-feed">
           <div className="icon-post-feed">
-            <BsCardImage />
-            <FaVideo />
-            <BsFillEmojiSmileFill />
+            <BsCardImage  className="pic-vid"/>
+            <FaVideo  className="pic-vid"/>
+            <IoLocation className="loca"/>
+            <FaMusic className="music"/>
+            <BsMic className="mic"/>
+            <FaFileAlt className="fil"/>
           </div>
           <button className="post-btn" type="submit">
             Post

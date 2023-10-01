@@ -1,29 +1,57 @@
 .layout-container {
   display: flex;
   width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 .nav-cild {
-  width: 100%;
+  width: 80%;
+}
+.sidebar-boxxx{
+  width: 30%;
+  background: #4f0da3;
+  min-height: 100vh;
 }
 .sidebar-container {
   background: #4f0da3;
-  width: 20%;
+  width: 30%;
   min-height: 100vh;
   margin-top: 0;
   padding-top: 60px;
+  z-index: 11;
 }
 .sidebar-box {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: fixed;
+  left: 3%;
+}
+
+.ctrl-btn{
+  width: 40px;
+  height: 40px;
+  background: #4f0da3;
+  position: fixed;
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  left: 15%;
+  z-index: 3;
+  top: 14%;
+  display: none;
 }
 .side-item {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   align-items: center;
-  color: #fff;
+  color: #C47EFB;
   gap: 5px;
   margin-bottom: 15px;
   text-decoration: none;
@@ -32,13 +60,15 @@
   font-size: 23px;
 }
 .active-link {
-  color: #ff8a15;
+  color: #fff;
 }
 li {
   list-style: none;
 }
 .lout {
   margin-top: 10rem;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Navbar */
@@ -48,6 +78,10 @@ li {
   align-items: center;
   padding: 10px 40px;
   background: #fff;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  
 }
 .logo-container {
   display: flex;
@@ -68,7 +102,7 @@ li {
 .searc-container {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  height: 30px;
+  height: 35px;
   width: 400px;
   display: flex;
   justify-content: space-between;
@@ -78,6 +112,7 @@ li {
 .searc-inp {
   border: none;
   outline: none;
+  width: 80%;
 }
 .sea-icon {
   font-size: 20px;
@@ -96,4 +131,135 @@ li {
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+}
+.mobile-searc{
+  display: none;
+}
+@media only screen and (max-width: 1150px) {
+  .sidebar-container {
+    background: #4f0da3;
+    width: 25%;
+    min-height: 100vh;
+    margin-top: 0;
+    padding-top: 60px;
+    position: fixed;
+    z-index: 11;
+  }
+
+  .nil{
+    display: none;
+  }
+  .ctrl-btn{
+    display: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    left: 23%;
+    z-index: 111;
+  }
+  .lst{
+    left: 0;
+    top: 15%;
+  }
+  .lout {
+    margin-top: 6rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  .navbar-container {
+   width: 100%;
+  }
+  .sidebar-boxxx{
+    width: 0;
+  }
+}
+@media only screen and (max-width: 940px) {
+  .mobile-searc{
+    display: initial;
+  }
+  .mobile-searc .sea-icon{
+    font-size: 25px;
+  }
+  .searc-container{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    background: #fff;
+  }
+  .lst{
+    left: 0;
+    top: 15%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .sidebar-container {
+    width: 30%;
+  }
+  .ctrl-btn{
+    left: 28%;
+  }
+  .lst{
+    left: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidebar-container {
+    width: 35%;
+  }
+  .ctrl-btn{
+    left: 32%;
+  }
+  .lst{
+    left: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sidebar-container {
+    width: 40%;
+  }
+  .ctrl-btn{
+    left: 37%;
+  }
+  .lst{
+    left: 0;
+  }
+  .navbar-container{
+    padding: 10px;
+  }
+  .logo-container {
+    font-size: 20px;
+  }
+  .logo-container img {
+    width: 50px;
+  }
+  .profile-container img {
+    width: 40px;
+    height: 40px;
+  }
+  .searc-container{
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .sidebar-container {
+    width: 50%;
+  }
+  .ctrl-btn{
+    left: 45%;
+  }
+  .lst{
+    left: 0;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .sidebar-container {
+    width: 58%;
+  }
+  .ctrl-btn{
+    left: 50%;
+  }
+  .lst{
+    left: 0;
+  }
 }

@@ -1,0 +1,154 @@
+.small-ticket-card{
+    background: #fff;
+    min-width: 180px;
+    max-width: 180px;
+    margin-top: -5px;
+    z-index: 12;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    border: 2px solid #D0D5DD;
+    padding-top: 5px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.im-tic-con{
+    position: relative;
+    border-radius: 10px;
+
+}
+.live-tict-lo{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    color: #fff ;
+    background: yellowgreen;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin: 10px;
+}
+.live-tict-im{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+.live-tict-im img{
+    width: 30px;
+    height: 30px;
+}
+
+.im-tic-con img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    max-height: 120px;
+}
+.tic-title{
+    font-size: 13px;
+    font-weight: 500;
+    padding-left: 5px;
+    margin: 5px 0;
+}
+.date-loc{
+    font-size: 10px;
+    color: #5C5C5C;
+    font-weight: 500;
+    padding-left: 5px;
+}
+.tic-btn-con{
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tick-btn{
+    width: 80px;
+    border: none;
+    outline: none;
+    background: #4F0DA3;
+    color: #fff;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.pro-title{
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+.rate-con{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+    padding-left: 5px;
+
+}
+.star{
+    color: #FF8A15;
+}
+.rate-con span{
+    font-weight: 500;
+}
+.cir{
+    background: #FF8A15;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.rate-con p{
+    color: #403F3F;
+    font-size: 13px;
+}
+.pro-btn-con{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.movie-das-card-box {
+    min-width: 200px;
+    max-width: 200px;
+    position: relative;
+}
+.movie-das-card-box img{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.movie-das-card-box{
+    font-size: 14px;
+    font-weight: 500;
+    color: #2B2B2B;
+}
+.lov-icon{
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    font-size: 25px;
+}
+.stick-btnn{
+    border: none;
+    width: 80px;
+    background: #4F0DA3;
+    border-radius: 30px;
+    height: 28px;
+    color: #fff;
+}
+.stick-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
