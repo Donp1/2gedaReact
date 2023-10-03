@@ -1,0 +1,151 @@
+.non-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    align-items: center;
+    position: relative;
+    background: #fff;
+  }
+  .navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 50%;
+    gap: 40px;
+  }
+  .nav-ul {
+    display: flex;
+    font-size: 20px;
+    gap: 30px;
+  }
+  .nav-li {
+    list-style: none;
+    text-decoration: none;
+  }
+  .navbar_links {
+    color: rgba(0, 0, 0, 0.80);
+    text-decoration: none;
+  }
+  .active-link {
+    color: #4F0DA3;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .log-reg-btns {
+    display: flex;
+    gap: 20px;
+  }
+  .log-tbt{
+    color: #4F0DA3;
+    background: none;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .log-btn {
+    background: #4F0DA3;
+    border: none;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 6px 8px 0px rgba(0, 0, 0, 0.25);
+  }
+  .logon img {
+    width: 80px;
+  }
+  .nav-icon {
+    display: none;
+  }
+  .active-li button {
+    background: rgba(88, 122, 133, 0.63);
+  }
+  .dash-layout-container {
+    padding-top: 20px;
+  }
+  .das-nav {
+    font-size: 25px;
+    text-align: center;
+  }
+  .nonn{
+    display: none;
+  }
+  @media only screen and (max-width: 940px) {
+    .navbar-container {
+      padding: 20px;
+    }
+    .nav-icon {
+      display: initial;
+      color: #4F0DA3;
+    }
+    .nav-ul {
+      flex-direction: column;
+      width: 50%;
+      position: absolute;
+      top: 90%;
+      right: 110%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      /* justify-content: center; */
+      align-items: flex-start;
+      padding: 10px;
+      gap: 25px;
+    }
+    .log-btnn {
+      width: 60px;
+      height: 30px;
+      border-radius: 5px;
+    }
+    .logon img {
+      width: 60px;
+    }
+  
+    .active {
+      background: #fff;
+      left: 50%;
+      opacity: 1;
+      z-index: 99999;
+      height: 84vh;
+    }
+    /* body {
+      background-position: center;
+    } */
+  }
+  /* @media only screen and (max-width: 940px) {
+    .nav-icon {
+      margin-left: 10px;
+    }
+  } */
+  @media only screen and (max-width: 680px) {
+    .log-reg-btns{
+     flex-direction: column;
+     gap: 25px;
+    }
+    .nill{
+        display: none;
+    }
+    .non-navbar-container {
+        padding: 20px 20px;
+      }
+      .log-tbt{
+        height: 25px;
+        color: #000;
+        font-weight: 400;
+      }
+      .nonn{
+        display: flex;
+      }
+
+  }
+  @media only screen and (max-width: 430px) {
+    .nav-ul {
+        padding: 20px ;
+      }
+      .active {
+        height: 75vh;
+      }
+      
+  }
+  
+  

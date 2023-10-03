@@ -10,13 +10,13 @@ import Status from "../../components/Dashboard/Status";
 import MusicDash from "../../components/Dashboard/MusicDas";
 import SmallTicketCard from "../../components/Dashboard/smallTicket";
 import ProductDash from "../../components/Dashboard/ProductDAs";
-import MovieDashCard from "../../components/Dashboard/MovieDas";
+// import MovieDashCard from "../../components/Dashboard/MovieDas";
 import Stick from "../../components/Dashboard/Stick";
+import MovieSlider from "../../components/Dashboard/Slider";
 // import Slider from "react-slick";
 // // import "slick-carousel/slick/slick.css";
 // // import "slick-carousel/slick/slick-theme.css";
 const Home = () => {
- 
   return (
     <div className="home-container">
       <MainLayout>
@@ -71,26 +71,26 @@ const Home = () => {
               </div>
             </div>
             <PostComp />
-            
-              <div className="music-das-row">
+
+            <div className="music-das-row">
               <MusicDash />
               <MusicDash />
               <MusicDash />
               <MusicDash />
               <MusicDash />
-              </div>
-            <PostComp />
-            <div className="ticket-das-row">
-              <SmallTicketCard />
-              <SmallTicketCard />
-              <SmallTicketCard />
-              <SmallTicketCard />
-              <SmallTicketCard />
-              <SmallTicketCard />
-              <SmallTicketCard />
             </div>
             <PostComp />
             <div className="ticket-das-row">
+              <SmallTicketCard />
+              <SmallTicketCard />
+              <SmallTicketCard />
+              <SmallTicketCard />
+              <SmallTicketCard />
+              <SmallTicketCard />
+              <SmallTicketCard />
+            </div>
+            <PostComp />
+            <div className="ticket-das-row">
               <ProductDash />
               <ProductDash />
               <ProductDash />
@@ -98,13 +98,18 @@ const Home = () => {
               <ProductDash />
             </div>
             <PostComp />
-            <div className="movie-das-row">
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
+            <div className="movie-slid-box">
+            <div className="post-ead">Trending movies</div>
+              <MovieSlider />
             </div>
+
+            {/* <div className="movie-das-row">
+              <MovieDashCard />
+              <MovieDashCard />
+              <MovieDashCard />
+              <MovieDashCard />
+              <MovieDashCard />
+            </div> */}
             <div className="you-may-know">
               <div className="post-ead">People you may know</div>
               <div className="may-know-box">

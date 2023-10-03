@@ -9,7 +9,7 @@ const SmallTicketCard = () => {
         <div className="live-tict-im">
           <img src="images/lo1.png" alt="" />
         </div>
-        <img src="images/p1.png" alt="" />
+        <img src="images/pic1.png" alt="" />
       </div>
       <div className="tic-title">Meta app unveil</div>
       <div className="date-loc">Thur, 17 Aug, 2023 - Eko Hotel ....</div>

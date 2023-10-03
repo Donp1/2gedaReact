@@ -357,6 +357,12 @@ object-fit: cover;
   margin-bottom: 25px;
   height: 200px;
   padding-top: 20px;
+  position: relative;
+}
+.sud{
+  position: absolute;
+  top: 30%;
+  left: 35%;
 }
 .mus-img img{
   width: 100%;

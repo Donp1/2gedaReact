@@ -18,7 +18,7 @@
   min-height: 100vh;
   margin-top: 0;
   padding-top: 60px;
-  z-index: 11;
+  z-index: 11111;
 }
 .sidebar-box {
   display: flex;
@@ -59,7 +59,7 @@
 .side-icon {
   font-size: 23px;
 }
-.active-link {
+.active_link {
   color: #fff;
 }
 li {
@@ -81,6 +81,7 @@ li {
   position: fixed;
   top: 0;
   width: 80%;
+  z-index: 10;
   
 }
 .logo-container {

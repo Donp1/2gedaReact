@@ -1,6 +1,7 @@
 const MusicDash = () => {
   return (
     <div className="music-das-container">
+      <img src="images/over.png" alt="" className="sud" />
       <div className="mus-img">
         <img src="images/p1.png" alt="" />
       </div>
