@@ -1,18 +1,17 @@
 import NonAuthNavbar from "../../Layout/NonAuthNav/NonAuthNavbar";
-import SignForm from "../../components/SignUpInComp/SignForm";
+import SigninForm from "../../components/SignUpInComp/SigninForm ";
 import WelcomeComp from "../../components/SignUpInComp/WelcomeComp";
-import "./style.css";
 
-const Signup = () => {
+const Signin = () => {
   return (
     <div className="signup-container">
       <NonAuthNavbar />
       <div className="welc-form-containr">
         <WelcomeComp />
-        <SignForm />
+        <SigninForm />
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default Signin;

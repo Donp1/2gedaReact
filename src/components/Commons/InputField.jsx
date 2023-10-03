@@ -1,7 +1,7 @@
-const InputField = () => {
+const InputField = ({ placeholder, type }) => {
   return (
     <div className="inp-cont">
-      <input type="text" className="form-inp" />
+      <input type={type} className="form-inp" placeholder={placeholder} />
     </div>
   );
 };

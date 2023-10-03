@@ -6,10 +6,13 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { NavLink } from "react-router-dom";
 
-const SignForm = () => {
+const SigninForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isUsingPhone, setIsUsingPhone] = useState(false);
+  const [isUsingUsername, setIsUsingUsername] = useState(false);
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -17,16 +20,23 @@ const SignForm = () => {
 
   const handleUsePhoneClick = () => {
     setIsUsingPhone(!isUsingPhone);
+    setIsUsingUsername(false);
   };
+
+  const handleUseUsernameClick = () => {
+    setIsUsingUsername(!isUsingUsername);
+    setIsUsingPhone(false);
+  };
+
   return (
     <div className="sign-form">
-      <div className="create-ead-txt">Create an Account</div>
+      <div className="create-ead-txt">Login</div>
       <div className="greet-txt">
-        Welcome to 2geda. To continue, please provide your details
+        Welcome back. Enter your details to continue.
       </div>
 
       <form action="">
-        {isUsingPhone ? (
+        {isUsingPhone && !isUsingUsername && (
           <div className="inp-phone">
             <PhoneInput
               defaultCountry="NG"
@@ -37,30 +47,34 @@ const SignForm = () => {
               placeholder="+1 201-555-0123"
               required
             />
-            {/* <InputField placeholder={"Input Phone Number"} type={"tel"} /> */}
-            <div className="ins-bx-txt">
-              We’ll verify the phone provided to be sure it belongs to you
-            </div>
-          </div>
-        ) : (
-          <div className="inp-email">
-            <InputField placeholder={"Input email address"} type={"text"} />
-            <div className="ins-bx-txt">
-              We’ll verify the email provided to be sure it belongs to you
-            </div>
           </div>
         )}
 
-        <div className="use-phone" onClick={handleUsePhoneClick}>
-          {isUsingPhone
-            ? "Use Email address instead"
-            : "Use Phone number instead"}
-        </div>
+        {!isUsingPhone && !isUsingUsername && (
+          <div className="inp-email">
+            <InputField
+              placeholder={"Input email address"}
+              type={"email"}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+        )}
 
-        <InputField placeholder={"Username"} type={"text"} />
+        {isUsingUsername && (
+          <div className="inp-username">
+            <InputField
+              placeholder={"Username"}
+              type={"text"}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+        )}
+
         <div className="pass-con">
           <InputField
-            placeholder={"Create Password"}
+            placeholder={"Password"}
             type={passwordVisible ? "text" : "password"}
           />
           <div className="eye-box" onClick={togglePasswordVisibility}>
@@ -71,14 +85,32 @@ const SignForm = () => {
             )}
           </div>
         </div>
+        <div className="use-phone" onClick={handleUsePhoneClick}>
+          {isUsingPhone
+            ? "Use Email Address Instead"
+            : isUsingUsername
+            ? "Use Email Address Instead"
+            : "Use Phone Number Instead"}
+        </div>
+        <div
+          className="use-phone"
+          onClick={
+            isUsingUsername ? handleUsePhoneClick : handleUseUsernameClick
+          }
+        >
+          {isUsingUsername
+            ? "Use Phone Number Instead"
+            : "Use Username Instead"}
+        </div>
+
         <div className="btn-continu">
           <ActionButton label={"Continue"} bg={"ma-d"} />
         </div>
         <div className="alr-ave">
-          Already have an account?{" "}
+          New user?{" "}
           <span>
-            <NavLink className="goto-link" to="/signin">
-              Sign in
+            <NavLink className="goto-link" to="/signup">
+              Sign up
             </NavLink>
           </span>
         </div>
@@ -87,4 +119,4 @@ const SignForm = () => {
   );
 };
 
-export default SignForm;
+export default SigninForm;

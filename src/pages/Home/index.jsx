@@ -10,7 +10,7 @@ import Status from "../../components/Dashboard/Status";
 import MusicDash from "../../components/Dashboard/MusicDas";
 import SmallTicketCard from "../../components/Dashboard/smallTicket";
 import ProductDash from "../../components/Dashboard/ProductDAs";
-// import MovieDashCard from "../../components/Dashboard/MovieDas";
+import MovieDashCard from "../../components/Dashboard/MovieDas";
 import Stick from "../../components/Dashboard/Stick";
 import MovieSlider from "../../components/Dashboard/Slider";
 // import Slider from "react-slick";
@@ -99,17 +99,19 @@ const Home = () => {
             </div>
             <PostComp />
             <div className="movie-slid-box">
-            <div className="post-ead">Trending movies</div>
+              <div className="post-ead">Trending movies</div>
               <MovieSlider />
             </div>
-
-            {/* <div className="movie-das-row">
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-            </div> */}
+            <div className="mov-bxx">
+              <div className="post-ead">Trending movies</div>
+              <div className="movie-das-row">
+                <MovieDashCard />
+                <MovieDashCard />
+                <MovieDashCard />
+                <MovieDashCard />
+                <MovieDashCard />
+              </div>
+            </div>
             <div className="you-may-know">
               <div className="post-ead">People you may know</div>
               <div className="may-know-box">

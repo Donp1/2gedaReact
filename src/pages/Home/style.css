@@ -10,7 +10,7 @@
   width: 100%;
   margin-top: 10em;
 }
-.status-row{
+.status-row {
   display: flex;
   width: 100%;
   gap: 10px;
@@ -20,14 +20,14 @@
 .status-row::-webkit-scrollbar {
   width: 0.4vw;
 }
-.life-satus{
-  color: #4F0DA3;
+.life-satus {
+  color: #4f0da3;
   width: 100%;
 }
-.em-im{
+.em-im {
   width: 60px;
   height: 60px;
-  border: 3px solid #4F0DA3;
+  border: 3px solid #4f0da3;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -35,18 +35,18 @@
   font-size: 25px;
   margin-bottom: 5px;
 }
-.em-im img{
+.em-im img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
 }
-.status-text{
+.status-text {
   font-size: 9px;
   font-weight: 500;
 }
-.select-what-display{
+.select-what-display {
   display: flex;
   background: #fff;
   margin: 15px 0;
@@ -59,15 +59,15 @@
 .select-what-display::-webkit-scrollbar {
   width: 0.4vw;
 }
-.sel-act{
-  background: #4F0DA3;
+.sel-act {
+  background: #4f0da3;
   border-radius: 30px;
   color: #fff;
 }
-.anot-wid{
+.anot-wid {
   width: 80px;
 }
-.dis-sel-name{
+.dis-sel-name {
   width: 70px;
   font-size: 12px;
   height: 30px;
@@ -77,7 +77,7 @@
   cursor: pointer;
   padding: 5px;
 }
-.music-das-row{
+.music-das-row {
   display: flex;
   gap: 10px;
   overflow-x: scroll;
@@ -87,7 +87,7 @@
 .music-das-row::-webkit-scrollbar {
   width: 0.4vw;
 }
-.ticket-das-row{
+.ticket-das-row {
   display: flex;
   gap: 10px;
   overflow: scroll;
@@ -96,87 +96,85 @@
 .ticket-das-row::-webkit-scrollbar {
   width: 0.4vw;
 }
-.movie-das-row{
+.movie-das-row {
   display: flex;
   gap: 10px;
   width: 100%;
   overflow: scroll;
   scrollbar-width: none;
+  margin-top: 15px;
 }
 .movie-das-row::-webkit-scrollbar {
   width: 0.4vw;
 }
-.you-may-know{
+.you-may-know {
   background: #fff;
   margin: 15px 0;
   padding: 10px;
 }
 @media only screen and (max-width: 1250px) {
-.dis-sel-name{
-  width: 100px;
-}
+  .dis-sel-name {
+    width: 100px;
+  }
 }
 @media only screen and (max-width: 1150px) {
-  .left-side-container{
+  .left-side-container {
     width: 65%;
   }
- 
-  
 }
 @media only screen and (max-width: 1000px) {
-  .main-containe{
+  .main-containe {
     flex-direction: column;
     margin-left: 0px;
   }
-  .left-side-container{
+  .left-side-container {
     width: 100%;
     padding: 20px;
-    margin: 0 100px;  
-
+    margin: 0 100px;
   }
 }
 @media only screen and (max-width: 830px) {
-  .left-side-container{
-    margin: 0 80px;  
+  .left-side-container {
+    margin: 0 80px;
   }
 }
 @media only screen and (max-width: 700px) {
-  .left-side-container{
-    margin: 0 50px;  
+  .left-side-container {
+    margin: 0 50px;
     padding: 0;
   }
-  .em-im{
+  .em-im {
     width: 55px;
     height: 55px;
   }
-  .status-text{
+  .status-text {
     width: 58px;
   }
 }
 @media only screen and (max-width: 430px) {
-  .left-side-container{
-    margin: 0 36px ;  
+  .left-side-container {
+    margin: 0 36px;
     padding: 0;
-    width: 350px; 
+    width: 350px;
   }
 }
 @media only screen and (max-width: 410px) {
-  .left-side-container{
-    margin: 0 36px ;  
+  .left-side-container {
+    margin: 0 36px;
     padding: 0;
-    width: 330px; 
+    width: 330px;
   }
 }
 @media only screen and (max-width: 385px) {
-  .left-side-container{
-    margin: 0 28px;  
+  .left-side-container {
+    margin: 0 28px;
     padding: 0;
     width: 320px;
   }
 }
 @media only screen and (max-width: 365px) {
-  .left-side-container{
-    margin: 0 30px;  
+  .left-side-container {
+    margin: 0 30px;
     padding: 0;
     width: 100%;
   }
