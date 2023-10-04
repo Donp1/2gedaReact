@@ -161,6 +161,10 @@
     height: 120px;
     width: 160px;
   }
+  .medi-img {
+    position: absolute;
+    top: 25%;
+  }
 }
 @media only screen and (max-width: 630px) {
   .media-card-container img {
@@ -170,6 +174,11 @@
   .media-card-container video {
     height: 100px;
     width: 140px;
+  }
+  .medi-img {
+    position: absolute;
+    top: 25%;
+    left: 35%;
   }
 }
 @media only screen and (max-width: 555px) {
@@ -190,6 +199,10 @@
   .media-card-container video {
     width: 130px;
   }
+  .medi-img {
+    top: 25%;
+    left: 32%;
+  }
 }
 @media only screen and (max-width: 495px) {
   .media-card-container img {
@@ -197,6 +210,13 @@
   }
   .media-card-container video {
     width: 125px;
+  }
+  .medi-img {
+    top: 30%;
+    left: 35%;
+    z-index: 11;
+    width: 50px !important;
+    height: 50px !important;
   }
 }
 @media only screen and (max-width: 487px) {
@@ -224,6 +244,13 @@
   .media-card-container video {
     width: 110px;
   }
+  .medi-img {
+    top: 20%;
+    left: 25%;
+    z-index: 11;
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 @media only screen and (max-width: 410px) {
   .media-card-container img {
@@ -248,21 +275,42 @@
 }
 @media only screen and (max-width: 365px) {
   .media-card-container img {
-    width: 120px;
+    width: 150px;
+    height: 95px;
   }
   .media-card-container video {
-    width: 120px;
+    height: 95px;
+    width: 150px;
+  }
+  .medi-img {
+    top: 30%;
+    left: 38%;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
-@media only screen and (max-width: 306px) {
+@media only screen and (max-width: 341px) {
   .media-card-container img {
-    width: 110px;
+    width: 140px;
+    height: 95px;
   }
   .media-card-container video {
-    width: 110px;
+    height: 95px;
+    width: 140px;
   }
 }
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 321px) {
+  .media-card-container img {
+    width: 130px;
+  }
+  .media-card-container video {
+    width: 130px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .media-card-container {
+    margin: 0 auto;
+  }
   .media-card-container img {
     width: 200px;
     height: 150px;
@@ -270,5 +318,12 @@
   .media-card-container video {
     width: 200px;
     height: 150px;
+  }
+  .medi-img {
+    top: 30%;
+    left: 35%;
+    z-index: 11;
+    width: 60px !important;
+    height: 60px !important;
   }
 }

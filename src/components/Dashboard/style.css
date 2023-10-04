@@ -439,7 +439,7 @@
 }
 @media only screen and (max-width: 1000px) {
   .ads-img {
-    margin: -15px 0 0;
+    margin: -15px 0 20px;
   }
   .middle-side-container {
     display: none;
@@ -480,9 +480,43 @@
   .feed-hr {
     width: 84%;
   }
+  .posted-likes-cont {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 380px) {
   .feed-hr {
     width: 80%;
+  }
+  .com-btn {
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .comment-inp {
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .com-btn {
+    width: 60px;
+  }
+  .comment-inp {
+    font-size: 11px;
+  }
+  .likes-bx {
+    width: 20px;
+    height: 20px;
+  }
+  .likes-per-post {
+    font-size: 14px;
+    gap: 1px;
+  }
+  .liker-name-and-total {
+    font-size: 12px;
   }
 }
