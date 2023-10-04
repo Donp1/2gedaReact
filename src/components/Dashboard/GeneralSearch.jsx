@@ -1,8 +1,14 @@
 import { AiOutlineClose } from "react-icons/ai";
 // import { BiSearch } from "react-icons/bi";
 import { IoSendSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const GeneralSearch = ({ handleCloseToggledIcon }) => {
+  const navigate = useNavigate();
+
+  const gotoSearch = () => {
+    navigate("/search");
+  };
   return (
     <div className="general-search-container">
       <div className="search-send-cont">
@@ -14,7 +20,7 @@ const GeneralSearch = ({ handleCloseToggledIcon }) => {
             placeholder="Start typing"
           />
         </div>
-        <IoSendSharp className="send-iconn" />
+        <IoSendSharp className="send-iconn" onClick={gotoSearch} />
       </div>
       <div className="down-cont">
         <div className="recent-see-all">
