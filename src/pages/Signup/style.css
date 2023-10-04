@@ -1,0 +1,11 @@
+.signup-container {
+}
+.welc-form-containr {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 940px) {
+  .welc-form-containr {
+    flex-direction: column;
+  }
+}

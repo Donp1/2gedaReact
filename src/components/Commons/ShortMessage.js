@@ -7,11 +7,14 @@ const ShortMessage = () => {
           alt=""
         />
         <div className="name-txt-sot">
-        <div className="pro-name-tst">Abraham Adesanya</div>
-        <div className="sot-text">How was your flight Joe, i couldnt </div>
+          <div className="pro-name-tst">Abraham Adesanya</div>
+          <div className="sot-text">How was your flight Joe, i couldnt </div>
         </div>
       </div>
-      <div className="pro-time-tx">12:00</div>
+      <div className="time-unread">
+        <div className="pro-time-tx">12:00</div>
+        <div className="unread-cir"></div>
+      </div>
     </div>
   );
 };

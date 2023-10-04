@@ -2,8 +2,8 @@ const Follower = () => {
   return (
     <div className="follower-container">
       <div className="follow-see">
-        <div className="follow-txt">Followers</div>
-        <div className="follow-txt">See all</div>
+        <div className="follow-txt">Stickers</div>
+        <div className="follow-txt al-see">See all</div>
       </div>
       <div className="followers-cont">
         <div className="foll-one">

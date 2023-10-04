@@ -8,25 +8,25 @@ const FirstSide = () => {
     <div className="first-side-container">
       <div className="post-feed-container">
         <div className="post-ead">Post on feed</div>
-        <textarea
+        {/* <textarea
           name=""
           id=""
           placeholder="Write up to 1,000 words"
           className="text-area"
-        ></textarea>
+        ></textarea> */}
 
         <div className="down-post-feed">
           <div className="icon-post-feed">
-            <BsCardImage  className="pic-vid"/>
-            <FaVideo  className="pic-vid"/>
-            <IoLocation className="loca"/>
-            <FaMusic className="music"/>
-            <BsMic className="mic"/>
-            <FaFileAlt className="fil"/>
+            <BsCardImage className="pic-vid" />
+            <FaVideo className="pic-vid" />
+            <IoLocation className="loca" />
+            <FaMusic className="music" />
+            <BsMic className="mic" />
+            <FaFileAlt className="fil" />
           </div>
-          <button className="post-btn" type="submit">
+          {/* <button className="post-btn" type="submit">
             Post
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

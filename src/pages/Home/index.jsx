@@ -12,11 +12,14 @@ import SmallTicketCard from "../../components/Dashboard/smallTicket";
 import ProductDash from "../../components/Dashboard/ProductDAs";
 import MovieDashCard from "../../components/Dashboard/MovieDas";
 import Stick from "../../components/Dashboard/Stick";
+import MovieSlider from "../../components/Dashboard/Slider";
+import Data from "../../utils/datahome.json";
+import { NavLink } from "react-router-dom";
+
 // import Slider from "react-slick";
 // // import "slick-carousel/slick/slick.css";
 // // import "slick-carousel/slick/slick-theme.css";
 const Home = () => {
- 
   return (
     <div className="home-container">
       <MainLayout>
@@ -45,40 +48,27 @@ const Home = () => {
               <Status />
             </div>
             <div className="select-what-display">
-              <div className="anot-wid">
-                <div className="dis-sel-name sel-act">All posts</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name ">Images</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Videos</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Products</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Voice note</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Location</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Music</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Files</div>
-              </div>
+              {Data.map((item, index) => (
+                <NavLink
+                  key={index}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    isActive ? " sel-act" : "anot-wid"
+                  }
+                >
+                  <div className="dis-sel-name">{item.text}</div>
+                </NavLink>
+              ))}
             </div>
             <PostComp />
-            
-              <div className="music-das-row">
+
+            <div className="music-das-row">
               <MusicDash />
               <MusicDash />
               <MusicDash />
               <MusicDash />
               <MusicDash />
-              </div>
+            </div>
             <PostComp />
             <div className="ticket-das-row">
               <SmallTicketCard />
@@ -98,12 +88,19 @@ const Home = () => {
               <ProductDash />
             </div>
             <PostComp />
-            <div className="movie-das-row">
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
-              <MovieDashCard />
+            <div className="movie-slid-box">
+              <div className="post-ead">Trending movies</div>
+              <MovieSlider />
+            </div>
+            <div className="mov-bxx">
+              <div className="post-ead">Trending movies</div>
+              <div className="movie-das-row">
+                <MovieDashCard />
+                <MovieDashCard />
+                <MovieDashCard />
+                <MovieDashCard />
+                <MovieDashCard />
+              </div>
             </div>
             <div className="you-may-know">
               <div className="post-ead">People you may know</div>
@@ -124,7 +121,9 @@ const Home = () => {
           <div className="right-side-container">
             <SelectCategory />
             <Follower />
-            <DashMessage />
+            <div className="mess-bxx-conn">
+              <DashMessage />
+            </div>
           </div>
         </div>
       </MainLayout>
