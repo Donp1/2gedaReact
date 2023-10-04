@@ -131,7 +131,9 @@ const Home = () => {
           <div className="right-side-container">
             <SelectCategory />
             <Follower />
-            <DashMessage />
+            <div className="mess-bxx-conn">
+              <DashMessage />
+            </div>
           </div>
         </div>
       </MainLayout>

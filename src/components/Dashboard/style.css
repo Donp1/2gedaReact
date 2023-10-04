@@ -153,6 +153,7 @@
 }
 .dot {
   font-size: 30px;
+  cursor: pointer;
 }
 .post-likes-box {
   display: flex;
@@ -210,6 +211,9 @@
 .right-side-container {
   width: 23%;
 }
+.al-see {
+  color: #4f0da3;
+}
 .select-cat-container {
   background: linear-gradient(180deg, #b469ef 0%, #4f0da3 100%);
   border-radius: 10px;
@@ -253,9 +257,9 @@
   margin-top: 20px;
 }
 .follow-see {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -276,18 +280,45 @@
   background: #dad7de;
   border-radius: 5px;
   margin-top: 20px;
+  overflow-y: inherit;
+  width: 100%;
+}
+
+.list-people-st {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+.list-people-st::-webkit-scrollbar {
+  width: 0.4vw;
+  width: 0.4vh;
+}
+.mess-unread {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #4f0da3;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .mess-headline {
   font-size: 15px;
   color: #fff;
-  background: #000030;
+  font-weight: 500;
+}
+.unread-box {
+  background: #fff;
+  color: #4f0da3;
+  width: 25px;
+  height: 25px;
   border-radius: 5px;
-  height: 40px;
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
 }
 .pro-name-cont {
   display: flex;
@@ -303,6 +334,22 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   padding-bottom: 5px;
+  height: 100%;
+}
+.unread-cir {
+  width: 10px;
+  height: 10px;
+  background: #4f0da3;
+  border-radius: 50%;
+}
+.time-unread {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.name-txt-sot {
+  width: 65%;
 }
 .pro-name-cont img {
   width: 50px;

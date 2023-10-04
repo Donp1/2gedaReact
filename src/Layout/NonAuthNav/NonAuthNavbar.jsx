@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const data = [
   {
     label: "Home",
-    to: "/landing",
+    to: "/",
   },
   {
     label: "Features",
@@ -59,7 +59,7 @@ const NonAuthNavbar = () => {
             <div className="log-reg-btns nonn">
               <NavLink
                 className={({ isActive }) => (isActive ? "" : "navbar_links")}
-                to={"/login"}
+                to={"/signin"}
               >
                 <button className="log-tbt">Log In</button>
               </NavLink>
@@ -75,17 +75,13 @@ const NonAuthNavbar = () => {
       </div>
       <div className="log-reg-btns nill">
         <NavLink
-          className={({ isActive }) =>
-            isActive ? "" : "navbar_links"
-          }
-          to={"/login"}
+          className={({ isActive }) => (isActive ? "" : "navbar_links")}
+          to={"/signin"}
         >
           <button className="log-tbt">Log In</button>
         </NavLink>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? "" : "navbar_links"
-          }
+          className={({ isActive }) => (isActive ? "" : "navbar_links")}
           to={"/signup"}
         >
           <button className="log-btn">Create account</button>

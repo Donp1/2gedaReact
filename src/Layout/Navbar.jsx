@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import GeneralSearch from "../components/Dashboard/GeneralSearch";
 
 const Navbar = () => {
-  const [ isToggled, setIsToggled] = useState(true);
+  const [isToggled, setIsToggled] = useState(true);
 
   const handleToggledIcon = () => {
     setIsToggled(!isToggled);
@@ -14,7 +15,10 @@ const Navbar = () => {
         <div className="logo-text">2geda</div>
       </div>
       <div className="searc-profile">
-        <div className="mobile-searc" onClick={handleToggledIcon}><BiSearch className="sea-icon" /></div>
+        <div className="mobile-searc" onClick={handleToggledIcon}>
+          <BiSearch className="sea-icon" />
+        </div>
+        <GeneralSearch />
         <div className={isToggled ? "searc-container  nil" : "searc-container"}>
           <input
             type="text"

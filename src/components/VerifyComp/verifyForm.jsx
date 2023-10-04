@@ -14,7 +14,7 @@ const VerifyForm = () => {
   const [timerExpired, setTimerExpired] = useState(false);
 
   const [inputRefs, setInputRefs] = useState([null, null, null, null, null]);
-
+  console.log(setInputRefs);
   useEffect(() => {
     if (inputRefs[0]) {
       inputRefs[0].focus();

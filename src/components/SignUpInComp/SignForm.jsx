@@ -34,7 +34,7 @@ const SignForm = () => {
               value={phone}
               style={{ height: "40px" }}
               onChange={(phone) => setPhone(phone)}
-              placeholder="+1 201-555-0123"
+              placeholder="+234 80 2015 5501"
               required
             />
             {/* <InputField placeholder={"Input Phone Number"} type={"tel"} /> */}

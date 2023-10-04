@@ -121,14 +121,18 @@
 }
 .movie-das-card-box img {
   width: 100%;
-  height: 150px;
+  height: 250px;
   border-radius: 10px;
   margin-bottom: 5px;
+  object-fit: cover;
 }
 .movie-das-card-box {
   font-size: 14px;
   font-weight: 500;
   color: #2b2b2b;
+}
+.lay-box {
+  font-size: 14px;
 }
 .mov-bxx {
   display: none;
@@ -136,9 +140,16 @@
 .lov-icon {
   color: #fff;
   position: absolute;
-  top: 60%;
-  left: 7%;
-  font-size: 25px;
+  bottom: 3%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .stick-btnn {
   border: none;
@@ -291,6 +302,36 @@
   cursor: pointer;
 }
 
+/* Search Section */
+.general-search-container {
+  position: absolute;
+  top: 30%;
+  background: #fff;
+  width: 34%;
+}
+.search-send-cont {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.sear-input-box {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.inp-general {
+  height: 30px;
+  outline: none;
+  padding: 0 10px;
+  border: none;
+}
+.send-iconn {
+  font-size: 20px;
+  color: #4f0da3;
+}
 @media (max-width: 500px) {
   .swiper_container {
     height: 47rem;

@@ -4,7 +4,7 @@ import InputField from "../Commons/InputField";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const SigninForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -13,6 +13,11 @@ const SigninForm = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  const goToForgot = () => {
+    navigate("/forgot");
+  };
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -84,6 +89,9 @@ const SigninForm = () => {
               <BsEyeFill className="eye-icon" />
             )}
           </div>
+        </div>
+        <div className="forg-pas-contan" onClick={goToForgot}>
+          Forgot password?
         </div>
         <div className="use-phone" onClick={handleUsePhoneClick}>
           {isUsingPhone
