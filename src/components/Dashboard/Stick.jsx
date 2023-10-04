@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const Stick = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const hanleClick = () => {
+    setIsClicked(!isClicked);
+  };
   return (
     <div className="stick-cont">
       <div className="post-profile">
@@ -13,7 +20,12 @@ const Stick = () => {
         </div>
       </div>
       <div className="stick-btn">
-        <button className="stick-btnn">Stick</button>
+        <button
+          className={isClicked ? "stickin " : " stick-btnn"}
+          onClick={hanleClick}
+        >
+          {isClicked ? "Sticking" : "Stick"}
+        </button>
       </div>
     </div>
   );

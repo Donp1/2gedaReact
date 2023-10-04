@@ -13,6 +13,9 @@ import ProductDash from "../../components/Dashboard/ProductDAs";
 import MovieDashCard from "../../components/Dashboard/MovieDas";
 import Stick from "../../components/Dashboard/Stick";
 import MovieSlider from "../../components/Dashboard/Slider";
+import Data from "../../utils/datahome.json";
+import { NavLink } from "react-router-dom";
+
 // import Slider from "react-slick";
 // // import "slick-carousel/slick/slick.css";
 // // import "slick-carousel/slick/slick-theme.css";
@@ -45,30 +48,17 @@ const Home = () => {
               <Status />
             </div>
             <div className="select-what-display">
-              <div className="anot-wid">
-                <div className="dis-sel-name sel-act">All posts</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name ">Images</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Videos</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Products</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Voice note</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Location</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Music</div>
-              </div>
-              <div className="anot-wid">
-                <div className="dis-sel-name">Files</div>
-              </div>
+              {Data.map((item, index) => (
+                <NavLink
+                  key={index}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    isActive ? " sel-act" : "anot-wid"
+                  }
+                >
+                  <div className="dis-sel-name">{item.text}</div>
+                </NavLink>
+              ))}
             </div>
             <PostComp />
 

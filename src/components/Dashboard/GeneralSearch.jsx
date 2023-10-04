@@ -1,13 +1,13 @@
 import { AiOutlineClose } from "react-icons/ai";
-import { BiSearch } from "react-icons/bi";
+// import { BiSearch } from "react-icons/bi";
 import { IoSendSharp } from "react-icons/io5";
 
-const GeneralSearch = () => {
+const GeneralSearch = ({ handleCloseToggledIcon }) => {
   return (
     <div className="general-search-container">
       <div className="search-send-cont">
         <div className="sear-input-box">
-          <BiSearch />
+          <AiOutlineClose className="cls" onClick={handleCloseToggledIcon} />
           <input
             type="text"
             className="inp-general"
@@ -23,7 +23,19 @@ const GeneralSearch = () => {
         </div>
         <div className="search-text-close-bx">
           <div className="search-text">Sandra</div>
-          <AiOutlineClose />
+          <AiOutlineClose className="sea-close" />
+        </div>
+        <div className="search-text-close-bx">
+          <div className="search-text">Worship</div>
+          <AiOutlineClose className="sea-close" />
+        </div>
+        <div className="search-text-close-bx">
+          <div className="search-text">Ask me</div>
+          <AiOutlineClose className="sea-close" />
+        </div>
+        <div className="search-text-close-bx">
+          <div className="search-text">Sola kay</div>
+          <AiOutlineClose className="sea-close" />
         </div>
       </div>
     </div>

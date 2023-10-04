@@ -3,10 +3,13 @@ import { BiSearch } from "react-icons/bi";
 import GeneralSearch from "../components/Dashboard/GeneralSearch";
 
 const Navbar = () => {
-  const [isToggled, setIsToggled] = useState(true);
+  const [isToggled, setIsToggled] = useState(false);
 
   const handleToggledIcon = () => {
-    setIsToggled(!isToggled);
+    setIsToggled(true);
+  };
+  const handleCloseToggledIcon = () => {
+    setIsToggled(false);
   };
   return (
     <div className="navbar-container">
@@ -15,16 +18,20 @@ const Navbar = () => {
         <div className="logo-text">2geda</div>
       </div>
       <div className="searc-profile">
-        <div className="mobile-searc" onClick={handleToggledIcon}>
+        <div
+          className={isToggled ? "mobile-searc nol" : "mobile-searc"}
+          onClick={handleToggledIcon}
+        >
           <BiSearch className="sea-icon" />
         </div>
-        <GeneralSearch />
-        <div className={isToggled ? "searc-container  nil" : "searc-container"}>
-          <input
-            type="text"
-            className="searc-inp"
-            placeholder="Search Name, Place and Jobs"
-          />
+        {isToggled && (
+          <GeneralSearch handleCloseToggledIcon={handleCloseToggledIcon} />
+        )}
+
+        <div className="searc-container  nil" onClick={handleToggledIcon}>
+          <div type="text" className="searc-inp" placeholder="">
+            Search Name, Place and Jobs
+          </div>
           <BiSearch className="sea-icon" />
         </div>
         <div className="profile-container">
@@ -32,7 +39,7 @@ const Navbar = () => {
             src="https://image.cnbcfm.com/api/v1/image/107228941-1682027700192-_DSC5658.jpg?v=1682427601&w=1920&h=1080"
             alt=""
           />
-          <div className="pro-text">My Profile</div>
+          <div className="pro-text ban">My Profile</div>
         </div>
       </div>
     </div>

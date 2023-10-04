@@ -1,7 +1,8 @@
 .first-side-container {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 10px 20px;
-  border-radius: 8px;
 }
 .post-ead {
   font-size: 16px;
@@ -21,6 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .icon-post-feed {
   font-size: 18px;
@@ -436,6 +438,9 @@
   }
 }
 @media only screen and (max-width: 1000px) {
+  .ads-img {
+    margin: -15px 0 0;
+  }
   .middle-side-container {
     display: none;
   }
