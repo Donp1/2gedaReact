@@ -15,6 +15,7 @@ import Stick from "../../components/Dashboard/Stick";
 import MovieSlider from "../../components/Dashboard/Slider";
 import Data from "../../utils/datahome.json";
 import { NavLink } from "react-router-dom";
+import PostFormModal from "../../components/Modals/PostFormModal";
 
 // import Slider from "react-slick";
 // // import "slick-carousel/slick/slick.css";
@@ -25,6 +26,7 @@ const Home = () => {
       <MainLayout>
         <div className="main-containe">
           <div className="left-side-container">
+            <PostFormModal />
             <FirstSide />
             <img src="images/jumia.png" alt="" className="ads-img" />
             <div className="status-row">

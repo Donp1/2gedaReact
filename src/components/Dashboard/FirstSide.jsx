@@ -2,6 +2,7 @@ import { BsCardImage, BsMic } from "react-icons/bs";
 import { FaVideo, FaMusic, FaFileAlt } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 import "./style.css";
+// import PostFormModal from "../Modals/PostFormModal";
 
 const FirstSide = () => {
   return (
@@ -14,6 +15,7 @@ const FirstSide = () => {
           placeholder="Write up to 1,000 words"
           className="text-area"
         ></textarea> */}
+        {/* <PostFormModal /> */}
 
         <div className="down-post-feed">
           <div className="icon-post-feed">
