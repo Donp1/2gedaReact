@@ -4,9 +4,9 @@ import { IoLocation } from "react-icons/io5";
 import "./style.css";
 // import PostFormModal from "../Modals/PostFormModal";
 
-const FirstSide = () => {
+const FirstSide = ({ handleMainContainerClick, hdPhotoOpen }) => {
   return (
-    <div className="first-side-container">
+    <div className="first-side-container" onClick={handleMainContainerClick}>
       <div className="post-feed-container">
         <div className="post-ead">Post on feed</div>
         {/* <textarea
@@ -19,7 +19,7 @@ const FirstSide = () => {
 
         <div className="down-post-feed">
           <div className="icon-post-feed">
-            <BsCardImage className="pic-vid" />
+            <BsCardImage className="pic-vid" onClick={hdPhotoOpen} />
             <FaVideo className="pic-vid" />
             <IoLocation className="loca" />
             <FaMusic className="music" />

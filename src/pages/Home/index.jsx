@@ -15,19 +15,47 @@ import Stick from "../../components/Dashboard/Stick";
 import MovieSlider from "../../components/Dashboard/Slider";
 import Data from "../../utils/datahome.json";
 import { NavLink } from "react-router-dom";
-import PostFormModal from "../../components/Modals/PostFormModal";
+import { useState } from "react";
+import PostFeedFormCont from "../../components/PostFeedForm";
 
 // import Slider from "react-slick";
 // // import "slick-carousel/slick/slick.css";
 // // import "slick-carousel/slick/slick-theme.css";
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPhotoModalOpen, setIsPhotoModalOpen] = useState(false);
+
+  const handlePhotoModalClick = () => {
+    setIsPhotoModalOpen(true);
+    setIsModalOpen(false);
+  };
+  const handleClosePhotoModalClick = () => {
+    setIsPhotoModalOpen(false);
+    setIsModalOpen(false);
+  };
+
+  const handleMainContainerClick = () => {
+    setIsModalOpen(true);
+  };
+  const handleCloseMainContainerClick = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="home-container">
       <MainLayout>
+        <PostFeedFormCont
+          hdClose={handleCloseMainContainerClick}
+          hdPhotoClose={handleClosePhotoModalClick}
+          isModalOpen={isModalOpen}
+          isPhotoOpen={isPhotoModalOpen}
+          hdPhotoOpen={handlePhotoModalClick}
+        />
         <div className="main-containe">
           <div className="left-side-container">
-            <PostFormModal />
-            <FirstSide />
+            <FirstSide
+              handleMainContainerClick={handleMainContainerClick}
+              hdPhotoOpen={handlePhotoModalClick}
+            />
             <img src="images/jumia.png" alt="" className="ads-img" />
             <div className="status-row">
               <div className="life-satus">

@@ -9,10 +9,11 @@ import { MdOutlineHowToVote } from "react-icons/md";
 import "./style.css";
 import { NavLink } from "react-router-dom";
 
-
-const Sidebar = ({isCollapsed}) => {
+const Sidebar = ({ isCollapsed }) => {
   return (
-    <div className={isCollapsed ? "sidebar-container  nil" : "sidebar-container"}>
+    <div
+      className={isCollapsed ? "sidebar-container  nil" : "sidebar-container"}
+    >
       <div className="sidebar-box">
         <div className="sidebar-items">
           <NavLink
@@ -24,7 +25,6 @@ const Sidebar = ({isCollapsed}) => {
           >
             <BiSolidHome className="side-icon " />
             <div className="sidebar-text">Home</div>
-            
           </NavLink>
           <NavLink
             to="/not"
@@ -56,9 +56,9 @@ const Sidebar = ({isCollapsed}) => {
             <PiBookDuotone className="side-icon " />
             <div className="sidebar-text">Business Directory</div>
           </NavLink>
-          
+
           <NavLink
-            to="/mess"
+            to="/chat"
             exact
             className={({ isActive }) =>
               isActive ? "active_link side-item" : "side-item"

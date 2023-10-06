@@ -7,6 +7,7 @@ import Verify from "./pages/Verify";
 import ForgotPassword from "./pages/ForgotPassword";
 import PersonalDetails from "./pages/PersonalDetails";
 import SearchPage from "./pages/SearchPage";
+import Chat from "./pages/Chat";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route index path="/forgot" element={<ForgotPassword />} />
         <Route index path="/personaldetail" element={<PersonalDetails />} />
         <Route index path="/search" element={<SearchPage />} />
+        <Route index path="/chat" element={<Chat />} />
       </Routes>
     </div>
   );

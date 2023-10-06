@@ -1,0 +1,164 @@
+.chat-head {
+  font-size: 20px;
+  font-weight: 600;
+}
+.pri-pub-act-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+}
+.nnnn {
+  visibility: hidden;
+}
+.add-contt {
+  position: relative;
+  width: 100%;
+}
+.add-bboxx {
+  width: 40%;
+  position: fixed;
+  background: #fff;
+  padding: 5px;
+  top: 11%;
+  border-radius: 5px;
+}
+.ads-mag img {
+  width: 100%;
+  margin-top: 10px;
+}
+.emp-chat-bor {
+  position: fixed;
+  top: 55%;
+  /* width: 250px; */
+  left: 35%;
+}
+.connenct-txt {
+  color: #4f0da3;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-left: 16px;
+  cursor: pointer;
+}
+/* Messa */
+.messagess-cont {
+  margin-top: 45%;
+  width: 95.5%;
+  border-radius: 25px;
+  border-top: 1px solid #d0d5dd;
+  border-right: 1px solid #d0d5dd;
+  border-left: 1px solid #d0d5dd;
+  background: #fff;
+  padding: 10px;
+}
+.no-borrd {
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  background: none;
+}
+.private-mess-container {
+  max-height: 730px;
+  overflow-y: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+.private-mess-container::-webkit-scrollbar {
+  width: 0.4vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .add-bboxx {
+    width: 45%;
+    top: 11%;
+  }
+
+  .emp-chat-bor {
+    top: 65%;
+    left: 15%;
+  }
+  .messagess-cont {
+    margin-top: 50%;
+  }
+  .bvc {
+    left: 6%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .add-bboxx {
+    width: 95%;
+    left: 15px;
+  }
+  .chat-head {
+    font-size: 25px;
+    text-align: center;
+  }
+  .emp-chat-bor {
+    top: 63%;
+    /* left: 27%; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .connenct-txt {
+    text-align: center;
+    width: 80%;
+  }
+  .messagess-cont {
+    margin-top: 40%;
+    width: 100%;
+    margin-left: -6%;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .messagess-cont {
+    margin-top: 48%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .add-bboxx {
+    top: 10.5%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .add-bboxx {
+    width: 95%;
+    left: 10px;
+    top: 10%;
+  }
+  .emp-chat-bor {
+    top: 58%;
+    width: 100%;
+    left: 0%;
+  }
+  .connenct-txt {
+    margin-left: 0%;
+    width: 100%;
+    text-align: center;
+  }
+  .messagess-cont {
+    margin-top: 62%;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .add-bboxx {
+    width: 92%;
+    left: 13px;
+  }
+  .messagess-cont {
+    margin-top: 70%;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .messagess-cont {
+    margin-top: 85%;
+    margin-bottom: 20px;
+  }
+}

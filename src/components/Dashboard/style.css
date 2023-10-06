@@ -3,6 +3,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 10px 20px;
+  cursor: pointer;
 }
 .post-ead {
   font-size: 16px;
@@ -11,9 +12,9 @@
 }
 .text-area {
   width: 100%;
-  border: none;
+  border: 1px solid #f5f5f5;
   outline: none;
-  height: 150px;
+  height: 100px;
   padding: 10px;
   margin: 20px 0;
   resize: none;
@@ -337,6 +338,7 @@
   margin-bottom: 10px;
   padding-bottom: 5px;
   height: 100%;
+  cursor: pointer;
 }
 .unread-cir {
   width: 10px;
@@ -482,6 +484,14 @@
   }
   .posted-likes-cont {
     font-size: 20px;
+  }
+  .icon-post-feed {
+    font-size: 16px;
+    gap: 8px;
+  }
+  .post-btn {
+    width: 80px;
+    height: 30px;
   }
 }
 @media only screen and (max-width: 380px) {
