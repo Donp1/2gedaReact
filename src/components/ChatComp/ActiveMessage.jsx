@@ -15,7 +15,7 @@ const ActiveMessage = ({ Data }) => {
         <div className="private-mess-container">
           <div className="total-unread-box">
             <div className="act-ve"></div>
-            <div className="unread-ttst">Unread messages</div>
+            <div className="unread-ttst">Active Friends</div>
           </div>
           <div className="messages-container-bx">
             {Data.map((message, index) => (

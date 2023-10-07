@@ -58,7 +58,21 @@
 .fil {
   color: #403f3f;
 }
-
+.word {
+  color: #054470;
+}
+.excel {
+  color: green;
+}
+.prese {
+  color: brown;
+}
+.pdf {
+  color: red;
+}
+.apk {
+  color: #000;
+}
 .ads-img {
   margin: 10px 0;
   width: 100%;

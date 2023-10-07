@@ -84,6 +84,9 @@
   overflow-x: scroll;
   scrollbar-width: none;
 }
+.viwdt {
+  width: 100%;
+}
 .post-img-cont-box::-webkit-scrollbar {
   width: 0.4vw;
 }
@@ -118,6 +121,28 @@ video {
   top: 5px;
   z-index: 111111;
 }
+.delete-audio {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 3.333px;
+  background: rgba(0, 0, 0, 0.5);
+  gap: 5px;
+  width: 70px;
+  height: 30px;
+  padding: 0 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+.de-aud {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 .dra-im {
   width: 100%;
   background: #f5f5f5;
@@ -138,6 +163,7 @@ video {
 .or-dr {
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
+  word-wrap: break-word;
 }
 .add-new-pic-or {
   font-size: 20px;
@@ -161,6 +187,13 @@ video {
   bottom: -10%;
   right: 0;
   z-index: 11111111111;
+}
+.post-audio-cont-box audio {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.icon-dw {
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 1000px) {
   .postFormModal-container {

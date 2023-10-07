@@ -1,6 +1,13 @@
-import { BsCardImage, BsMic } from "react-icons/bs";
+import {
+  BsCardImage,
+  BsMic,
+  BsFillFileEarmarkPdfFill,
+  BsAndroid2,
+} from "react-icons/bs";
 import { FaVideo, FaMusic, FaFileAlt } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
+import { PiMicrosoftPowerpointLogo } from "react-icons/pi";
+import { SiMicrosoftword, SiMicrosoftexcel } from "react-icons/si";
 import "./style.css";
 // import PostFormModal from "../Modals/PostFormModal";
 
@@ -25,6 +32,11 @@ const FirstSide = ({ handleMainContainerClick, hdPhotoOpen }) => {
             <FaMusic className="music" />
             <BsMic className="mic" />
             <FaFileAlt className="fil" />
+            <SiMicrosoftword className="word" />
+            <SiMicrosoftexcel className="excel" />
+            <PiMicrosoftPowerpointLogo className="prese" />
+            <BsFillFileEarmarkPdfFill className="pdf" />
+            <BsAndroid2 className="apk" />
           </div>
           {/* <button className="post-btn" type="submit">
             Post

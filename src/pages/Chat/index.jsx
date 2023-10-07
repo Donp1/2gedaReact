@@ -10,17 +10,19 @@ import DashMessage from "../../components/Dashboard/DasMess";
 import Follower from "../../components/Dashboard/Follower";
 import SelectCategory from "../../components/Dashboard/SelectCategory";
 import "./style.css";
+import ChatHeader from "../../components/ChatComp/ChatHeader";
+import MainChat from "../../components/ChatComp/MainChat";
 const Data = [
-  {
-    name: "Abraham Adesanya",
-    text: "How was your flight Joe, i couldnt",
-    new: "yes",
-  },
-  {
-    name: "Wale Addyjum",
-    text: "How was your flight Joe, i couldnt",
-    new: "no",
-  },
+  // {
+  //   name: "Abraham Adesanya",
+  //   text: "How was your flight Joe, i couldnt",
+  //   new: "yes",
+  // },
+  // {
+  //   name: "Wale Addyjum",
+  //   text: "How was your flight Joe, i couldnt",
+  //   new: "no",
+  // },
 ];
 
 const Chat = () => {
@@ -44,6 +46,8 @@ const Chat = () => {
       <MainLayout>
         <div className="main-containe bvc">
           <div className="left-side-container wvit">
+            {/* <ChatHeader />
+            <MainChat /> */}
             <div className="add-contt">
               <div className="add-bboxx">
                 <div className="chat-head">Chats</div>
@@ -75,8 +79,8 @@ const Chat = () => {
           </div>
           <div className="middle-side-container cvvv">
             <img src="images/ads1.png" alt="" />
-            {/* <img src="images/ads2.png" alt="" />
-            <img src="images/ads3.png" alt="" /> */}
+            <img src="images/ads2.png" alt="" />
+            <img src="images/ads3.png" alt="" />
           </div>
           <div className="right-side-container">
             <SelectCategory />

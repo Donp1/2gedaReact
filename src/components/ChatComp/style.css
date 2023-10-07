@@ -150,6 +150,56 @@
   background: #207700;
   border-radius: 50%;
 }
+.chat-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 5px;
+}
+.left-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.back-chat {
+  font-size: 23px;
+  cursor: pointer;
+}
+.ddt {
+  color: #4f0da3;
+  position: relative;
+}
+.user-current {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.user-current img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.curr-user-nm {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.ci-acc {
+  width: 8px;
+  height: 8px;
+  background: green;
+  border-radius: 50%;
+}
+.ac-now {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.act-now {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
 @media only screen and (max-width: 1200px) {
   .identifier-text {
     font-size: 15px;

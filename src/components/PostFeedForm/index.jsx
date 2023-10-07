@@ -1,5 +1,5 @@
 import PostFormModal from "../Modals/PostFormModal";
-import PostFormPhotoModal from "../Modals/PostFormPhotoModal";
+// import PostFormPhotoModal from "../Modals/PostFormPhotoModal";
 
 const PostFeedFormCont = ({
   hdClose,
@@ -15,14 +15,16 @@ const PostFeedFormCont = ({
           <PostFormModal
             handleCloseMainContainerClick={hdClose}
             hdPhotoOpen={hdPhotoOpen}
+            hdPhotoClose={hdPhotoClose}
+            isPhotoOpen={isPhotoOpen}
           />
         </div>
       )}
-      {isPhotoOpen && (
+      {/* {isPhotoOpen && (
         <div className="modal-full-container">
           <PostFormPhotoModal handleClosePhotoModalClick={hdPhotoClose} />
         </div>
-      )}
+      )} */}
     </>
   );
 };
