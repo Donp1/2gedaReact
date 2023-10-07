@@ -4,9 +4,8 @@ import PostFormModal from "../Modals/PostFormModal";
 const PostFeedFormCont = ({
   hdClose,
   isModalOpen,
-  isPhotoOpen,
-  hdPhotoClose,
-  hdPhotoOpen,
+  selectedIcon,
+  handleIconClick,
 }) => {
   return (
     <>
@@ -14,17 +13,11 @@ const PostFeedFormCont = ({
         <div className="modal-full-container">
           <PostFormModal
             handleCloseMainContainerClick={hdClose}
-            hdPhotoOpen={hdPhotoOpen}
-            hdPhotoClose={hdPhotoClose}
-            isPhotoOpen={isPhotoOpen}
+            selectedIcon={selectedIcon}
+            handleIconClick={handleIconClick}
           />
         </div>
       )}
-      {/* {isPhotoOpen && (
-        <div className="modal-full-container">
-          <PostFormPhotoModal handleClosePhotoModalClick={hdPhotoClose} />
-        </div>
-      )} */}
     </>
   );
 };

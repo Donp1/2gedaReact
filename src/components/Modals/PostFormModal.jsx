@@ -21,11 +21,11 @@ import PostFormPdfModal from "./PostFormPdfModal";
 import PostFormApkModal from "./PostFormApkModal";
 import PostFormExeModal from "./PostFormExeModal";
 import PostFormLocationModal from "./PostFormLocModal";
+import PostFormFilesModal from "./PostFormFilesModal";
 const PostFormModal = ({
   handleCloseMainContainerClick,
-  hdPhotoOpen,
-  hdPhotoClose,
-  isPhotoOpen,
+  selectedIcon,
+  handleIconClick,
 }) => {
   return (
     <>
@@ -43,56 +43,20 @@ const PostFormModal = ({
           placeholder="Write up to 1,000 words"
           className="text-area"
         ></textarea>
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormPhotoModal handleClosePhotoModalClick={hdPhotoClose} />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormMusicModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormRecModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormWordModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormExcelModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormPowerModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormPdfModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormApkModal />
-          </div>
-        )} */}
-        {/* {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormExeModal />
-          </div>
-        )} */}
-        {isPhotoOpen && (
-          <div className="viwdt">
-            <PostFormLocationModal />
-          </div>
-        )}
+
+        <div className="viwdt">
+          {selectedIcon === "photo" && <PostFormPhotoModal />}
+          {selectedIcon === "music" && <PostFormMusicModal />}
+          {selectedIcon === "rec" && <PostFormRecModal />}
+          {selectedIcon === "word" && <PostFormWordModal />}
+          {selectedIcon === "excel" && <PostFormExcelModal />}
+          {selectedIcon === "power" && <PostFormPowerModal />}
+          {selectedIcon === "pdf" && <PostFormPdfModal />}
+          {selectedIcon === "apk" && <PostFormApkModal />}
+          {selectedIcon === "exe" && <PostFormExeModal />}
+          {selectedIcon === "location" && <PostFormLocationModal />}
+          {selectedIcon === "allfiles" && <PostFormFilesModal />}
+        </div>
         <div className="hashtags-container">
           <div className="add-tags-btn">Add hashtag</div>
           <div className="add-tags-btn added-tag-cont">
@@ -121,18 +85,51 @@ const PostFormModal = ({
         </div>
         <div className="down-post-feed">
           <div className="icon-post-feed">
-            <BsCardImage className="pic-vid" onClick={hdPhotoOpen} />
-            <FaVideo className="pic-vid" />
-            <IoLocation className="loca" />
-            <FaMusic className="music" />
-            <BsMic className="mic" />
-            <FaFileAlt className="fil" />
-            <SiMicrosoftword className="word" />
-            <SiMicrosoftexcel className="excel" />
-            <PiMicrosoftPowerpointLogo className="prese" />
-            <BsFillFileEarmarkPdfFill className="pdf" />
-            <BsAndroid2 className="apk" />
-            <BsFiletypeExe className="apk" />
+            <BsCardImage
+              className="pic-vid"
+              onClick={() => handleIconClick("photo")}
+            />
+            <FaVideo
+              className="pic-vid"
+              onClick={() => handleIconClick("photo")}
+            />
+            <IoLocation
+              className="loca"
+              onClick={() => handleIconClick("location")}
+            />
+            <FaMusic
+              className="music"
+              onClick={() => handleIconClick("music")}
+            />
+            <BsMic className="mic" onClick={() => handleIconClick("rec")} />
+            <FaFileAlt
+              className="fil"
+              onClick={() => handleIconClick("allfiles")}
+            />
+            <SiMicrosoftword
+              className="word"
+              onClick={() => handleIconClick("word")}
+            />
+            <SiMicrosoftexcel
+              className="excel"
+              onClick={() => handleIconClick("excel")}
+            />
+            <PiMicrosoftPowerpointLogo
+              className="prese"
+              onClick={() => handleIconClick("power")}
+            />
+            <BsFillFileEarmarkPdfFill
+              className="pdf"
+              onClick={() => handleIconClick("pdf")}
+            />
+            <BsAndroid2
+              className="apk"
+              onClick={() => handleIconClick("apk")}
+            />
+            <BsFiletypeExe
+              className="apk"
+              onClick={() => handleIconClick("exe")}
+            />
           </div>
           <button className="post-btn" type="submit">
             Post

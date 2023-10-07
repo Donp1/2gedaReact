@@ -2,7 +2,6 @@ import { PiMicrosoftPowerpointLogo } from "react-icons/pi";
 import { AiFillDelete } from "react-icons/ai";
 import "./style.css";
 import { useState } from "react";
-import { SiMicrosoftexcel } from "react-icons/si";
 
 const PostFormPowerModal = () => {
   const [powerpointFile, setPowerpointFile] = useState(null);
