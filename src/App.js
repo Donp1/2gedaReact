@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import Landing from "./pages/LandingPage";
@@ -8,10 +8,22 @@ import ForgotPassword from "./pages/ForgotPassword";
 import PersonalDetails from "./pages/PersonalDetails";
 import SearchPage from "./pages/SearchPage";
 import Chat from "./pages/Chat";
+import { useEffect } from "react";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route index path="/signup" element={<Signup />} />

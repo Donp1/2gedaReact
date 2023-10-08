@@ -1,7 +1,15 @@
 import { PiMegaphoneBold } from "react-icons/pi";
-const PublicShortMessage = ({ visib, name, text }) => {
+const PublicShortMessage = ({
+  visib,
+  name,
+  text,
+  handleGotoPublicMessagBox,
+}) => {
   return (
-    <div className="short-mess-container chat-ad">
+    <div
+      className="short-mess-container chat-ad"
+      onClick={handleGotoPublicMessagBox}
+    >
       <div className="pro-name-cont">
         <div className="pub-icon-con">
           <PiMegaphoneBold />

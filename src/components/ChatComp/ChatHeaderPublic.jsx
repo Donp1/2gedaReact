@@ -3,7 +3,7 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import CurrentChatMenuModal from "../Modals/CurrentChatMenuModal";
 import { useState } from "react";
 
-const ChatHeader = ({ handleCloseMessagBox }) => {
+const ChatHeaderPublic = ({ handleClosePublicMessagBox }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Function to open the modal
@@ -15,17 +15,12 @@ const ChatHeader = ({ handleCloseMessagBox }) => {
       <div className="left-chat-header">
         <AiOutlineArrowLeft
           className="back-chat"
-          onClick={handleCloseMessagBox}
+          onClick={handleClosePublicMessagBox}
         />
 
         <div className="user-current">
-          <img src="images/pic2.png" alt="" />
           <div className="curr-user-act">
-            <div className="curr-user-nm">Hassan Mubaraq</div>
-            <div className="ac-now">
-              <div className="ci-acc"></div>
-              <div className="act-now">Active now</div>
-            </div>
+            <div className="curr-user-nm">Twins arcade</div>
           </div>
         </div>
       </div>
@@ -40,4 +35,4 @@ const ChatHeader = ({ handleCloseMessagBox }) => {
   );
 };
 
-export default ChatHeader;
+export default ChatHeaderPublic;

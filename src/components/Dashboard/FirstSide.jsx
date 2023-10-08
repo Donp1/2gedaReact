@@ -24,7 +24,6 @@ const FirstSide = () => {
 
   const handleMainContainerClick = () => {
     setIsModalOpen(true);
-    // setSelectedIcon(null);
   };
   const handleCloseMainContainerClick = () => {
     setIsModalOpen(false);

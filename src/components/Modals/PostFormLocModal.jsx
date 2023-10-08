@@ -46,7 +46,7 @@ const PostFormLocationModal = () => {
               </div>
             </div>
             <div className="de-aud">
-              <div className="delete-location" onClick={handleDeleteLocation}>
+              <div className="delete-audio" onClick={handleDeleteLocation}>
                 <AiFillDelete />
                 <div className="del-tss">Delete</div>
               </div>

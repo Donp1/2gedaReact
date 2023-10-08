@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import { BsBell } from "react-icons/bs";
 import GeneralSearch from "../components/Dashboard/GeneralSearch";
 
 const Navbar = () => {
@@ -34,11 +35,16 @@ const Navbar = () => {
           </div>
           <BiSearch className="sea-icon" />
         </div>
+        <div className="notif-cont">
+          <div className="bell-count">99+</div>
+          <BsBell className="bell" />
+        </div>
         <div className="profile-container">
           <img
             src="https://image.cnbcfm.com/api/v1/image/107228941-1682027700192-_DSC5658.jpg?v=1682427601&w=1920&h=1080"
             alt=""
           />
+
           <div className="pro-text ban">My Profile</div>
         </div>
       </div>

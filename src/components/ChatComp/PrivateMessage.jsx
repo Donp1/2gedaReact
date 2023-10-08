@@ -1,7 +1,7 @@
 import ChatShortMessage from "../Commons/ChatShortMessage";
 import EmptyChat from "./EmptyChat";
 
-const PrivateMessage = ({ Data }) => {
+const PrivateMessage = ({ Data, handleGotoMessagBox }) => {
   if (Data.length === 0) {
     return (
       <div className="emp-chat-bor">
@@ -17,7 +17,7 @@ const PrivateMessage = ({ Data }) => {
             <div className="total-unread">10</div>
             <div className="unread-ttst">Unread messages</div>
           </div>
-          <div className="messages-container-bx">
+          <div className="messages-container-bx" onClick={handleGotoMessagBox}>
             {Data.map((message, index) => (
               <ChatShortMessage
                 key={index}

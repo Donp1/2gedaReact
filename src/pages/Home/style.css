@@ -44,6 +44,7 @@
 .life-satus {
   color: #4f0da3;
   width: 100%;
+  cursor: pointer;
 }
 .em-im {
   width: 60px;

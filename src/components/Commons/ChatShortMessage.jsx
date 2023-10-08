@@ -1,6 +1,6 @@
-const ChatShortMessage = ({ visib, nota, name, text }) => {
+const ChatShortMessage = ({ visib, nota, name, text, handleGotoMessagBox }) => {
   return (
-    <div className="short-mess-container chat-ad">
+    <div className="short-mess-container chat-ad" onClick={handleGotoMessagBox}>
       <div className="pro-name-cont">
         <img
           src="https://image.cnbcfm.com/api/v1/image/107228941-1682027700192-_DSC5658.jpg?v=1682427601&w=1920&h=1080"

@@ -2,7 +2,7 @@ import { PiMegaphoneBold } from "react-icons/pi";
 import PublicShortMessage from "../Commons/PublicShortMessage ";
 import EmptyChat from "./EmptyChat";
 
-const PublicMessage = ({ Data }) => {
+const PublicMessage = ({ Data, handleGotoPublicMessagBox }) => {
   if (Data.length === 0) {
     return (
       <div className="emp-chat-bor">
@@ -32,6 +32,7 @@ const PublicMessage = ({ Data }) => {
                 name={message.name}
                 text={message.text}
                 visib={message.new === "no" ? "vic" : undefined}
+                handleGotoPublicMessagBox={handleGotoPublicMessagBox}
               />
             ))}
           </div>

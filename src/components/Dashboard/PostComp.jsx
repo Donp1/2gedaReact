@@ -46,8 +46,8 @@ const PostComp = () => {
             <div className="likes-bx">
               <BiSolidLike className="likes" />
             </div>
-            <div className="smil">😊</div>
-            <div className="smil">😊</div>
+            <div className="smil">🥰</div>
+            <div className="smil">&#x1F60A;</div>
           </div>
           <div className="liker-name-and-total">
             Ademola Kola and 3.2k others

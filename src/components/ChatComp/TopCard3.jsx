@@ -6,7 +6,7 @@ const TopCard3 = ({ data, handleTopCard3Click }) => {
   return (
     <div className={`top-card-container priv`} onClick={handleTopCard3Click}>
       <div className="problem"></div>
-      <div className="cont-icon-add">
+      <div className="cont-icon-add nnnn">
         <BiMessageDetail className="nnnn" />
         <div className="add-mess">
           <AiOutlinePlus />

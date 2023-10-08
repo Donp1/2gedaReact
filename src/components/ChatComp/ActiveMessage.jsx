@@ -1,7 +1,7 @@
 import ChatShortMessage from "../Commons/ChatShortMessage";
 import EmptyChat from "./EmptyChat";
 
-const ActiveMessage = ({ Data }) => {
+const ActiveMessage = ({ Data, handleGotoMessagBox }) => {
   if (Data.length === 0) {
     return (
       <div className="emp-chat-bor">
@@ -25,6 +25,7 @@ const ActiveMessage = ({ Data }) => {
                 text={message.text}
                 visib={message.new === "no" ? "vic" : undefined}
                 nota={message.new === "no" ? "vic" : undefined}
+                handleGotoMessagBox={handleGotoMessagBox}
               />
             ))}
           </div>

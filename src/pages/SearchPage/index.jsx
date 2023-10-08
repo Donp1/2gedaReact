@@ -11,8 +11,9 @@ import Data from "../../utils/data.json";
 // import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import MediaCard from "../../components/SearchComp/MediaCard";
-import BusinessStick from "../../components/Dashboard/BusinessStick";
 import PlacesComp from "../../components/SearchComp/PlacesComp";
+import SearchBusinessCard from "../../components/SearchComp/SearchBusinessCard";
+import SearchJobCard from "../../components/SearchComp/SearchJobCard";
 
 const SearchPage = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -101,11 +102,12 @@ const SearchPage = () => {
               <div className="csss">
                 <div className=" you-may-know-bo">
                   <div className="may-know-box">
-                    <BusinessStick />
-                    <BusinessStick />
-                    <BusinessStick />
-                    <BusinessStick />
-                    <BusinessStick />
+                    <SearchBusinessCard />
+                    <SearchBusinessCard />
+                    <SearchBusinessCard />
+                    <SearchBusinessCard />
+                    <SearchBusinessCard />
+                    <SearchBusinessCard />
                   </div>
                 </div>
               </div>
@@ -123,11 +125,11 @@ const SearchPage = () => {
               <div className="csss">
                 <div className=" you-may-know-bo">
                   <div className="may-know-box">
-                    <Stick />
-                    <Stick />
-                    <Stick />
-                    <Stick />
-                    <Stick />
+                    <SearchJobCard />
+                    <SearchJobCard />
+                    <SearchJobCard />
+                    <SearchJobCard />
+                    <SearchJobCard />
                   </div>
                 </div>
               </div>
@@ -135,8 +137,8 @@ const SearchPage = () => {
           </div>
           <div className="middle-side-container">
             <img src="images/ads1.png" alt="" />
-            <img src="images/ads2.png" alt="" />
-            <img src="images/ads3.png" alt="" />
+            {/* <img src="images/ads2.png" alt="" />
+            <img src="images/ads3.png" alt="" /> */}
           </div>
           <div className="right-side-container">
             <SelectCategory />

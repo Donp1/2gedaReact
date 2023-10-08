@@ -25,6 +25,10 @@
   justify-content: space-between;
   margin-top: 20px;
 }
+.smil {
+  outline: none;
+  border: none;
+}
 .icon-post-feed {
   font-size: 18px;
   display: flex;

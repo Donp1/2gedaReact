@@ -10,7 +10,7 @@ const Data = [
     new: "no",
   },
 ];
-const MainChat = () => {
+const MainChatPublic = () => {
   const chatContainerRef = useRef(null);
   const [showChatInput, setShowChatInput] = useState(false);
 
@@ -69,26 +69,17 @@ const MainChat = () => {
               </span>
             </div>
           </div>
-
-          {/* // Render chat suggestion container if Data is empty */}
-          {/* <div className="chat-suggestion-container">
-            <div className="sugg-head">Ice breaker? We got you!</div>
-            <div className="sugg-boxx">
-              <div className="suggestion-con">Hi, how are you?</div>
-              <div className="suggestion-con">Do you like football?</div>
-              <div className="suggestion-con">Do you have an office?</div>
-              <div className="suggestion-con">I like your posts</div>
-            </div>
-          </div> */}
         </div>
+        {/* // Render chat suggestion container if Data is empty */}
+        <div className="non-chat-container"></div>
       </div>
       <div className="field-inp-cont">
         {showChatInput && <ChatInputField />}
       </div>
       <div className="mic-edit-boox">
-        <div className="mic-mess">
+        {/* <div className="mic-mess">
           <BiSolidMicrophone />
-        </div>
+        </div> */}
         <div className="mic-mess edt" onClick={handleMicEditClick}>
           <BiSolidEdit />
         </div>
@@ -97,4 +88,4 @@ const MainChat = () => {
   );
 };
 
-export default MainChat;
+export default MainChatPublic;
