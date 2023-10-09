@@ -37,7 +37,7 @@ const Sidebar = ({ isCollapsed }) => {
             <div className="sidebar-text">Connect</div>
           </NavLink>
           <NavLink
-            to="/bu"
+            to="/commerce"
             exact
             className={({ isActive }) =>
               isActive ? "active_link side-item" : "side-item"

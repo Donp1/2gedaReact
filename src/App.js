@@ -9,6 +9,7 @@ import PersonalDetails from "./pages/PersonalDetails";
 import SearchPage from "./pages/SearchPage";
 import Chat from "./pages/Chat";
 import { useEffect } from "react";
+import Commerce from "./pages/Commerce";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ function App() {
         <Route index path="/personaldetail" element={<PersonalDetails />} />
         <Route index path="/search" element={<SearchPage />} />
         <Route index path="/chat" element={<Chat />} />
+        <Route index path="/commerce" element={<Commerce />} />
       </Routes>
     </div>
   );
