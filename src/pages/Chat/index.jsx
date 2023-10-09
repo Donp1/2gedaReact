@@ -6,14 +6,12 @@ import PublicMessage from "../../components/ChatComp/PublicMessage";
 import TopCard1 from "../../components/ChatComp/TopCard1";
 import TopCard2 from "../../components/ChatComp/TopCard2";
 import TopCard3 from "../../components/ChatComp/TopCard3";
-import DashMessage from "../../components/Dashboard/DasMess";
-import Follower from "../../components/Dashboard/Follower";
-import SelectCategory from "../../components/Dashboard/SelectCategory";
 import "./style.css";
 import ChatHeader from "../../components/ChatComp/ChatHeader";
 import MainChat from "../../components/ChatComp/MainChat";
 import ChatHeaderPublic from "../../components/ChatComp/ChatHeaderPublic";
 import MainChatPublic from "../../components/ChatComp/MainChatPublic";
+import ActiveSideUser from "../../components/ChatComp/ActiveSideComp";
 const Data = [
   {
     name: "Abraham Adesanya",
@@ -138,16 +136,34 @@ const Chat = () => {
               </div>
             )}
           </div>
-          <div className="middle-side-container cvvv">
+          <div className="middle-side-container cvvv chatt">
             <img src="images/ads1.png" alt="" />
             {/* <img src="images/ads2.png" alt="" />
             <img src="images/ads3.png" alt="" /> */}
           </div>
           <div className="right-side-container">
-            <SelectCategory />
-            <Follower />
-            <div className="mess-bxx-conn">
-              <DashMessage />
+            <div className="act-side-conn">
+              <div className="total-unread-box">
+                <div className="act-ve"></div>
+                <div className="unread-ttst">Active Friends</div>
+              </div>
+              <div className="scr-act-use">
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+                <ActiveSideUser />
+              </div>
             </div>
           </div>
         </div>
