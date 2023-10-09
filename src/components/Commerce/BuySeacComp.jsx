@@ -1,20 +1,20 @@
-import { AiOutlineClose } from "react-icons/ai";
-import { IoSendSharp } from "react-icons/io5";
+// import { AiOutlineClose } from "react-icons/ai";
+import { BiSearch } from "react-icons/bi";
 import "./Style.css";
+
 const BuySearchComp = () => {
   return (
     <div className="buy-sell-comp-cont">
       <div className="head-line">Buy and sell instantly</div>
-      <div className="search-send-cont">
-        <div className="sear-input-box">
-          <AiOutlineClose className="cls" />
+      <div className="search-product">
+        <div className="sear-input-pro">
           <input
             type="text"
-            className="inp-general"
-            placeholder="Start typing"
+            className="inp-pro"
+            placeholder="Search products"
           />
         </div>
-        <IoSendSharp className="send-iconn" />
+        <BiSearch className="seah-con" />
       </div>
     </div>
   );

@@ -242,6 +242,7 @@
 }
 .cat-card-container {
   width: 45px;
+  cursor: pointer;
 }
 .cat-box {
   display: flex;
@@ -273,6 +274,10 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
+}
+.foll-one {
+  cursor: pointer;
 }
 .follower-container {
   margin-top: 20px;

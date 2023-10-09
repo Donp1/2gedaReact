@@ -140,6 +140,7 @@ li {
 }
 .notif-cont {
   position: relative;
+  cursor: pointer;
 }
 .bell {
   font-size: 30px;
