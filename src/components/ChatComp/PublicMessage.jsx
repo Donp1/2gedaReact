@@ -1,8 +1,12 @@
 import { PiMegaphoneBold } from "react-icons/pi";
 import PublicShortMessage from "../Commons/PublicShortMessage ";
 import EmptyChat from "./EmptyChat";
+import { useEffect } from "react";
 
 const PublicMessage = ({ Data, handleGotoPublicMessagBox }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (Data.length === 0) {
     return (
       <div className="emp-chat-bor">

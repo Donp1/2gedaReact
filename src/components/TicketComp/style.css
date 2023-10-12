@@ -2,6 +2,7 @@
   font-size: 14px;
   color: #ed6c30;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .view-all-tic-bx {
   display: flex;
@@ -37,6 +38,9 @@
   font-weight: 500;
   color: #5c5c5c;
 }
+.img-tick-cont {
+  position: relative;
+}
 .img-tick-cont img {
   width: 70px;
   height: 70px;
@@ -46,5 +50,66 @@
 .event-date {
   font-size: 14px;
   color: #4f0da3;
+  font-weight: 400;
+}
+.event-name {
+  font-size: 14px;
   font-weight: 500;
+  margin: 5px 0;
+}
+.location-box {
+  font-size: 20px;
+  color: #5c5c5c;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.loca-txt {
+  font-size: 13px;
+}
+.tic-image-detail-bx {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.tick-full-card-container {
+  margin: 15px 0;
+}
+.ver-lay img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+.fir-bt {
+  border-radius: 5px;
+  border: 1px solid #4f0da3;
+  background: none;
+  color: #4f0da3;
+}
+@media only screen and (max-width: 430px) {
+  .img-tick-cont img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  .ver-lay img {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .event-date {
+    font-size: 12px;
+  }
+  .event-name {
+    font-size: 12px;
+  }
+  .location-box {
+    font-size: 16px;
+  }
+  .loca-txt {
+    font-size: 10px;
+  }
 }

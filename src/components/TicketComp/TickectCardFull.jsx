@@ -5,6 +5,9 @@ const TickectCardFull = () => {
     <div className="tick-full-card-container">
       <div className="tic-image-detail-bx">
         <div className="img-tick-cont">
+          <div className="ver-lay">
+            <img src="images/lo5.png" alt="" />
+          </div>
           <img
             src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg"
             alt=""
@@ -22,8 +25,8 @@ const TickectCardFull = () => {
         </div>
       </div>
       <div className="claim-visit-page-btn">
-        <button className="claim-visit-btn">Claim business</button>
-        <button className="claim-visit-btn visi-pae">Visit page</button>
+        <button className="claim-visit-btn fir-bt">Promote event</button>
+        <button className="claim-visit-btn visi-pae">Get ticket</button>
       </div>
     </div>
   );

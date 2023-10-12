@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import TickectCardFull from "../../components/TicketComp/TickectCardFull";
 import TicketSearchComp from "../../components/TicketComp/TicketSearchComp";
 
-const PromotedTicket = ({ handleCloseContainerClick }) => {
+const EventThisWeekAll = ({ handleCloseContainerClick }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
       <TicketSearchComp
-        label={"Promoted events"}
+        label={"Event This Week"}
         handleCloseContainerClick={handleCloseContainerClick}
       />
       <div className="ticket-full-box">
@@ -24,4 +24,4 @@ const PromotedTicket = ({ handleCloseContainerClick }) => {
   );
 };
 
-export default PromotedTicket;
+export default EventThisWeekAll;
