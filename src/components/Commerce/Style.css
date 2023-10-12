@@ -209,6 +209,7 @@
   .buy-sell-comp-cont {
     flex-direction: column;
     gap: 10px;
+    align-items: flex-start;
   }
   .search-product {
     width: 100%;
@@ -223,6 +224,9 @@
   }
   .deati-header-bx {
     flex-direction: row;
+  }
+  .product-ind {
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 400px) {

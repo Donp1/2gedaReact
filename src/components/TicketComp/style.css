@@ -1,0 +1,50 @@
+.view-ll {
+  font-size: 14px;
+  color: #ed6c30;
+  margin-bottom: 20px;
+}
+.view-all-tic-bx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.even-cat-box {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+  width: 130px !important;
+  padding-left: 10px;
+}
+.image-category-bx {
+  border-radius: 50%;
+  background: rgba(105, 0, 155, 0.1);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+.tot-event {
+  font-size: 11px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+.img-tick-cont img {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.event-date {
+  font-size: 14px;
+  color: #4f0da3;
+  font-weight: 500;
+}
