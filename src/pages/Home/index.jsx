@@ -3,10 +3,8 @@ import DashMessage from "../../components/Dashboard/DasMess";
 import FirstSide from "../../components/Dashboard/FirstSide";
 import Follower from "../../components/Dashboard/Follower";
 import PostComp from "../../components/Dashboard/PostComp";
-import { FaPlus } from "react-icons/fa6";
 import SelectCategory from "../../components/Dashboard/SelectCategory";
 import "./style.css";
-import Status from "../../components/Dashboard/Status";
 import MusicDash from "../../components/Dashboard/MusicDas";
 import SmallTicketCard from "../../components/Dashboard/smallTicket";
 import ProductDash from "../../components/Dashboard/ProductDAs";
@@ -15,6 +13,7 @@ import Stick from "../../components/Dashboard/Stick";
 import MovieSlider from "../../components/Dashboard/Slider";
 import Data from "../../utils/datahome.json";
 import { NavLink } from "react-router-dom";
+import StatusContainer from "../../components/Dashboard/StatusContainer";
 
 // import Slider from "react-slick";
 // // import "slick-carousel/slick/slick.css";
@@ -28,24 +27,7 @@ const Home = () => {
             <FirstSide />
             <img src="images/jumia.png" alt="" className="ads-img" />
             <div className="status-row">
-              <div className="life-satus">
-                <div className="em-im">
-                  <FaPlus />
-                </div>
-                <div className="status-text">Your lifestyle</div>
-              </div>
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
-              <Status />
+              <StatusContainer />
             </div>
             <div className="select-what-display">
               {Data.map((item, index) => (

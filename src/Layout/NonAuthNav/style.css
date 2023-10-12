@@ -154,3 +154,17 @@
     height: 75vh;
   }
 }
+@media only screen and (max-width: 360px) {
+  .nav-ul {
+    padding: 10px;
+    gap: 10px;
+    font-size: 15px;
+    height: 100vh;
+  }
+  .nonn {
+    gap: 5px;
+  }
+  .log-tbt {
+    font-size: 15px;
+  }
+}

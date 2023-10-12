@@ -3,6 +3,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 10px 20px;
+  cursor: pointer;
 }
 .post-ead {
   font-size: 16px;
@@ -11,9 +12,9 @@
 }
 .text-area {
   width: 100%;
-  border: none;
+  border: 1px solid #f5f5f5;
   outline: none;
-  height: 150px;
+  height: 100px;
   padding: 10px;
   margin: 20px 0;
   resize: none;
@@ -23,6 +24,10 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+}
+.smil {
+  outline: none;
+  border: none;
 }
 .icon-post-feed {
   font-size: 18px;
@@ -57,7 +62,21 @@
 .fil {
   color: #403f3f;
 }
-
+.word {
+  color: #054470;
+}
+.excel {
+  color: green;
+}
+.prese {
+  color: brown;
+}
+.pdf {
+  color: red;
+}
+.apk {
+  color: #000;
+}
 .ads-img {
   margin: 10px 0;
   width: 100%;
@@ -337,6 +356,7 @@
   margin-bottom: 10px;
   padding-bottom: 5px;
   height: 100%;
+  cursor: pointer;
 }
 .unread-cir {
   width: 10px;
@@ -439,7 +459,7 @@
 }
 @media only screen and (max-width: 1000px) {
   .ads-img {
-    margin: -15px 0 0;
+    margin: -15px 0 20px;
   }
   .middle-side-container {
     display: none;
@@ -480,9 +500,51 @@
   .feed-hr {
     width: 84%;
   }
+  .posted-likes-cont {
+    font-size: 20px;
+  }
+  .icon-post-feed {
+    font-size: 16px;
+    gap: 8px;
+  }
+  .post-btn {
+    width: 80px;
+    height: 30px;
+  }
 }
 @media only screen and (max-width: 380px) {
   .feed-hr {
     width: 80%;
+  }
+  .com-btn {
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .comment-inp {
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .com-btn {
+    width: 60px;
+  }
+  .comment-inp {
+    font-size: 11px;
+  }
+  .likes-bx {
+    width: 20px;
+    height: 20px;
+  }
+  .likes-per-post {
+    font-size: 14px;
+    gap: 1px;
+  }
+  .liker-name-and-total {
+    font-size: 12px;
   }
 }

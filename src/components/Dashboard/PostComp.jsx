@@ -1,4 +1,9 @@
-import { BiSolidLike, BiLike, BiMessageAlt, BiDotsHorizontalRounded} from "react-icons/bi";
+import {
+  BiSolidLike,
+  BiLike,
+  BiMessageAlt,
+  BiDotsHorizontalRounded,
+} from "react-icons/bi";
 // import { RiMessage2Fill } from "react-icons/ri";
 // import { FaShareSquare } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
@@ -37,14 +42,16 @@ const PostComp = () => {
           <img src="images/post1.png" alt="" />
         </div>
         <div className="post-likes-co">
-        <div className="likes-per-post">
-        <div className="likes-bx">
-        <BiSolidLike className="likes" />
-        </div>
-        <div className="smil">😊</div>
-        <div className="smil">😊</div>
-        </div>
-        <div className="liker-name-and-total">Ademola Kola and 3.2k others</div>
+          <div className="likes-per-post">
+            <div className="likes-bx">
+              <BiSolidLike className="likes" />
+            </div>
+            <div className="smil">🥰</div>
+            <div className="smil">&#x1F60A;</div>
+          </div>
+          <div className="liker-name-and-total">
+            Ademola Kola and 3.2k others
+          </div>
         </div>
         <div className="post-likes-box">
           <div className="posted-likes-cont">
@@ -56,7 +63,7 @@ const PostComp = () => {
               <BiMessageAlt className="mess" />
               <div className="con-test">115</div>
             </div>
-            
+
             <div className="icon-text">
               <FiShare2 className="share" />
               <div className="con-test">1.3k</div>
