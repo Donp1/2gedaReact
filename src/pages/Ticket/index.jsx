@@ -11,7 +11,7 @@ const Ticket = () => {
           <div className="main-containe bus-box-con">
             <div className="left-side-container buss-all-container">
               <div className="head-line bus-dir">Tickets</div>
-              <BusinessSearch />
+              <BusinessSearch label={"Event"} />
               <div className="business-card-boxx"></div>
             </div>
             <div className="middle-side-container">
