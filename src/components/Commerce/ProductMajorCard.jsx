@@ -1,7 +1,10 @@
-const ProductMajorCard = () => {
+const ProductMajorCard = ({ handleProductClick }) => {
   return (
-    <div className="card-product-major">
-      <img src="images/pic2.png" alt="" />
+    <div className="card-product-major" onClick={handleProductClick}>
+      <img
+        src="https://www.microbizmag.co.uk/wp-content/uploads/2023/03/luxury-car-1024x682.jpeg"
+        alt=""
+      />
       <div className="pro-det-card-major">
         <div className="pro-name-txt">Semi detached duplex</div>
         <div className="price-pro-card">#200,000</div>

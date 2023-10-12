@@ -7,7 +7,7 @@ const SmallTicketCard = () => {
           <div className="live-tic">Live event</div>
         </div>
         <div className="live-tict-im">
-          <img src="images/lo1.png" alt="" />
+          <img src="images/lo5.png" alt="" />
         </div>
         <img src="images/pic1.png" alt="" />
       </div>

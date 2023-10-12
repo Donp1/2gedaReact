@@ -1,12 +1,6 @@
 import { useState } from "react";
 import MainLayout from "../../Layout/MainLayout";
-import AutomobileProduct from "../../components/Commerce/Automobile";
-import BuySearchComp from "../../components/Commerce/BuySeacComp";
-import FurnitureProduct from "../../components/Commerce/Funiture";
 import Shortcart from "../../components/Commerce/ShortCart";
-import SkinCareProduct from "../../components/Commerce/SkinCare";
-import SuggestedBusiness from "../../components/Commerce/SuggestedBusiness";
-import TrendingProduct from "../../components/Commerce/TrendingPro";
 import SelectCategory from "../../components/Dashboard/SelectCategory";
 import TopSeller from "../../components/Dashboard/TopSeller";
 import SellItem from "../../components/Modals/SellItem";
@@ -14,22 +8,16 @@ import "./Style.css";
 import SellItemStepTwo from "../../components/Modals/SellItemStepTwo";
 import SellItemStepThree from "../../components/Modals/SellItemStepThree";
 import ProjectDetail from "../../components/Commerce/ProjectDetail";
-import MyStore from "./MyStore";
+import CategoryMajorCard from "../../components/Commerce/CategoryMajorCard";
+import CategorySearchComp from "../../components/Commerce/CategorySearchComp";
 
-const Commerce = () => {
+const CategoryPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isPModalOpen, setIsPModalOpen] = useState(false);
+  const [isProductOpen, setIsProductOpen] = useState(false);
   const [isPreviewModalOpen, setIsPreviewModalOpen] = useState(false);
   const [isPromoteModalOpen, setIsPromoteModalOpen] = useState(false);
-  const [isProductOpen, setIsProductOpen] = useState(false);
-  const [isStoreOpen, setIsStoreOpen] = useState(false);
 
-  const handleStoreClick = () => {
-    setIsStoreOpen(true);
-  };
-  const handleStoreClose = () => {
-    setIsStoreOpen(false);
-  };
   const handleProductClick = () => {
     setIsProductOpen(true);
   };
@@ -93,7 +81,7 @@ const Commerce = () => {
           )}
         </form>
         <div className="full-commerce-box">
-          <div className="left-commerce-cont">
+          <div className="left-commerce-cont back-left">
             <div className="sell-manage-cont">
               <div className="btn-sell-pro">
                 <button
@@ -104,29 +92,40 @@ const Commerce = () => {
                 </button>
               </div>
               <div className="btn-sell-pro ">
-                <button
-                  className="sell-item-comm mann inc"
-                  onClick={handleStoreClick}
-                >
+                <button className="sell-item-comm mann inc">
                   Manage store
                 </button>
               </div>
             </div>
-            {isStoreOpen && <MyStore handleStoreClose={handleStoreClose} />}
             {isProductOpen && (
               <ProjectDetail handleProductClose={handleProductClose} />
             )}
-            {!isProductOpen && !isStoreOpen && (
+            {!isProductOpen && (
               <>
-                <BuySearchComp />
-                <TrendingProduct handleProductClick={handleProductClick} />
+                <CategorySearchComp label={"AutoMobiles"} />
+                <div className="all-row-cat-select">
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                </div>
                 <div className="prod-ads">
                   <img src="images/ads5.png" alt="" />
                 </div>
-                <AutomobileProduct handleProductClick={handleProductClick} />
-                <SuggestedBusiness handleProductClick={handleProductClick} />
-                <FurnitureProduct handleProductClick={handleProductClick} />
-                <SkinCareProduct handleProductClick={handleProductClick} />
+                <div className="all-row-cat-select">
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                  <CategoryMajorCard handleProductClick={handleProductClick} />
+                </div>{" "}
               </>
             )}
           </div>
@@ -140,12 +139,7 @@ const Commerce = () => {
               </button>
             </div>
             <div className="btn-sell-pro">
-              <button
-                className="sell-item-comm mann"
-                onClick={handleStoreClick}
-              >
-                Manage store
-              </button>
+              <button className="sell-item-comm mann">Manage store</button>
             </div>
             <SelectCategory />
             <TopSeller />
@@ -157,4 +151,4 @@ const Commerce = () => {
   );
 };
 
-export default Commerce;
+export default CategoryPage;

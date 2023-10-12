@@ -4,8 +4,12 @@
   display: flex;
 }
 .left-commerce-cont {
-  width: 75%;
+  width: 73%;
   padding: 20px 5px 50px 20px;
+}
+.back-left {
+  background: #fff;
+  margin-right: 10px;
 }
 .prod-ads img {
   width: 100%;
@@ -58,6 +62,7 @@
 .rightSide-commerce {
   width: 25%;
   padding: 20px;
+  background: #fff;
 }
 .sell-item-comm {
   width: 100%;
@@ -76,6 +81,34 @@
   background: #f5f5f5;
   color: #000;
 }
+.sell-manage-cont {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+.inc {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.area-txt {
+  resize: none;
+  padding-top: 5px;
+  min-height: 100px;
+  max-height: 100px;
+}
+.all-row-cat-select {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.people-also-view {
+  margin: 20px 0;
+}
 @media only screen and (max-width: 1150px) {
   .full-commerce-box {
     width: 120%;
@@ -88,13 +121,19 @@
   .rightSide-commerce {
     display: none;
   }
+  .inc {
+    display: initial;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .sugg-buss-card-cont {
     width: 45%;
   }
+  .back-left {
+    margin-right: 0px;
+  }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
   .sugg-buss-card-cont {
     width: 100%;
   }
@@ -110,6 +149,17 @@
   }
   .rightSide-commerce {
     display: none;
+  }
+  .inc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .btn-sell-pro {
+    width: 50%;
+    margin-top: -20px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -130,6 +180,9 @@
     padding: 1px;
   }
 }
+/* @media only screen and (max-width: 356px) {
+  
+} */
 @media only screen and (max-width: 290px) {
   .buss-namee {
     font-size: 11px;
