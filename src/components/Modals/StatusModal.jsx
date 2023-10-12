@@ -1,4 +1,4 @@
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa6";
 import EachStatus from "../Commons/EachStatus";
 import Slider from "react-slick";
@@ -87,7 +87,16 @@ const StatusModal = ({ handleCloseMainContainerClick }) => {
       </div>
       <div className="status-img-container">
         <div className="status-back-box">
-          <Slider {...settings}>
+          <div className="arrow-control">
+            <AiOutlineLeft />
+          </div>
+          <div className="status-images-cont-bbx">
+            <img src="images/pic2.png" alt="" />
+          </div>
+          <div className="arrow-control">
+            <AiOutlineRight />
+          </div>
+          {/* <Slider {...settings}>
             <div className="test">
               <img
                 src="https://3.bp.blogspot.com/-km-24oMrcqo/Wv3Kj82uFtI/AAAAAAAAWBQ/Tw8RBvpyaBU3dtpIcyp1Opr4nKgzrufEACLcBGAs/s1600/STREET%2BPHOTOGRAPHY%2Bwith%2BPeter%2BMcKinnon.jpg"
@@ -106,8 +115,7 @@ const StatusModal = ({ handleCloseMainContainerClick }) => {
                 alt=""
               />
             </div>
-            {/* Add more slides as needed */}
-          </Slider>
+          </Slider> */}
         </div>
       </div>
     </div>

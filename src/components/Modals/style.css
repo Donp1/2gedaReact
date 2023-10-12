@@ -317,10 +317,35 @@ video {
 }
 .status-back-box {
   width: 100%;
-  height: 400px;
+  height: 450px;
   background: #000;
+  color: #fff;
 }
-
+.status-back-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 auto; */
+  gap: 10px;
+}
+.arrow-control {
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  color: #000;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-images-cont-bbx img {
+  height: 350px;
+  object-fit: fill;
+  object-position: center;
+  width: 100%;
+  border-radius: 10px;
+}
 .test img {
   width: 100%;
   height: 100%;
@@ -401,7 +426,7 @@ video {
     padding: 10px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 50px) {
   .chat-input-field {
     width: 75%;
   }
