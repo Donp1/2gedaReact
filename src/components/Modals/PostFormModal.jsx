@@ -22,11 +22,43 @@ import PostFormApkModal from "./PostFormApkModal";
 import PostFormExeModal from "./PostFormExeModal";
 import PostFormLocationModal from "./PostFormLocModal";
 import PostFormFilesModal from "./PostFormFilesModal";
+import { useState } from "react";
+import HashtagModal from "./HashTagModal";
 const PostFormModal = ({
   handleCloseMainContainerClick,
   selectedIcon,
   handleIconClick,
 }) => {
+  const [userInput, setUserInput] = useState("");
+  const [suggestedHashtags, setSuggestedHashtags] = useState([]);
+  const [addedTags, setAddedTags] = useState([]);
+  const [selectedSuggestion, setSelectedSuggestion] = useState("");
+  const hashtags = ["#programming", "#technology", "#art", "#travel"];
+
+  const handleInputChange = (event) => {
+    const inputText = event.target.value;
+    setUserInput(inputText);
+
+    const filteredHashtags = hashtags.filter((tag) =>
+      tag.toLowerCase().includes(inputText.toLowerCase())
+    );
+    setSuggestedHashtags(filteredHashtags);
+  };
+  const handleEnterPress = (event) => {
+    if (event.key === "Enter" && userInput.length > 0) {
+      setAddedTags([...addedTags, userInput]);
+      setUserInput("");
+    }
+  };
+  console.log(setSelectedSuggestion);
+  const handleRemoveTag = (index) => {
+    const updatedTags = [...addedTags];
+    updatedTags.splice(index, 1);
+    setAddedTags(updatedTags);
+  };
+  const handleSuggestionClick = (suggestion) => {
+    setAddedTags([...addedTags, suggestion]);
+  };
   return (
     <>
       <div className="postFormModal-container">
@@ -59,9 +91,33 @@ const PostFormModal = ({
         </div>
         <div className="hashtags-container">
           <div className="add-tags-btn">Add hashtag</div>
+          {addedTags.map((tag, index) => (
+            <div className="add-tags-btn added-tag-cont" key={index}>
+              <div className="added-tag-tst">{tag}</div>
+              <AiOutlineClose
+                className="cls-tag"
+                onClick={() => handleRemoveTag(index)}
+              />
+            </div>
+          ))}
           <div className="add-tags-btn added-tag-cont">
-            <div className="added-tag-tst">#let’sgo</div>
+            <div className="added-tag-tst">
+              <input
+                type="text"
+                className="let-inp"
+                value={selectedSuggestion || userInput}
+                onChange={handleInputChange}
+                onKeyPress={handleEnterPress}
+                placeholder="Type here"
+              />
+            </div>
             <AiOutlineClose className="cls-tag" />
+            {userInput.length > 0 && (
+              <HashtagModal
+                hashtags={suggestedHashtags}
+                onHashtagClick={handleSuggestionClick}
+              />
+            )}
           </div>
         </div>
         <div className="hashtags-container">

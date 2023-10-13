@@ -74,6 +74,9 @@ const MainChat = () => {
       setShowChatInput(false); // Hide the input field
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="main-chat-container">
       <div className="message-content">
