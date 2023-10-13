@@ -73,6 +73,8 @@
   margin: 20px auto;
   cursor: pointer;
   border-radius: 8px;
+  border: none;
+  outline: none;
 }
 .sell-form-item {
   padding: 10px 15px;

@@ -6,7 +6,7 @@ const BuySearchComp = () => {
   return (
     <div className="buy-sell-comp-cont">
       <div className="head-line">Buy and sell instantly</div>
-      <div className="search-product">
+      <div className="search-product sto-sea">
         <div className="sear-input-pro">
           <input
             type="text"

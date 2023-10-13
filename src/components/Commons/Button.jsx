@@ -1,8 +1,9 @@
-const ActionButton = ({bg, label}) => {
-    
+const ActionButton = ({ bg, label }) => {
   return (
     <div className="act-btn-cont">
-      <button className={`action-btn ${bg}`} >{label}</button>
+      <button type="submit" className={`action-btn ${bg}`}>
+        {label}
+      </button>
     </div>
   );
 };

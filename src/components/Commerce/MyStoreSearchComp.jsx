@@ -9,7 +9,7 @@ const MyStoreSearchComp = ({ label, handleStoreClose }) => {
         <AiOutlineArrowLeft className="ti-bc" onClick={handleStoreClose} />
         <div className="head-line">{label}</div>
       </div>
-      <div className="search-product">
+      <div className="search-product sto-sea">
         <div className="sear-input-pro">
           <input
             type="text"

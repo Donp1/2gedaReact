@@ -1,7 +1,7 @@
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 
-const TicketSearchComp = ({ label, handleCloseContainerClick }) => {
+const TicketSearchComp = ({ label, handleCloseContainerClick, add }) => {
   return (
     <div className="buy-sell-comp-cont tic-sea">
       <div className="back-title">
@@ -10,7 +10,7 @@ const TicketSearchComp = ({ label, handleCloseContainerClick }) => {
         </div>
         <div className="head-line">{label}</div>
       </div>
-      <div className="search-product">
+      <div className={`search-product ticccc ${add} `}>
         <div className="sear-input-pro">
           <input type="text" className="inp-pro" placeholder="Search Events" />
         </div>

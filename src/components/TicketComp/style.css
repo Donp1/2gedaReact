@@ -88,6 +88,209 @@
   background: none;
   color: #4f0da3;
 }
+
+/* event-detail-style */
+.event-details-box-cont {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.event-det-nm {
+  font-size: 20px;
+  font-weight: 500;
+}
+.chang {
+  margin: 10px 0;
+}
+.title-lab {
+  font-size: 18px;
+  color: #5c5c5c;
+}
+.ticket-info-row-cal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ticket-info-boxs {
+  padding: 15px;
+  width: 50%;
+  background: #fff;
+  margin: 10px 5px;
+}
+.vip-re-cont {
+  border: 1px solid rgba(105, 0, 155, 0.12);
+  height: 200px;
+  margin-top: 10px;
+}
+.pric-availl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vip-price-bx {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  border-bottom: 1px solid rgba(105, 0, 155, 0.12);
+  padding: 0 15px 10px;
+  height: 50%;
+  align-items: center;
+}
+.price-avil-box {
+  font-size: 18px;
+  font-weight: 600;
+}
+.out-stock {
+  font-size: 16px;
+  color: #ff4064;
+}
+.sellin {
+  font-size: 16px;
+  color: #48cf3e;
+}
+.no-bod {
+  border-bottom: none;
+}
+.date-eve {
+  font-size: 16px;
+  font-weight: 500;
+}
+.eve-tim {
+  font-size: 14px;
+  color: #5c5c5c;
+  margin: 5px 0;
+}
+.avail-ticket {
+  width: 100px;
+  font-size: 14px;
+  color: #4f0da3;
+  border-radius: 4px;
+  border: 1px solid #69009b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  height: 20px;
+}
+.padr {
+  padding: 10px;
+  height: 200px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* receiver */
+.receiver-detail-container {
+  background: #fff;
+  padding: 10px;
+}
+.rec-inp {
+  height: 43px;
+}
+.check-bx {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.check-aree-cont {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.act-rec-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+.reci-link {
+  font-weight: 500;
+  text-decoration: none;
+}
+.res-dw {
+  margin-bottom: 10px;
+}
+
+/* search empty */
+.notin-is {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.full-notin {
+  font-size: 14px;
+  width: 80%;
+  text-align: center;
+}
+.empt-box-sea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1200px) {
+  .title-lab {
+    font-size: 13px;
+  }
+  .price-avil-box {
+    font-size: 13px;
+  }
+  .out-stock {
+    font-size: 13px;
+  }
+  .sellin {
+    font-size: 13px;
+  }
+  .check-aree-cont {
+    font-size: 14px;
+  }
+  .check-bx {
+    height: 18px;
+    width: 18px;
+  }
+  .ticccc {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .ticccc {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .ticket-info-row-cal {
+    flex-direction: column;
+  }
+  .ticket-info-boxs {
+    width: 90%;
+  }
+  .padr {
+    height: 150px;
+  }
+  .vip-re-cont {
+    height: 150px;
+  }
+  .check-aree-cont {
+    font-size: 12px;
+  }
+  .empt-box-sea img {
+    width: 200px;
+  }
+  .notin-is {
+    font-size: 16px;
+  }
+  .full-notin {
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 430px) {
   .img-tick-cont img {
     width: 50px;
@@ -110,6 +313,19 @@
     font-size: 16px;
   }
   .loca-txt {
+    font-size: 10px;
+  }
+  .redd {
+    font-size: 13px;
+  }
+  .loc-red {
+    font-size: 8px;
+  }
+  .redddd {
+    width: 80px;
+    height: 30px;
+  }
+  .rec-inp {
     font-size: 10px;
   }
 }
