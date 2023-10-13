@@ -3,10 +3,20 @@ import { GoFilter } from "react-icons/go";
 import { useState } from "react";
 import BussinessFilterModal from "../Modals/BussinessFilterModal";
 
-const TicketSearh = () => {
+const TicketSearh = ({ handleSearchResultContainerClick }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const handleFilterClick = () => {
     setIsFilterOpen(!isFilterOpen);
+  };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && inputValue.length >= 1) {
+      handleSearchResultContainerClick();
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
   };
 
   return (
@@ -17,6 +27,9 @@ const TicketSearh = () => {
           type="text"
           className="search-inp-bus"
           placeholder="Find event"
+          value={inputValue}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
         />
       </div>
       {isFilterOpen && <BussinessFilterModal />}

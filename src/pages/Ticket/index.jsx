@@ -10,10 +10,28 @@ import TicketSearh from "../../components/TicketComp/TicketSearch";
 import PromotedTicket from "./PromotedTicket";
 import "./style.css";
 import EventThisWeekAll from "./EventThisWeekAll";
+import EventDetail from "./EventDetail";
+import SearchResultTicket from "./SearchResultTicket";
 
 const Ticket = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isWeekOpen, setIsWeekOpen] = useState(false);
+  const [isEventDetailOpen, setIsEventDetailOpen] = useState(false);
+  const [isSearchResultOpen, setIsSearchResultOpen] = useState(false);
+
+  const handleSearchResultContainerClick = () => {
+    setIsSearchResultOpen(true);
+  };
+  const handleSearchResultCloseContainerClick = () => {
+    setIsSearchResultOpen(false);
+  };
+  const handleEventDetailContainerClick = () => {
+    setIsEventDetailOpen(true);
+  };
+  const handleEventDetailCloseContainerClick = () => {
+    setIsEventDetailOpen(false);
+  };
+
   const handleWeekContainerClick = () => {
     setIsWeekOpen(true);
   };
@@ -53,18 +71,45 @@ const Ticket = () => {
                   handleCloseContainerClick={handleWeekCloseContainerClick}
                 />
               )}
-              {!isModalOpen && !isWeekOpen && (
-                <div>
-                  <div className="head-line bus-dir">Tickets</div>
-                  <TicketSearh />
-                  <PopularTicket />
-                  <PromoteTicket handleContainerClick={handleContainerClick} />
-                  <EventCategory />
-                  <EventThisWeek
-                    handleWeekContainerClick={handleWeekContainerClick}
-                  />
-                </div>
+              {isEventDetailOpen && (
+                <EventDetail
+                  handleCloseContainerClick={
+                    handleEventDetailCloseContainerClick
+                  }
+                />
               )}
+              {isSearchResultOpen && (
+                <SearchResultTicket
+                  handleCloseContainerClick={
+                    handleSearchResultCloseContainerClick
+                  }
+                />
+              )}
+              {!isModalOpen &&
+                !isWeekOpen &&
+                !isEventDetailOpen &&
+                !isSearchResultOpen && (
+                  <div>
+                    <div className="head-line bus-dir">Tickets</div>
+                    <TicketSearh
+                      handleSearchResultContainerClick={
+                        handleSearchResultContainerClick
+                      }
+                    />
+                    <PopularTicket
+                      handleEventDetailContainerClick={
+                        handleEventDetailContainerClick
+                      }
+                    />
+                    <PromoteTicket
+                      handleContainerClick={handleContainerClick}
+                    />
+                    <EventCategory />
+                    <EventThisWeek
+                      handleWeekContainerClick={handleWeekContainerClick}
+                    />
+                  </div>
+                )}
             </div>
             <div className="middle-side-container">
               <img src="images/ads1.png" alt="" />
