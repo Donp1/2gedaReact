@@ -41,28 +41,9 @@ const MainChatPublic = () => {
     // Toggle the display of ChatInputField
     setShowChatInput((prevShowChatInput) => !prevShowChatInput);
   };
-  // const formatTimestamp = (timestamp) => {
-  //   const messageDate = new Date(timestamp);
-  //   const now = new Date();
-  //   const differenceInHours = Math.floor(
-  //     (now - messageDate) / (1000 * 60 * 60)
-  //   );
-
-  //   if (differenceInHours <= 24) {
-  //     return "Yesterday";
-  //   } else if (
-  //     messageDate.getFullYear() === now.getFullYear() &&
-  //     messageDate.getMonth() === now.getMonth() &&
-  //     messageDate.getDate() === now.getDate()
-  //   ) {
-  //     return "Today";
-  //   } else {
-  //     // If it's not today or yesterday, display the actual date
-  //     const options = { year: "numeric", month: "short", day: "numeric" };
-  //     return messageDate.toLocaleDateString(undefined, options);
-  //   }
-  // };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleSendMessage = (text, isUser) => {
     const now = new Date();
     const hours = now.getHours();

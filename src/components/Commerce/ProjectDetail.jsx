@@ -5,7 +5,11 @@ import { AiOutlineStar } from "react-icons/ai";
 import ReviewItem from "./ReviewItem";
 import ActionButton from "../Commons/Button";
 import ProductMajorCard from "./ProductMajorCard";
+import { useEffect } from "react";
 const ProjectDetail = ({ handleProductClose }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="project-detail-container">
       <ProductDetailHeader handleProductClose={handleProductClose} />

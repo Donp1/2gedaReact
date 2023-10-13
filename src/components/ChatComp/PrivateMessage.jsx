@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import ChatShortMessage from "../Commons/ChatShortMessage";
 import EmptyChat from "./EmptyChat";
 
 const PrivateMessage = ({ Data, handleGotoMessagBox }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (Data.length === 0) {
     return (
       <div className="emp-chat-bor">
