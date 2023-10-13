@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 .head-line {
   font-size: 20px;
@@ -26,13 +27,16 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: none;
   display: flex;
-  width: 50%;
+  width: 70%;
   justify-content: space-between;
   height: 40px;
   align-items: center;
 }
+.sto-sea {
+  width: 60% !important;
+}
 .inp-pro {
-  width: 380px;
+  width: 460px;
   background: none;
   border: none;
   padding: 0 10px;
@@ -186,6 +190,14 @@
 .cat-card-bx-mg {
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 1250px) {
+  .inp-pro {
+    width: 320px;
+  }
+  .search-product {
+    width: 60% !important;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .inp-pro {
     width: 300px;
@@ -210,10 +222,12 @@
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
-  }
-  .search-product {
     width: 100%;
   }
+  .search-product {
+    width: 100% !important;
+  }
+
   .cat-card-bx-mg {
     width: 170px;
   }

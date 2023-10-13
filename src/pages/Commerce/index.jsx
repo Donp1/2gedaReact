@@ -94,8 +94,8 @@ const Commerce = () => {
         </form>
         <div className="full-commerce-box">
           <div className="left-commerce-cont">
-            <div className="sell-manage-cont">
-              <div className="btn-sell-pro">
+            <div className="sell-manage-cont sell-tem-pro">
+              <div className="btn-sell-pro btn-ssel">
                 <button
                   className="sell-item-comm inc"
                   onClick={handleMainContainerClick}
@@ -103,7 +103,7 @@ const Commerce = () => {
                   Sell an item
                 </button>
               </div>
-              <div className="btn-sell-pro ">
+              <div className="btn-sell-pro btn-ssel">
                 <button
                   className="sell-item-comm mann inc"
                   onClick={handleStoreClick}
