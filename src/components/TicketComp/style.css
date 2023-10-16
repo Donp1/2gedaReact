@@ -236,6 +236,176 @@
   justify-content: center;
   flex-direction: column;
 }
+.ticket-dash-card-cont {
+  border-radius: 5px;
+  background: #000;
+  box-shadow: -1px 3px 11px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  width: 50%;
+  padding: 10px;
+}
+.all-sell-txt {
+  font-size: 24px;
+  font-weight: 500;
+}
+.sell-per-txt {
+  font-size: 16px;
+  color: #d0d5dd;
+  margin: 8px 0;
+}
+.tot-evt-sold {
+  font-size: 30px;
+  font-weight: 400;
+}
+.sold {
+  background: #003250;
+}
+.freepaid-bx {
+  background: #fff;
+  flex-direction: column;
+  font-size: 16px;
+  height: 100%;
+  width: 30%;
+  cursor: pointer;
+  justify-content: center;
+}
+.free-paid-container {
+  border-radius: 25px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+  margin: 20px 0;
+  justify-content: center;
+  gap: 10px;
+  height: 45px;
+}
+.act-tick {
+  cursor: pointer;
+  background: #e6d2ff;
+}
+.tick-cont-bxx {
+  border-radius: 5px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.red-bg {
+  background: #ef0f0f;
+  width: 80px;
+}
+.free-tc {
+  padding-top: 5px;
+  font-size: 14px;
+}
+.b-cr {
+  background: rgba(235, 235, 235, 0.34);
+}
+.add-new-tck-bx {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4f0da3;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.act-continue-btn {
+  margin-top: 20px;
+}
+.nobd {
+  font-size: 20px;
+  color: #5c5c5c;
+}
+.noline {
+  border: none;
+  height: 100%;
+  background: none;
+}
+.bac-formm {
+  color: #4f0da3;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(220deg, #ffffff, #e8eaea);
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  transition: 0.4s;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.switch input:checked + .slider {
+  background: #76ee59;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.add-info-cont {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.main-add-info {
+  font-size: 14px;
+  font-weight: 500;
+}
+.body-add-info {
+  font-size: 12px;
+  color: #5c5c5c;
+  margin: 5px 0;
+}
+.add-info-line {
+  border: 1px solid #e4e4e4;
+  margin: 15px 0;
+}
+.bw-bit {
+  margin-bottom: 10px;
+}
+.img-con-cv img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
 @media only screen and (max-width: 1200px) {
   .title-lab {
     font-size: 13px;
@@ -290,6 +460,15 @@
   .full-notin {
     font-size: 12px;
   }
+  .all-sell-txt {
+    font-size: 18px;
+  }
+  .sell-per-txt {
+    font-size: 13px;
+  }
+  .tot-evt-sold {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 430px) {
   .img-tick-cont img {
@@ -300,6 +479,11 @@
   .ver-lay img {
     width: 10px;
     height: 10px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .ticket-dash-card-cont {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -327,5 +511,10 @@
   }
   .rec-inp {
     font-size: 10px;
+  }
+  .freepaid-bx {
+    font-size: 14px;
+    width: 40%;
+    cursor: pointer;
   }
 }

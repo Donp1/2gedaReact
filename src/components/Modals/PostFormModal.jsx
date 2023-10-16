@@ -24,6 +24,9 @@ import PostFormLocationModal from "./PostFormLocModal";
 import PostFormFilesModal from "./PostFormFilesModal";
 import { useState } from "react";
 import HashtagModal from "./HashTagModal";
+import TagFriends from "./TagFriends";
+import data from "../../utils/tag.json";
+
 const PostFormModal = ({
   handleCloseMainContainerClick,
   selectedIcon,
@@ -32,8 +35,25 @@ const PostFormModal = ({
   const [userInput, setUserInput] = useState("");
   const [suggestedHashtags, setSuggestedHashtags] = useState([]);
   const [addedTags, setAddedTags] = useState([]);
+  const [isTagsFrd, setIsTagsFrd] = useState(false);
   const [selectedSuggestion, setSelectedSuggestion] = useState("");
   const hashtags = ["#programming", "#technology", "#art", "#travel"];
+  const [checkedFriends, setCheckedFriends] = useState([]);
+
+  const handleFriendCheck = (img) => {
+    if (checkedFriends.includes(img)) {
+      setCheckedFriends(checkedFriends.filter((friend) => friend !== img));
+    } else {
+      setCheckedFriends([...checkedFriends, img]);
+    }
+  };
+  const handleRemoveTagFrd = (index) => {
+    const updatedFriends = [...checkedFriends];
+    updatedFriends.splice(index, 1);
+    setCheckedFriends(updatedFriends);
+  };
+
+  console.log(checkedFriends);
 
   const handleInputChange = (event) => {
     const inputText = event.target.value;
@@ -50,7 +70,7 @@ const PostFormModal = ({
       setUserInput("");
     }
   };
-  console.log(setSelectedSuggestion);
+  // console.log(setSelectedSuggestion);
   const handleRemoveTag = (index) => {
     const updatedTags = [...addedTags];
     updatedTags.splice(index, 1);
@@ -59,6 +79,13 @@ const PostFormModal = ({
   const handleSuggestionClick = (suggestion) => {
     setAddedTags([...addedTags, suggestion]);
   };
+  const handleTagFrdClick = () => {
+    setIsTagsFrd(true);
+  };
+  const handleCloseTagFrdClick = () => {
+    setIsTagsFrd(false);
+  };
+
   return (
     <>
       <div className="postFormModal-container">
@@ -107,7 +134,7 @@ const PostFormModal = ({
                 className="let-inp"
                 value={selectedSuggestion || userInput}
                 onChange={handleInputChange}
-                onKeyPress={handleEnterPress}
+                onKeyDown={handleEnterPress}
                 placeholder="Type here"
               />
             </div>
@@ -120,24 +147,28 @@ const PostFormModal = ({
             )}
           </div>
         </div>
-        <div className="hashtags-container">
+        {isTagsFrd && (
+          <div className="modal-full-container">
+            <TagFriends
+              handleCloseTagFrdClick={handleCloseTagFrdClick}
+              data={data}
+              onFriendCheck={handleFriendCheck}
+            />
+          </div>
+        )}
+        <div className="hashtags-container" onClick={handleTagFrdClick}>
           <div className="add-tags-frd">Tag Friends</div>
         </div>
         <div className="taged-frd-box">
-          <div className="tag-frd-cont">
-            <img
-              src="https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg"
-              alt=""
-            />
-            <IoCloseSharp className="cls-tag-fr" />
-          </div>
-          <div className="tag-frd-cont">
-            <img
-              src="https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg"
-              alt=""
-            />
-            <IoCloseSharp className="cls-tag-fr" />
-          </div>
+          {checkedFriends.map((img, index) => (
+            <div className="tag-frd-cont" key={index}>
+              <img src={img} alt="" />
+              <IoCloseSharp
+                className="cls-tag-fr"
+                onClick={() => handleRemoveTagFrd(index)}
+              />
+            </div>
+          ))}
         </div>
         <div className="down-post-feed">
           <div className="icon-post-feed">
