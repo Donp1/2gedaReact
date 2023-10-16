@@ -13,6 +13,7 @@ import EventThisWeekAll from "./EventThisWeekAll";
 import EventDetail from "./EventDetail";
 import SearchResultTicket from "./SearchResultTicket";
 import SellTicketDash from "./SellTicketDash";
+import TicketReport from "./TicketReport";
 
 const Ticket = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,6 +21,13 @@ const Ticket = () => {
   const [isEventDetailOpen, setIsEventDetailOpen] = useState(false);
   const [isSellTicketOpen, setIsSellTicketOpen] = useState(false);
   const [isSearchResultOpen, setIsSearchResultOpen] = useState(false);
+  const [isTicketReportOpen, setIsTicketReportOpen] = useState(false);
+  const handleTicketReportContainerClick = () => {
+    setIsTicketReportOpen(true);
+  };
+  const handleTicketReportCloseContainerClick = () => {
+    setIsTicketReportOpen(false);
+  };
 
   const handleSearchResultContainerClick = () => {
     setIsSearchResultOpen(true);
@@ -102,10 +110,20 @@ const Ticket = () => {
                   }
                 />
               )}
-              {isSellTicketOpen && (
+              {!isTicketReportOpen && isSellTicketOpen && (
                 <SellTicketDash
                   handleCloseContainerClick={
                     handleSellTicketCloseContainerClick
+                  }
+                  handleTicketReportContainerClick={
+                    handleTicketReportContainerClick
+                  }
+                />
+              )}
+              {isTicketReportOpen && (
+                <TicketReport
+                  handleTicketReportCloseContainerClick={
+                    handleTicketReportCloseContainerClick
                   }
                 />
               )}
@@ -120,6 +138,7 @@ const Ticket = () => {
                 !isWeekOpen &&
                 !isEventDetailOpen &&
                 !isSellTicketOpen &&
+                !isTicketReportOpen &&
                 !isSearchResultOpen && (
                   <div>
                     <div className="head-line bus-dir">Tickets</div>

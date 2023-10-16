@@ -1,0 +1,168 @@
+.cl-upload {
+  font-size: 16px;
+}
+.event-rep {
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.down-csv-cont {
+  justify-content: space-between;
+}
+.rep-icon-bx {
+  font-size: 20px;
+  background: #48cf3e;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  justify-content: center;
+  color: #fff;
+}
+.rotate-icon {
+  transform: rotate(45deg);
+}
+.name-byr {
+  font-size: 12px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+.id-buyr {
+  font-size: 10px;
+  color: #5c5c5c;
+  margin-top: 3px;
+}
+.tot-tic-bxb {
+  background: #4f0da3;
+  color: #fff;
+  font-size: 10px;
+  width: 70px;
+  height: 20px;
+  border-radius: 30px;
+  justify-content: center;
+}
+.total-amt-byr {
+  font-size: 10px;
+  color: #48cf3e;
+  margin-top: 3px;
+}
+.rep-col-left {
+  gap: 10px;
+}
+.each-col-rep-cont {
+  justify-content: space-between;
+  margin: 5px 0 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+}
+.tick-actual-container {
+  border-radius: 15px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+  padding: 10px;
+  margin-top: 15px;
+}
+.all-rep-box {
+  margin-top: 15px;
+}
+.tic-cont-det {
+  background: #fff;
+  width: 30%;
+  padding: 15px;
+}
+.rep-tic-det-bx {
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: space-between;
+}
+.byr-ct {
+  font-size: 12px;
+  color: #5c5c5c;
+}
+.det-byr-nm {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.row-line {
+  justify-content: space-between;
+  border-bottom: 1px solid #5c5c5c;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.tic-btnn {
+  background: #4f0da3;
+  width: 23%;
+  height: 20px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 30px;
+  justify-content: center;
+  gap: 10px;
+}
+.vvip {
+  background: #ed6c30;
+}
+.vip {
+  background: #000000;
+}
+.regular {
+  background: #5c5c5c;
+}
+.all-row-bx {
+  justify-content: space-between;
+  border-bottom: 1px solid #5c5c5c;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.amount-pric {
+  color: #48cf3e;
+  font-size: 16px;
+}
+.lower-box {
+  border-radius: 5px;
+  border: 0.5px solid #e4e4e4;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .tic-cont-det {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .tic-cont-det {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .tic-cont-det {
+    width: 97%;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .down-csv-cont {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .inb {
+    width: 130px;
+  }
+  .each-col-rep-cont {
+    align-items: flex-end;
+    margin: 8px 0 15px;
+  }
+  .tot-tic-bxb {
+    width: 60px;
+  }
+  .tic-btnn {
+    font-size: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+  }
+
+  .all-row-bx {
+    flex-wrap: wrap;
+  }
+}

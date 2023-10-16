@@ -26,7 +26,10 @@ const jsonData = {
   },
 };
 
-const SellTicketDash = ({ handleCloseContainerClick }) => {
+const SellTicketDash = ({
+  handleCloseContainerClick,
+  handleTicketReportContainerClick,
+}) => {
   const [selectedOption, setSelectedOption] = useState("Month");
   const [isCreatTicketOpen, setIsCreatTicketOpen] = useState(false);
 
@@ -91,6 +94,7 @@ const SellTicketDash = ({ handleCloseContainerClick }) => {
                 sellPerText={sellPerText}
                 totSell={totSell}
                 cardName={"Total Sold"}
+                click={handleTicketReportContainerClick}
               />
             </div>
             <div className="earning-container">

@@ -4,9 +4,10 @@ const TicketDashCard = ({
   sellPerText,
   totSell,
   cardName,
+  click,
 }) => {
   return (
-    <div className={`ticket-dash-card-cont ${bg}`}>
+    <div className={`ticket-dash-card-cont ${bg}`} onClick={click}>
       <div className="all-sell-txt">{allSellText}</div>
       <div className="sell-per-txt">{totSell + sellPerText}</div>
       <div className="tot-evt-sold">{cardName}</div>
