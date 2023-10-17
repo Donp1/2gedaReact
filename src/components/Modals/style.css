@@ -23,6 +23,7 @@
   margin-bottom: 15px;
   gap: 5px;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .add-tags-btn {
   max-width: 140px;

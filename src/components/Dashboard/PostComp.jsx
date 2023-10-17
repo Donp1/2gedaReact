@@ -4,14 +4,12 @@ import {
   BiMessageAlt,
   BiDotsHorizontalRounded,
 } from "react-icons/bi";
-// import { RiMessage2Fill } from "react-icons/ri";
-// import { FaShareSquare } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
 import Comment from "./Comment";
 
-const PostComp = () => {
+const PostComp = ({ disnone, redmar, handleFeedOpen }) => {
   return (
-    <div className="postcom">
+    <div className={`postcom ${redmar}`} onClick={handleFeedOpen}>
       <div className="post-comp-container">
         <div className="profile-time">
           <div className="post-profile">
@@ -38,8 +36,14 @@ const PostComp = () => {
             </a>
           </div>
         </div>
-        <div className="post-media">
-          <img src="images/post1.png" alt="" />
+        <div className="dob-img flex">
+          <div className="post-media">
+            <img src="images/post1.png" alt="" />
+          </div>
+          <div className="post-media lay-post">
+            <img src="images/post1.png" alt="" />
+            <div className="over-lay-post flex">+2</div>
+          </div>
         </div>
         <div className="post-likes-co">
           <div className="likes-per-post">
@@ -72,7 +76,7 @@ const PostComp = () => {
           <BiDotsHorizontalRounded className="dot" />
         </div>
       </div>
-      <Comment />
+      <Comment disnone={disnone} />
     </div>
   );
 };
