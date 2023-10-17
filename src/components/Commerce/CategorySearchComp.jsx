@@ -15,7 +15,7 @@ const CategorySearchComp = ({ label }) => {
         <AiOutlineArrowLeft className="ti-bc" onClick={goBack} />
         <div className="head-line">{label}</div>
       </div>
-      <div className="search-product">
+      <div className="search-product sto-sea">
         <div className="sear-input-pro">
           <input
             type="text"

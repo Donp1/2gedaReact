@@ -422,6 +422,109 @@
   max-width: 150px;
 }
 
+/* suggestion */
+.sugg-frd-prof img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.tag-close-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  width: 80%;
+}
+.tag-head {
+  font-size: 17px;
+  font-weight: 500;
+}
+.search-icon-bx {
+  font-size: 18px;
+}
+.search-icon-bx {
+  border-radius: 25px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 35px;
+  padding: 0 10px;
+  width: 90%;
+}
+.tags-inp {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.search-done-box,
+.sugg-friend-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.done-txt {
+  font-size: 16px;
+  color: #4f0da3;
+  cursor: pointer;
+}
+.sug-txt {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.pro-tag-nm {
+  font-size: 16px;
+}
+.sugg-frd-prof {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fnt {
+  font-size: 30px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.con-sl {
+  display: flex;
+  font-size: 20px;
+  /* justify-content: space-between; */
+}
+.nn {
+  font-size: 40px;
+}
+.tag-check-bx {
+  width: 20px;
+  height: 18px;
+}
+.not-wrt {
+  font-size: 20px;
+  text-align: center;
+}
+.start-recordcom {
+  width: 100px;
+}
+.jus {
+  justify-content: space-between;
+}
+.record {
+  height: 30px;
+  border: none;
+  outline: none;
+  background: #4f0da3;
+  color: #f5f5f5;
+  border-radius: 10px;
+  width: 100px;
+}
+.aud-st {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1000px) {
   .delete-modal {
     width: 45%;
