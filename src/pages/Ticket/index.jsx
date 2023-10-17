@@ -14,6 +14,7 @@ import EventDetail from "./EventDetail";
 import SearchResultTicket from "./SearchResultTicket";
 import SellTicketDash from "./SellTicketDash";
 import TicketReport from "./TicketReport";
+import MyEvent from "./MyEvent";
 
 const Ticket = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,6 +23,13 @@ const Ticket = () => {
   const [isSellTicketOpen, setIsSellTicketOpen] = useState(false);
   const [isSearchResultOpen, setIsSearchResultOpen] = useState(false);
   const [isTicketReportOpen, setIsTicketReportOpen] = useState(false);
+  const [isMyEventOpen, setIsMyEventOpen] = useState(false);
+  const handleMyEventContainerClick = () => {
+    setIsMyEventOpen(true);
+  };
+  const handleMyEventCloseContainerClick = () => {
+    setIsMyEventOpen(false);
+  };
   const handleTicketReportContainerClick = () => {
     setIsTicketReportOpen(true);
   };
@@ -37,9 +45,21 @@ const Ticket = () => {
   };
   const handleSellTicketContainerClick = () => {
     setIsSellTicketOpen(true);
+    setIsEventDetailOpen(false);
+    setIsModalOpen(false);
+    setIsWeekOpen(false);
+  };
+  const handleBackClick = () => {
+    setIsMyEventOpen(false);
+    setIsSellTicketOpen(true);
   };
   const handleSellTicketCloseContainerClick = () => {
     setIsSellTicketOpen(false);
+    setIsMyEventOpen(false);
+    setIsTicketReportOpen(false);
+    setIsEventDetailOpen(false);
+    setIsModalOpen(false);
+    setIsWeekOpen(false);
   };
   const handleEventDetailContainerClick = () => {
     setIsEventDetailOpen(true);
@@ -110,7 +130,7 @@ const Ticket = () => {
                   }
                 />
               )}
-              {!isTicketReportOpen && isSellTicketOpen && (
+              {!isTicketReportOpen && !isMyEventOpen && isSellTicketOpen && (
                 <SellTicketDash
                   handleCloseContainerClick={
                     handleSellTicketCloseContainerClick
@@ -118,6 +138,7 @@ const Ticket = () => {
                   handleTicketReportContainerClick={
                     handleTicketReportContainerClick
                   }
+                  handleMyEventContainerClick={handleMyEventContainerClick}
                 />
               )}
               {isTicketReportOpen && (
@@ -125,6 +146,14 @@ const Ticket = () => {
                   handleTicketReportCloseContainerClick={
                     handleTicketReportCloseContainerClick
                   }
+                />
+              )}
+              {isMyEventOpen && (
+                <MyEvent
+                  handleMyEventCloseContainerClick={
+                    handleMyEventCloseContainerClick
+                  }
+                  handleBackClick={handleBackClick}
                 />
               )}
               {isSearchResultOpen && (
@@ -139,6 +168,7 @@ const Ticket = () => {
                 !isEventDetailOpen &&
                 !isSellTicketOpen &&
                 !isTicketReportOpen &&
+                !isMyEventOpen &&
                 !isSearchResultOpen && (
                   <div>
                     <div className="head-line bus-dir">Tickets</div>

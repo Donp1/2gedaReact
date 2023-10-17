@@ -297,6 +297,7 @@
 .copied {
   font-size: 16px;
   color: #4f0da3;
+  text-align: center;
 }
 .mv-dwn {
   margin-top: 15px;

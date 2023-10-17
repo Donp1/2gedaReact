@@ -4,6 +4,7 @@ import TicketDashCard from "../../components/TicketComp/TicketDashCard";
 import ActionButton from "../../components/Commons/Button";
 import CreateEventTicket from "./CreateEventTicket";
 import { AiOutlinePlus } from "react-icons/ai";
+import Payout from "./Payout";
 
 const jsonData = {
   Month: {
@@ -29,9 +30,18 @@ const jsonData = {
 const SellTicketDash = ({
   handleCloseContainerClick,
   handleTicketReportContainerClick,
+  handleMyEventContainerClick,
 }) => {
   const [selectedOption, setSelectedOption] = useState("Month");
   const [isCreatTicketOpen, setIsCreatTicketOpen] = useState(false);
+  const [isPayoutOpen, setIsPayoutOpen] = useState(false);
+
+  const handlePayoutContainerClick = () => {
+    setIsPayoutOpen(true);
+  };
+  const handlePayoutCloseContainerClick = () => {
+    setIsPayoutOpen(false);
+  };
 
   const handleCreatTicketContainerClick = () => {
     setIsCreatTicketOpen(true);
@@ -59,7 +69,13 @@ const SellTicketDash = ({
           }
         />
       )}
-      {!isCreatTicketOpen && (
+      {isPayoutOpen && (
+        <Payout
+          handlePayoutCloseContainerClick={handlePayoutCloseContainerClick}
+        />
+      )}
+
+      {!isCreatTicketOpen && !isPayoutOpen && (
         <>
           <TicketSearchComp
             label={"Sell Tickets"}
@@ -87,6 +103,7 @@ const SellTicketDash = ({
                 sellPerText={sellPerText}
                 totSell={totSell}
                 cardName={"Total Event"}
+                click={handleMyEventContainerClick}
               />
               <TicketDashCard
                 bg={"sold"}
@@ -127,7 +144,10 @@ const SellTicketDash = ({
                     <div className="tot-ammt"># 485,920.50</div>
                   </div>
                 </div>
-                <div className="req-act-btn">
+                <div
+                  className="req-act-btn"
+                  onClick={handlePayoutContainerClick}
+                >
                   <ActionButton label={"Request withdrawal"} bg={"sms"} />
                 </div>
               </div>
