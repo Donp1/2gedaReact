@@ -8,7 +8,6 @@ const CreateEventTictetFormTwo = ({
   handleCreatTicketTwoCloseContainerClick,
   handleCreatTicketThreeContainerClick,
 }) => {
-  const [isPlatforn, setIsPlatforn] = useState(false);
   const [selectedTicketIndex, setSelectedTicketIndex] = useState(0);
   const [tickets, setTickets] = useState([
     {
@@ -31,9 +30,7 @@ const CreateEventTictetFormTwo = ({
     });
     setTickets(updatedTickets);
   };
-  const handlePlatfornClick = () => {
-    setIsPlatforn(!isPlatforn);
-  };
+
   const handleAddTicket = () => {
     const newTicket = {
       name: "",
