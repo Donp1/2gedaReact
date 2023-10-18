@@ -13,6 +13,8 @@ import Commerce from "./pages/Commerce";
 import CategoryPage from "./pages/Commerce/Category";
 import BusinessDirectory from "./pages/BussinessDirectory";
 import Ticket from "./pages/Ticket";
+import Profile from "./pages/Profile";
+import BusinessProfile from "./pages/BusinessProfile";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +44,8 @@ function App() {
         <Route index path="/category" element={<CategoryPage />} />
         <Route index path="/business" element={<BusinessDirectory />} />
         <Route index path="/ticket" element={<Ticket />} />
+        <Route index path="/profile" element={<Profile />} />
+        <Route index path="/bussprofile" element={<BusinessProfile />} />
       </Routes>
     </div>
   );
