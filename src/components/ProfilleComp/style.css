@@ -70,3 +70,34 @@
   cursor: pointer;
   color: #ff0000;
 }
+.mana-card-ad-container {
+  font-size: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+.ad-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4f0da3;
+}
+.ad-cat-txt {
+  color: #171618;
+  margin: 5px 0;
+}
+.expire-date {
+  color: #0b0b0b;
+}
+@media only screen and (max-width: 300px) {
+  .mana-card-ad-container {
+    font-size: 10px;
+    border-radius: 6px;
+    padding: 10px;
+  }
+  .ad-title {
+    font-size: 12px;
+    color: #4f0da3;
+  }
+}

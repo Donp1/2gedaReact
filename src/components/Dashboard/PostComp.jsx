@@ -6,10 +6,17 @@ import {
 } from "react-icons/bi";
 import { FiShare2 } from "react-icons/fi";
 import Comment from "./Comment";
+import PostMenu from "../Modals/PostMenu";
+import { useState } from "react";
 
 const PostComp = ({ disnone, redmar, handleFeedOpen }) => {
+  const [isPoostMenuDone, setIsPoostMenuDone] = useState(false);
+
+  const handlePostMenuClickDone = (e) => {
+    setIsPoostMenuDone(!isPoostMenuDone);
+  };
   return (
-    <div className={`postcom ${redmar}`} onClick={handleFeedOpen}>
+    <div className={`postcom ${redmar}`}>
       <div className="post-comp-container">
         <div className="profile-time">
           <div className="post-profile">
@@ -26,7 +33,7 @@ const PostComp = ({ disnone, redmar, handleFeedOpen }) => {
           <div className="time-posted">1hr ago</div>
         </div>
         <hr className="feed-hr" />
-        <div className="post-body-box">
+        <div className="post-body-box" onClick={handleFeedOpen}>
           <div className="post-body-text">
             This is the Opportunity to Join the World Leading Tech Professionals
             in 2022. All you need do is to register with the link below <br />
@@ -36,7 +43,7 @@ const PostComp = ({ disnone, redmar, handleFeedOpen }) => {
             </a>
           </div>
         </div>
-        <div className="dob-img flex">
+        <div className="dob-img flex" onClick={handleFeedOpen}>
           <div className="post-media">
             <img src="images/post1.png" alt="" />
           </div>
@@ -73,7 +80,15 @@ const PostComp = ({ disnone, redmar, handleFeedOpen }) => {
               <div className="con-test">1.3k</div>
             </div>
           </div>
-          <BiDotsHorizontalRounded className="dot" />
+          <div className="click-dot" onClick={handlePostMenuClickDone}>
+            <BiDotsHorizontalRounded className="dot" />
+          </div>
+
+          {isPoostMenuDone && (
+            <div className="post-menu-cont-bx">
+              <PostMenu />
+            </div>
+          )}
         </div>
       </div>
       <Comment disnone={disnone} />

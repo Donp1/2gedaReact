@@ -524,10 +524,159 @@
 .aud-st {
   width: 100%;
 }
+.clss-con {
+  font-size: 17px;
+  justify-content: right;
+  cursor: pointer;
+}
+.logo-menu-profil img {
+  width: 30px;
+  height: 25px;
+}
+.each-menu-txt {
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  cursor: pointer;
+}
+.profile-menu-modal-container {
+  padding: 10px;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  background: #fff;
+}
+
+.profile-dot-bx {
+  position: relative;
+}
+.domm {
+  background: #4f0da3;
+  color: #fff;
+  font-size: 20px;
+}
+.ddd {
+  margin-top: -14px;
+}
+.dad {
+  font-size: 15px;
+  color: #fff;
+}
+.txt-rea {
+  resize: none;
+  min-height: 100px;
+  max-height: 120px;
+  padding-top: 10px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}
+.maxxi {
+  font-size: 10px;
+  color: #344054;
+  text-align: right;
+}
+.txt-nnx {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(40, 40, 40, 0.5);
+  padding: 5px;
+}
+.edit-pro-container {
+  padding: 5px 20px;
+}
+.act-bttn-cl {
+  margin-top: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cennc {
+  text-align: center;
+}
+.eye-icon {
+  color: rgba(0, 0, 0, 0.2);
+}
+.mv-dwn {
+  margin-top: 20px;
+}
+.change-pw {
+  padding: 15px;
+}
+.conntc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.btm-bd {
+  border: none;
+  border-bottom: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+.seled-id-bn {
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.54);
+  width: 100px;
+  color: #fff;
+  font-size: 13px;
+  height: 30px;
+  justify-content: center;
+  gap: 5px;
+}
+.photo-ma {
+  font-size: 20px;
+}
+.selec-id-card {
+  margin: 10px 0;
+}
+.uploaded-nanme {
+  font-size: 12px;
+  margin: 5px 0;
+  color: #344054;
+  font-style: italic;
+}
+.verif-sucess-container {
+  background: #fff;
+  width: 40%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0 20px;
+}
+.checked-sucss {
+  width: 35px;
+  height: 35px;
+  background: #207700;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 5px;
+  justify-content: center;
+}
+.req-sent {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.pass-info {
+  font-size: 15px;
+  margin-bottom: 25px;
+  width: 80%;
+  text-align: center;
+}
 
 @media only screen and (max-width: 1000px) {
   .delete-modal {
     width: 45%;
+  }
+  .profile-menu-modal-container {
+    width: 70%;
+  }
+  .verif-sucess-container {
+    width: 50%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -576,6 +725,41 @@
   .delete-modal {
     width: 90%;
   }
+  .profile-menu-modal-container {
+    width: 90%;
+  }
+  .double-input {
+    flex-direction: column;
+  }
+  .no-bor {
+    font-size: 12px;
+    height: 30px;
+  }
+  .sel-btnn {
+    width: 80px;
+    height: 23px;
+    font-size: 10px !important;
+  }
+  .claim-inp {
+    padding: 2px;
+    font-size: 12px;
+  }
+  .eye-icon {
+    font-size: 15px;
+  }
+  .form-inp {
+    font-size: 12px;
+  }
+  .verif-sucess-container {
+    width: 90%;
+  }
+  .pass-info {
+    font-size: 13px;
+    width: 95%;
+  }
+  .busi-mod-header {
+    padding: 5px;
+  }
 }
 @media only screen and (max-width: 400px) {
   .first-cover {
@@ -602,6 +786,15 @@
     width: 100%;
     margin-left: 0px;
   }
+  .edit-pro-container {
+    padding: 5px 10px;
+  }
+  .profile-menu-modal-container {
+    width: 100%;
+  }
+  .uppp {
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 300px) {
   .guildness-btn {
@@ -609,5 +802,25 @@
   }
   .ceny {
     font-size: 18px;
+  }
+  .no-bor {
+    font-size: 9px;
+  }
+  .sel-btnn {
+    height: 19px;
+    font-size: 8px !important;
+  }
+  .busi-mod-header {
+    padding: 3px;
+  }
+  .busi-bxs img {
+    width: 25px;
+    height: 20px;
+  }
+  .claim {
+    font-size: 10px;
+  }
+  .cls-post {
+    font-size: 15px;
   }
 }

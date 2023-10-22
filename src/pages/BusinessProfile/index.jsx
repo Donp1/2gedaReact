@@ -8,18 +8,42 @@ import BusinessPostCard from "../../components/BusinessProfile/BusinessPostCard"
 import ActionButton from "../../components/Commons/Button";
 import TopBusiness from "../../components/BusinessProfile/TopBusiness";
 import ProfileModalMenu from "../../components/Modals/ProfileModal";
+import { useState } from "react";
+// import ManageBusiness from "./ManageBusiness";
 
 const BusinessProfile = () => {
+  const [isModalMenuOpen, setIsModalMenuOpen] = useState(false);
+  // const [isMBusOpen, setIsMBusOpen] = useState(false);
+
+  // const handleMBusClick = () => {
+  //   setIsMBusOpen(true);
+  // };
+  // const handleMBusClose = () => {
+  //   setIsMBusOpen(false);
+  // };
+
+  const handleModalMenuClick = () => {
+    setIsModalMenuOpen(true);
+  };
+  const handleModalMenuClose = () => {
+    setIsModalMenuOpen(false);
+  };
   return (
     <div className="home-container">
       <MainLayout>
         <div className="main-containe bus-box-con">
           <div className="left-side-container buss-all-container buss-prof-boxx">
+            {/* <ManageBusiness /> */}
             <div className="profile-dot-bx flex">
               <div className="head-line bus-dir">Business Profile</div>
-              <BiDotsVerticalRounded className="dot" />
+              <BiDotsVerticalRounded
+                className="dot"
+                onClick={handleModalMenuClick}
+              />
+              {isModalMenuOpen && (
+                <ProfileModalMenu handleModalMenuClose={handleModalMenuClose} />
+              )}
             </div>
-            <ProfileModalMenu />
             <div className="profile-main-container">
               <div className="profile-all-image-box">
                 <div className="cover-profile-image">
