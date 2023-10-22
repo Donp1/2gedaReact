@@ -30,7 +30,6 @@ const SearchPage = () => {
               {Data.map((item, index) => (
                 <div
                   key={index}
-                  // className={isActive ? " sel-act" : "anot-wid add-bor"}
                   className={`tab-item ${
                     item.text === activeTab ? "sel-act" : "anot-wid add-bor"
                   }`}
@@ -38,15 +37,6 @@ const SearchPage = () => {
                 >
                   <div className="dis-sel-name">{item.text}</div>
                 </div>
-                // <NavLink
-                //   key={index}
-                //   to={item.to}
-                //   className={({ isActive }) =>
-                //     isActive ? " sel-act" : "anot-wid add-bor"
-                //   }
-                // >
-                //   <div className="dis-sel-name">{item.text}</div>
-                // </NavLink>
               ))}
             </div>
             {activeTab === "All" ? (

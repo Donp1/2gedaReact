@@ -183,7 +183,7 @@ li {
   }
   .lst {
     left: 0;
-    top: 15%;
+    top: 10%;
   }
   .lout {
     margin-top: 6rem;
@@ -213,7 +213,7 @@ li {
   }
   .lst {
     left: 0;
-    top: 15%;
+    top: 10%;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -341,5 +341,24 @@ li {
   }
   .lst {
     left: 0;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .logo-container img {
+    width: 30px;
+  }
+  .logo-text {
+    font-size: 13px;
+  }
+  .mb-red {
+    font-size: 12px;
+  }
+  .profile-container img {
+    width: 30px;
+    height: 30px;
+  }
+  .bell {
+    font-size: 25px;
   }
 }

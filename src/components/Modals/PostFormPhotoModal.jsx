@@ -54,7 +54,6 @@ const PostFormPhotoModal = ({ handleClosePhotoModalClick }) => {
                 </div>
               );
             } else if (file.type.startsWith("video/")) {
-              // Display videos using <video> element
               return (
                 <div className="im-vi-bxb">
                   <div

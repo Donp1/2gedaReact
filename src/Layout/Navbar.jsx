@@ -23,7 +23,7 @@ const Navbar = () => {
           className={isToggled ? "mobile-searc nol" : "mobile-searc"}
           onClick={handleToggledIcon}
         >
-          <BiSearch className="sea-icon" />
+          <BiSearch className="sea-icon " />
         </div>
         {isToggled && (
           <GeneralSearch handleCloseToggledIcon={handleCloseToggledIcon} />
@@ -33,7 +33,7 @@ const Navbar = () => {
           <div type="text" className="searc-inp" placeholder="">
             Search Anythings
           </div>
-          <BiSearch className="sea-icon" />
+          <BiSearch className="sea-icon " />
         </div>
         <div className="notif-cont">
           <div className="bell-count">99+</div>
