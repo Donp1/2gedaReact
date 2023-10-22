@@ -200,6 +200,16 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  position: relative;
+}
+.post-menu-cont-bx {
+  position: absolute;
+  right: 0%;
+  top: 40%;
+}
+.ant {
+  width: 220px !important;
+  z-index: 0 !important;
 }
 .icon-text {
   display: flex;
