@@ -5,6 +5,7 @@ import BusinessSnmallCard from "../../components/BusinessDirectoryComp/BusinessS
 import SearchBusinessCard from "../../components/SearchComp/SearchBusinessCard";
 import "./style.css";
 import ClamBuss from "./ClamBuss";
+import BusinessStick from "../../components/Commons/BusinessStick";
 
 const BusinessDirectory = () => {
   const [isClaimModalOpen, setIsClaimModalOpen] = useState(false);
@@ -12,6 +13,7 @@ const BusinessDirectory = () => {
   const [isClaimModalOpenTwo, setIsClaimModalOpenTwo] = useState(false);
   const [isClaimModalOpenThree, setIsClaimModalOpenThree] = useState(false);
   const [isClaimModalOpenDone, setIsClaimModalOpenDone] = useState(false);
+  const [isBussinessOpen, setIsBussinessOpen] = useState(false);
 
   const handleClaimClickDone = (e) => {
     e.preventDefault();
@@ -52,6 +54,13 @@ const BusinessDirectory = () => {
   const handleClaimClickClose = () => {
     setIsClaimModalOpen(false);
   };
+  const handleBussinessClose = () => {
+    setIsBussinessOpen(false);
+  };
+
+  const handleBussinessClick = () => {
+    setIsBussinessOpen(true);
+  };
 
   return (
     <>
@@ -77,16 +86,41 @@ const BusinessDirectory = () => {
         <MainLayout>
           <div className="main-containe bus-box-con">
             <div className="left-side-container buss-all-container">
-              <div className="head-line bus-dir">Business directory</div>
-              <BusinessSearch />
-              <div className="business-card-boxx">
-                <SearchBusinessCard handleClaimClick={handleClaimClick} />
-                <SearchBusinessCard handleClaimClick={handleClaimClick} />
-                <SearchBusinessCard handleClaimClick={handleClaimClick} />
-                <SearchBusinessCard handleClaimClick={handleClaimClick} />
-                <SearchBusinessCard handleClaimClick={handleClaimClick} />
-                <SearchBusinessCard handleClaimClick={handleClaimClick} />
-              </div>
+              {isBussinessOpen && (
+                <BusinessStick handleBussinessClose={handleBussinessClose} />
+              )}
+              {!isBussinessOpen && (
+                <>
+                  <div className="head-line bus-dir">Business directory</div>
+                  <BusinessSearch />
+                  <div className="business-card-boxx">
+                    <SearchBusinessCard
+                      handleClaimClick={handleClaimClick}
+                      handleBussinessClick={handleBussinessClick}
+                    />
+                    <SearchBusinessCard
+                      handleClaimClick={handleClaimClick}
+                      handleBussinessClick={handleBussinessClick}
+                    />
+                    <SearchBusinessCard
+                      handleClaimClick={handleClaimClick}
+                      handleBussinessClick={handleBussinessClick}
+                    />
+                    <SearchBusinessCard
+                      handleClaimClick={handleClaimClick}
+                      handleBussinessClick={handleBussinessClick}
+                    />
+                    <SearchBusinessCard
+                      handleClaimClick={handleClaimClick}
+                      handleBussinessClick={handleBussinessClick}
+                    />
+                    <SearchBusinessCard
+                      handleClaimClick={handleClaimClick}
+                      handleBussinessClick={handleBussinessClick}
+                    />
+                  </div>
+                </>
+              )}
             </div>
             <div className="middle-side-container">
               <img src="images/ads1.png" alt="" />

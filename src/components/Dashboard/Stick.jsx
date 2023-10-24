@@ -24,7 +24,7 @@ const Stick = () => {
           className={isClicked ? "stickin " : " stick-btnn"}
           onClick={hanleClick}
         >
-          {isClicked ? "Unstick" : "Stick"}
+          {isClicked ? "Sticking" : "Stick"}
         </button>
       </div>
     </div>

@@ -2,12 +2,16 @@ import { BiSearch } from "react-icons/bi";
 import { GoFilter } from "react-icons/go";
 import { useState } from "react";
 import BussinessFilterModal from "../Modals/BussinessFilterModal";
+import SortByModal from "../Modals/SortByModal";
 
 const ConnectSearch = ({ handleSearchResultContainerClick }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleFilterClick = () => {
     setIsFilterOpen(!isFilterOpen);
+  };
+  const handleFilterClose = () => {
+    setIsFilterOpen(false);
   };
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && inputValue.length >= 1) {
@@ -32,7 +36,11 @@ const ConnectSearch = ({ handleSearchResultContainerClick }) => {
           onKeyDown={handleKeyDown}
         />
       </div>
-      {isFilterOpen && <BussinessFilterModal />}
+      {isFilterOpen && (
+        <div className="modal-full-container">
+          <SortByModal handleFilterClose={handleFilterClose} />
+        </div>
+      )}
       <div className="filter-search-bus" onClick={handleFilterClick}>
         <GoFilter />
       </div>
