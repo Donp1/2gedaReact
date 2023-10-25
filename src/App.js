@@ -16,6 +16,8 @@ import Ticket from "./pages/Ticket";
 import Profile from "./pages/Profile";
 import BusinessProfile from "./pages/BusinessProfile";
 import Connect from "./pages/Connect";
+import Stereo from "./pages/Stereo";
+import NonAuthStero from "./pages/Stereo/NonAuthStero";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,7 +49,9 @@ function App() {
         <Route index path="/ticket" element={<Ticket />} />
         <Route index path="/connect" element={<Connect />} />
         <Route index path="/profile" element={<Profile />} />
+        <Route index path="/stereo" element={<Stereo />} />
         <Route index path="/bussprofile" element={<BusinessProfile />} />
+        <Route index path="/stereo/nonauth" element={<NonAuthStero />} />
       </Routes>
     </div>
   );

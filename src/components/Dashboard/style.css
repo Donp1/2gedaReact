@@ -598,12 +598,14 @@
 }
 .sud {
   position: absolute;
-  top: 30%;
+  top: 42%;
   left: 35%;
 }
 .mus-img img {
   width: 100%;
   border-radius: 5px;
+  height: 150px;
+  object-fit: cover;
 }
 .mus-title {
   font-size: 14px;

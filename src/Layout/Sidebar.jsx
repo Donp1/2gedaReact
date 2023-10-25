@@ -90,7 +90,7 @@ const Sidebar = ({ isCollapsed }) => {
             <div className="sidebar-text">Live</div>
           </NavLink>
           <NavLink
-            to="/not"
+            to="/stereo"
             className={({ isActive }) =>
               isActive ? "active_link side-item" : "side-item"
             }

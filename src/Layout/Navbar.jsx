@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="logo-container">
-        <img src="images/lo2.png" alt="" className="logo-img" />
+        <img src="/images/lo2.png" alt="" className="logo-img" />
         <div className="logo-text">2geda</div>
       </div>
       <div className="searc-profile">
