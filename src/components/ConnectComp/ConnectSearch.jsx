@@ -13,11 +13,11 @@ const ConnectSearch = ({ handleSearchResultContainerClick }) => {
   const handleFilterClose = () => {
     setIsFilterOpen(false);
   };
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" && inputValue.length >= 1) {
-      handleSearchResultContainerClick();
-    }
-  };
+  // const handleKeyDown = (e) => {
+  //   if (e.key === "Enter" && inputValue.length >= 1) {
+  //     handleSearchResultContainerClick();
+  //   }
+  // };
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -33,7 +33,7 @@ const ConnectSearch = ({ handleSearchResultContainerClick }) => {
           placeholder="Find event"
           value={inputValue}
           onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
+          // onKeyDown={handleKeyDown}
         />
       </div>
       {isFilterOpen && (
