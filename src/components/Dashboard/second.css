@@ -167,7 +167,8 @@
   width: 80px;
   border-radius: 30px;
   height: 28px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #4f0da3;
+  font-weight: 600;
   cursor: pointer;
 }
 .stick-cont {

@@ -2,7 +2,7 @@ import { IoMdMail, IoIosGlobe } from "react-icons/io";
 import { IoCallSharp } from "react-icons/io5";
 import "./style.css";
 
-const SearchBusinessCard = ({ handleClaimClick }) => {
+const SearchBusinessCard = ({ handleClaimClick, handleBussinessClick }) => {
   return (
     <div className="business-search-card">
       <div className="business-logo-con">
@@ -35,7 +35,12 @@ const SearchBusinessCard = ({ handleClaimClick }) => {
         <button className="claim-visit-btn" onClick={handleClaimClick}>
           Claim business
         </button>
-        <button className="claim-visit-btn visi-pae">Visit page</button>
+        <button
+          className="claim-visit-btn visi-pae"
+          onClick={handleBussinessClick}
+        >
+          Visit page
+        </button>
       </div>
     </div>
   );
