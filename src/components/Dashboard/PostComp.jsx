@@ -48,7 +48,7 @@ const PostComp = ({ disnone, redmar, handleFeedOpen }) => {
             <img src="images/post1.png" alt="" />
           </div>
           <div className="post-media lay-post">
-            <img src="images/post1.png" alt="" />
+            <img src="images/pic1.png" alt="" />
             <div className="over-lay-post flex">+2</div>
           </div>
         </div>

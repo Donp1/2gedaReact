@@ -1,22 +1,68 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ActionButton from "../Commons/Button";
 import InputField from "../Commons/InputField";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { NavLink } from "react-router-dom";
+// import AuthContext from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { Slide, ToastContainer, toast } from "react-toastify";
 
 const SignForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isUsingPhone, setIsUsingPhone] = useState(false);
   const [phone, setPhone] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  console.log(phone);
+  const navigate = useNavigate();
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
 
   const handleUsePhoneClick = () => {
     setIsUsingPhone(!isUsingPhone);
+  };
+  const signupUser = (event) => {
+    event.preventDefault();
+    let userData;
+    if (email === "") {
+      userData = { username, password, phone_number: phone };
+    } else {
+      userData = { username, email, password };
+    }
+    console.log(userData);
+    fetch("https://shark-app-ia4iu.ondigitalocean.app/register/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.token);
+        localStorage.setItem("authToken", data?.token);
+        navigate("/verify");
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error("Error:", error);
+      });
   };
   return (
     <div className="sign-form">
@@ -25,13 +71,13 @@ const SignForm = () => {
         Welcome to 2geda. To continue, please provide your details
       </div>
 
-      <form action="">
+      <form action="" onSubmit={signupUser}>
         {isUsingPhone ? (
           <div className="inp-phone">
             <PhoneInput
               defaultCountry="NG"
               className="custom-phone-input"
-              value={phone}
+              name="phone"
               style={{ height: "40px" }}
               onChange={(phone) => setPhone(phone)}
               placeholder="+234 80 2015 5501"
@@ -44,7 +90,12 @@ const SignForm = () => {
           </div>
         ) : (
           <div className="inp-email">
-            <InputField placeholder={"Input email address"} type={"text"} />
+            <InputField
+              placeholder={"Input email address"}
+              type={"text"}
+              value={email}
+              onChange={handleEmailChange}
+            />
             <div className="ins-bx-txt">
               We’ll verify the email provided to be sure it belongs to you
             </div>
@@ -57,11 +108,20 @@ const SignForm = () => {
             : "Use Phone number instead"}
         </div>
 
-        <InputField placeholder={"Username"} type={"text"} />
+        <InputField
+          placeholder={"Username"}
+          type={"text"}
+          name="username"
+          value={username}
+          onChange={handleUsernameChange}
+        />
         <div className="pass-con">
           <InputField
             placeholder={"Create Password"}
             type={passwordVisible ? "text" : "password"}
+            name="password"
+            value={password}
+            onChange={handlePasswordChange}
           />
           <div className="eye-box" onClick={togglePasswordVisibility}>
             {passwordVisible ? (
@@ -72,14 +132,14 @@ const SignForm = () => {
           </div>
         </div>
         <div className="btn-continu">
-          <ActionButton label={"Continue"} bg={"ma-d"} />
+          <ActionButton label={"Continue"} bg={"ma-d"} type={"submit"} />
         </div>
         <div className="alr-ave">
           Already have an account?{" "}
           <span>
-            <NavLink className="goto-link" to="/signin">
-              Sign in
-            </NavLink>
+            {/* <NavLink className="goto-link" to="/signin"> */}
+            Sign in
+            {/* </NavLink> */}
           </span>
         </div>
       </form>

@@ -5,7 +5,7 @@ import WelcomeComp from "../../components/SignUpInComp/WelcomeComp";
 const Signin = () => {
   return (
     <div className="signup-container">
-      <NonAuthNavbar />
+      <NonAuthNavbar nono={"nono"} />
       <div className="welc-form-containr">
         <WelcomeComp />
         <SigninForm />

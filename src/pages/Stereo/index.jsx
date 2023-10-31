@@ -9,6 +9,8 @@ import TopStero from "../../components/StereoComp/TopStero";
 import { BiSearch } from "react-icons/bi";
 import Artisist from "../../components/StereoComp/Artisist";
 import QuickPicks from "./QuickPicks";
+import BigHit from "./bigHit";
+import QuickPickCol from "../../components/StereoComp/QuickPickCol";
 
 const Data = [
   {
@@ -51,6 +53,14 @@ const Stereo = () => {
   const [activeTab, setActiveTab] = useState("Home");
   const [activeListTab, setActiveListTab] = useState("All");
   const [isBigOpen, setIsBigOpen] = useState(false);
+  const [isHitOpen, setIsHitOpen] = useState(false);
+
+  const handleHitOpen = () => {
+    setIsHitOpen(true);
+  };
+  const handleHitClose = () => {
+    setIsHitOpen(false);
+  };
 
   const handleBigOpen = () => {
     setIsBigOpen(true);
@@ -77,7 +87,8 @@ const Stereo = () => {
             <div className="left-side-container buss-all-container ster-container-man">
               <>
                 {isBigOpen && <QuickPicks handleBigClose={handleBigClose} />}
-                {!isBigOpen && (
+                {isHitOpen && <BigHit handleHitClose={handleHitClose} />}
+                {!isBigOpen && !isHitOpen && (
                   <>
                     <div>
                       <StereoSearchComp label={"Stereo"} />
@@ -137,7 +148,12 @@ const Stereo = () => {
                         <div className="take-easy">
                           <div className="view-all-tic-bx">
                             <div className="product-ind">Top albums</div>
-                            <div className="view-ll pup">More</div>
+                            <div
+                              className="view-ll pup"
+                              onClick={handleHitOpen}
+                            >
+                              More
+                            </div>
                           </div>
                           <div className="music-das-row">
                             <MusicStero />
@@ -159,10 +175,93 @@ const Stereo = () => {
                         </div>
                       </div>
                     ) : null}
-                    {activeTab === "Businesses nearby" ? (
-                      <div className="csss">
-                        <div className=" you-may-know-bo"></div>
-                      </div>
+                    {activeTab === "Explore" ? (
+                      <>
+                        <div className="take-easy">
+                          <div className="head-line">African Vibe</div>
+                          <div className="music-das-row">
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                          </div>
+                        </div>
+                        <div className="take-easy">
+                          <div className="head-line">Best of Afrobeats</div>
+                          <div className="music-das-row">
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                          </div>
+                        </div>
+                        <div className="take-easy">
+                          <div className="head-line">Recommended</div>
+                          <div className="music-das-row">
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                          </div>
+                        </div>
+                        <div className="take-easy">
+                          <div className="head-line">Pop for you</div>
+                          <div className="music-das-row">
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                            <MusicStero rem={"rem"} />
+                          </div>
+                        </div>
+                      </>
+                    ) : null}
+                    {activeTab === "New" ? (
+                      <>
+                        <div className="take-easy">
+                          <div className="head-line">New release</div>
+                          <div className="music-das-row">
+                            <MusicStero />
+                            <MusicStero />
+                            <MusicStero />
+                            <MusicStero />
+                            <MusicStero />
+                          </div>
+                        </div>
+                        <div className="im-stereo-ads">
+                          <img src="images/ads8.png" alt="" />
+                        </div>
+                        <div className="take-easy">
+                          <div className="head-line">Albums</div>
+                          <div className="music-das-row">
+                            <MusicStero />
+                            <MusicStero />
+                            <MusicStero />
+                            <MusicStero />
+                            <MusicStero />
+                          </div>
+                        </div>
+                      </>
+                    ) : null}
+
+                    {activeTab === "Top tracks" ? (
+                      <>
+                        <div className="picks-row-cont">
+                          <QuickPickCol />
+                          <QuickPickCol />
+                          <QuickPickCol />
+                          <QuickPickCol />
+
+                          <div className="im-stereo-ads">
+                            <img src="images/ads8.png" alt="" />
+                          </div>
+                          <QuickPickCol />
+                          <QuickPickCol />
+                        </div>
+                      </>
                     ) : null}
                   </>
                 )}

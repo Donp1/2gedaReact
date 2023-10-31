@@ -18,6 +18,7 @@ import BusinessProfile from "./pages/BusinessProfile";
 import Connect from "./pages/Connect";
 import Stereo from "./pages/Stereo";
 import NonAuthStero from "./pages/Stereo/NonAuthStero";
+// import { AuthProvider } from "./Context/AuthContext";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <ScrollToTop />
+      {/* <AuthProvider> */}
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route index path="/signup" element={<Signup />} />
@@ -53,6 +55,7 @@ function App() {
         <Route index path="/bussprofile" element={<BusinessProfile />} />
         <Route index path="/stereo/nonauth" element={<NonAuthStero />} />
       </Routes>
+      {/* </AuthProvider> */}
     </div>
   );
 }

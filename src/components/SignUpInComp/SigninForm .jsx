@@ -11,14 +11,25 @@ const SigninForm = () => {
   const [isUsingPhone, setIsUsingPhone] = useState(false);
   const [isUsingUsername, setIsUsingUsername] = useState(false);
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const goToForgot = () => {
     navigate("/forgot");
   };
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -32,6 +43,40 @@ const SigninForm = () => {
     setIsUsingUsername(!isUsingUsername);
     setIsUsingPhone(false);
   };
+  const phone_number = phone;
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!username || !password) {
+      console.error("Both username and assword are required.");
+      return;
+    }
+    const userData = {
+      username,
+      password,
+    };
+    console.log(userData);
+
+    try {
+      const response = await fetch(
+        "https://shark-app-ia4iu.ondigitalocean.app/login/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+      console.log("data", userData);
+
+      const data = await response.json();
+      console.log(data); // Display the response data
+    } catch (error) {
+      // Handle error here
+      console.error("An error occurred:", error);
+    }
+  };
 
   return (
     <div className="sign-form">
@@ -40,7 +85,7 @@ const SigninForm = () => {
         Welcome back. Enter your details to continue.
       </div>
 
-      <form action="">
+      <form action="" onSubmit={handleLogin}>
         {isUsingPhone && !isUsingUsername && (
           <div className="inp-phone">
             <PhoneInput
@@ -61,7 +106,7 @@ const SigninForm = () => {
               placeholder={"Input email address"}
               type={"email"}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleUsernameChange}
             />
           </div>
         )}
@@ -72,7 +117,7 @@ const SigninForm = () => {
               placeholder={"Username"}
               type={"text"}
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={handleUsernameChange}
             />
           </div>
         )}
@@ -81,6 +126,7 @@ const SigninForm = () => {
           <InputField
             placeholder={"Password"}
             type={passwordVisible ? "text" : "password"}
+            onChange={handlePasswordChange}
           />
           <div className="eye-box" onClick={togglePasswordVisibility}>
             {passwordVisible ? (

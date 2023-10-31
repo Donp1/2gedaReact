@@ -80,6 +80,9 @@
 .nonn {
   display: none;
 }
+.nk {
+  display: none;
+}
 @media only screen and (max-width: 940px) {
   .navbar-container {
     padding: 20px;
@@ -87,6 +90,9 @@
   .nav-icon {
     display: initial;
     color: #4f0da3;
+  }
+  .nono {
+    display: none;
   }
   .nav-ul {
     flex-direction: column;

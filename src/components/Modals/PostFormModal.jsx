@@ -39,6 +39,11 @@ const PostFormModal = ({
   const [selectedSuggestion, setSelectedSuggestion] = useState("");
   const hashtags = ["#programming", "#technology", "#art", "#travel"];
   const [checkedFriends, setCheckedFriends] = useState([]);
+  const [images, setImages] = useState([]);
+  const [audioFile, setAudioFile] = useState(null);
+
+  console.log(audioFile);
+  console.log(images);
 
   const handleFriendCheck = (img) => {
     if (checkedFriends.includes(img)) {
@@ -104,8 +109,15 @@ const PostFormModal = ({
         ></textarea>
 
         <div className="viwdt">
-          {selectedIcon === "photo" && <PostFormPhotoModal />}
-          {selectedIcon === "music" && <PostFormMusicModal />}
+          {selectedIcon === "photo" && (
+            <PostFormPhotoModal images={images} setImages={setImages} />
+          )}
+          {selectedIcon === "music" && (
+            <PostFormMusicModal
+              audioFile={audioFile}
+              setAudioFile={setAudioFile}
+            />
+          )}
           {selectedIcon === "rec" && <PostFormRecModal />}
           {selectedIcon === "word" && <PostFormWordModal />}
           {selectedIcon === "excel" && <PostFormExcelModal />}
@@ -176,10 +188,10 @@ const PostFormModal = ({
               className="pic-vid"
               onClick={() => handleIconClick("photo")}
             />
-            <FaVideo
+            {/* <FaVideo
               className="pic-vid"
               onClick={() => handleIconClick("photo")}
-            />
+            /> */}
             <IoLocation
               className="loca"
               onClick={() => handleIconClick("location")}

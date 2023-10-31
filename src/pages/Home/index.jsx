@@ -16,9 +16,11 @@ import { NavLink } from "react-router-dom";
 import StatusContainer from "../../components/Dashboard/StatusContainer";
 import FeedDetail from "./FeedDetail";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
   const [isFeedOpen, setIsFeedOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("All Posts");
 
   const handleFeedOpen = () => {
     setIsFeedOpen(true);
@@ -26,7 +28,12 @@ const Home = () => {
   const handleFeedClose = () => {
     setIsFeedOpen(false);
   };
-
+  const handleTabClick = (text) => {
+    setActiveTab(text);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="home-container">
       <MainLayout>
@@ -45,69 +52,85 @@ const Home = () => {
               </div>
               <div className="select-what-display">
                 {Data.map((item, index) => (
-                  <NavLink
+                  <div
                     key={index}
-                    to={item.to}
-                    className={({ isActive }) =>
-                      isActive ? " sel-act" : "anot-wid"
-                    }
+                    className={`tab-item ${
+                      item.text === activeTab ? "sel-act" : "anot-wid"
+                    }`}
+                    onClick={() => handleTabClick(item.text)}
                   >
                     <div className="dis-sel-name">{item.text}</div>
-                  </NavLink>
+                  </div>
                 ))}
               </div>
-              <PostComp handleFeedOpen={handleFeedOpen} />
+              {activeTab === "All Posts" ? (
+                <>
+                  <PostComp handleFeedOpen={handleFeedOpen} />
 
-              <div className="music-das-row">
-                <MusicDash />
-                <MusicDash />
-                <MusicDash />
-                <MusicDash />
-                <MusicDash />
-              </div>
-              <PostComp />
-              <div className="ticket-das-row">
-                <SmallTicketCard />
-                <SmallTicketCard />
-                <SmallTicketCard />
-                <SmallTicketCard />
-                <SmallTicketCard />
-                <SmallTicketCard />
-                <SmallTicketCard />
-              </div>
-              <PostComp />
-              <div className="ticket-das-row">
-                <ProductDash />
-                <ProductDash />
-                <ProductDash />
-                <ProductDash />
-                <ProductDash />
-              </div>
-              <PostComp />
-              <div className="movie-slid-box">
-                <div className="post-ead">Trending movies</div>
-                <MovieSlider />
-              </div>
-              <div className="mov-bxx">
-                <div className="post-ead">Trending movies</div>
-                <div className="movie-das-row">
-                  <MovieDashCard />
-                  <MovieDashCard />
-                  <MovieDashCard />
-                  <MovieDashCard />
-                  <MovieDashCard />
+                  <div className="music-das-row">
+                    <MusicDash />
+                    <MusicDash />
+                    <MusicDash />
+                    <MusicDash />
+                    <MusicDash />
+                  </div>
+                  <PostComp />
+                  <div className="ticket-das-row">
+                    <SmallTicketCard />
+                    <SmallTicketCard />
+                    <SmallTicketCard />
+                    <SmallTicketCard />
+                    <SmallTicketCard />
+                    <SmallTicketCard />
+                    <SmallTicketCard />
+                  </div>
+                  <PostComp />
+                  <div className="ticket-das-row">
+                    <ProductDash />
+                    <ProductDash />
+                    <ProductDash />
+                    <ProductDash />
+                    <ProductDash />
+                  </div>
+                  <PostComp />
+                  <div className="movie-slid-box">
+                    <div className="post-ead">Trending movies</div>
+                    <MovieSlider />
+                  </div>
+                  <div className="mov-bxx">
+                    <div className="post-ead">Trending movies</div>
+                    <div className="movie-das-row">
+                      <MovieDashCard />
+                      <MovieDashCard />
+                      <MovieDashCard />
+                      <MovieDashCard />
+                      <MovieDashCard />
+                    </div>
+                  </div>
+                  <div className="you-may-know">
+                    <div className="post-ead">People you may know</div>
+                    <div className="may-know-box">
+                      <Stick />
+                      <Stick />
+                      <Stick />
+                      <Stick />
+                      <Stick />
+                    </div>
+                  </div>
+                </>
+              ) : null}
+              {activeTab === "Images" ? (
+                <PostComp handleFeedOpen={handleFeedOpen} />
+              ) : null}
+              {activeTab === "Products" ? (
+                <div className="ticket-das-row">
+                  <ProductDash />
+                  <ProductDash />
+                  <ProductDash />
+                  <ProductDash />
+                  <ProductDash />
                 </div>
-              </div>
-              <div className="you-may-know">
-                <div className="post-ead">People you may know</div>
-                <div className="may-know-box">
-                  <Stick />
-                  <Stick />
-                  <Stick />
-                  <Stick />
-                  <Stick />
-                </div>
-              </div>
+              ) : null}
             </div>
           )}
           <div className="middle-side-container">

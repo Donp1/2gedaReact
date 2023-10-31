@@ -244,6 +244,31 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::after {
   display: initial;
 }
+.ima-act-bxbbx {
+  position: absolute;
+  top: 6%;
+  left: 4%;
+}
+.ima-act-bxbbx img {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50%;
+  object-fit: cover !important;
+}
+.succ-ver-modal-container {
+  background: #0d9654;
+  color: #fff;
+  width: 40%;
+  justify-content: space-between;
+  padding: 15px;
+}
+.mess-tst {
+  font-size: 16px;
+}
+.check-very {
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 1100px) {
   .duration-bx-container {
     flex-direction: column;
@@ -262,6 +287,15 @@ input[type="checkbox"]:checked::after {
   }
   .preview-container-bx {
     width: 90%;
+  }
+  .succ-ver-modal-container {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .succ-ver-modal-container {
+    width: 80%;
+    padding: 20px;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -293,6 +327,9 @@ input[type="checkbox"]:checked::after {
   .preview-container-bx {
     width: 98%;
   }
+  .succ-ver-modal-container {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 321px) {
   .fir-info {
@@ -300,5 +337,8 @@ input[type="checkbox"]:checked::after {
   }
   .preview-container-bx {
     width: 100%;
+  }
+  .succ-ver-modal-container {
+    width: 1060%;
   }
 }

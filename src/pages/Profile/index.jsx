@@ -21,6 +21,7 @@ import PhoneImelCreate from "../../components/Modals/PhoneImelCreate";
 import ManageAdvert from "../../components/Modals/ManageAdvert";
 import AllStickers from "../../components/Commons/AllStickers";
 import AllSticking from "../../components/Commons/AllSticking";
+import EditProfile from "../../components/Modals/EditProfile";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("All posts");
@@ -29,9 +30,16 @@ const Profile = () => {
   const [isImelListOpen, setIsImelListOpen] = useState(false);
   const [isImelCreateOpen, setIsImelCreateOpen] = useState(false);
   const [isManAdOpen, setIsManAdOpen] = useState(false);
+  const [isEditProOpen, setIsEditProOpen] = useState(false);
   const [isAllStickerOpen, setIsAllStickerOpen] = useState(false);
   const [isAllStickingOpen, setIsAllStickingOpen] = useState(false);
 
+  const handleEditProClick = () => {
+    setIsEditProOpen(true);
+  };
+  const handleEditProClose = () => {
+    setIsEditProOpen(false);
+  };
   const handleAllStickingClick = () => {
     setIsAllStickingOpen(true);
   };
@@ -110,6 +118,11 @@ const Profile = () => {
           />
         </div>
       )}
+      {isEditProOpen && (
+        <div className="modal-full-container">
+          <EditProfile handleEditProClose={handleEditProClose} />
+        </div>
+      )}
       {isImelCreateOpen && (
         <div className="modal-full-container">
           <PhoneImelCreate handleImelCreateClose={handleImelCreateClose} />
@@ -143,6 +156,7 @@ const Profile = () => {
                         handleModalMenuClose={handleModalMenuClose}
                         handleImelClick={handleImelClick}
                         handleManAdClick={handleManAdClick}
+                        handleEditProClick={handleEditProClick}
                       />
                     )}
                   </div>
