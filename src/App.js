@@ -18,6 +18,7 @@ import BusinessProfile from "./pages/BusinessProfile";
 import Connect from "./pages/Connect";
 import Stereo from "./pages/Stereo";
 import NonAuthStero from "./pages/Stereo/NonAuthStero";
+import AddProfile from "./pages/Profile/AddProfile";
 // import { AuthProvider } from "./Context/AuthContext";
 
 function ScrollToTop() {
@@ -29,7 +30,7 @@ function ScrollToTop() {
 
   return null;
 }
-
+export const API_BASE_URL = "https://shark-app-ia4iu.ondigitalocean.app";
 function App() {
   return (
     <div className="App">
@@ -50,6 +51,7 @@ function App() {
         <Route index path="/business" element={<BusinessDirectory />} />
         <Route index path="/ticket" element={<Ticket />} />
         <Route index path="/connect" element={<Connect />} />
+        <Route index path="/addprofile" element={<AddProfile />} />
         <Route index path="/profile" element={<Profile />} />
         <Route index path="/stereo" element={<Stereo />} />
         <Route index path="/bussprofile" element={<BusinessProfile />} />

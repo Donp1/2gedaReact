@@ -215,7 +215,7 @@
 }
 @media only screen and (max-width: 420px) {
   .identifier-text {
-    font-size: 17px;
+    /* font-size: 12px; */
   }
   .top-card-container {
     height: 150px;
@@ -223,7 +223,7 @@
 }
 @media only screen and (max-width: 375px) {
   .identifier-text {
-    font-size: 15px;
+    /* font-size: 1px; */
   }
 }
 @media only screen and (max-width: 305px) {

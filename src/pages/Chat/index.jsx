@@ -115,24 +115,26 @@ const Chat = () => {
                     <img src="images/ads4.png" alt="" />
                   </div>
                 </div>
-                {selectedTopCard === 1 && (
-                  <PrivateMessage
-                    Data={Data}
-                    handleGotoMessagBox={handleGotoMessagBox}
-                  />
-                )}
-                {selectedTopCard === 2 && (
-                  <PublicMessage
-                    Data={Data}
-                    handleGotoPublicMessagBox={handleGotoPublicMessagBox}
-                  />
-                )}
-                {selectedTopCard === 3 && (
-                  <ActiveMessage
-                    Data={Data}
-                    handleGotoMessagBox={handleGotoMessagBox}
-                  />
-                )}
+                <div className="all-cart-vv">
+                  {selectedTopCard === 1 && (
+                    <PrivateMessage
+                      Data={Data}
+                      handleGotoMessagBox={handleGotoMessagBox}
+                    />
+                  )}
+                  {selectedTopCard === 2 && (
+                    <PublicMessage
+                      Data={Data}
+                      handleGotoPublicMessagBox={handleGotoPublicMessagBox}
+                    />
+                  )}
+                  {selectedTopCard === 3 && (
+                    <ActiveMessage
+                      Data={Data}
+                      handleGotoMessagBox={handleGotoMessagBox}
+                    />
+                  )}
+                </div>
               </div>
             )}
           </div>

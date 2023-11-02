@@ -160,7 +160,7 @@ const EditProfile = ({ handleEditProClose }) => {
           </div>
 
           <div className="act-bttn-cl">
-            <ActionButton label={"Proceed to claim"} />
+            <ActionButton label={"Save"} />
           </div>
         </div>
       </div>

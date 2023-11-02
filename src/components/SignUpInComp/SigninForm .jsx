@@ -5,6 +5,8 @@ import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API_BASE_URL } from "../../App";
 
 const SigninForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -15,7 +17,7 @@ const SigninForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  console.log(API_BASE_URL);
   const goToForgot = () => {
     navigate("/forgot");
   };
@@ -47,37 +49,27 @@ const SigninForm = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!username || !password) {
-      console.error("Both username and assword are required.");
-      return;
-    }
-    const userData = {
-      username,
-      password,
-    };
-    console.log(userData);
 
+    let formData = new FormData();
+    formData.append("username", username || phone_number || email);
+    formData.append("password", password);
     try {
-      const response = await fetch(
-        "https://shark-app-ia4iu.ondigitalocean.app/login/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userData),
-        }
-      );
-      console.log("data", userData);
+      const response = await axios.post(`${API_BASE_URL}/login/`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      console.log(phone_number);
+      localStorage.setItem("authToken", response.data?.token);
 
-      const data = await response.json();
-      console.log(data); // Display the response data
+      console.log(response.data); // assuming the response is JSON
+      // Handle successful login, e.g., store the token in local storage
     } catch (error) {
-      // Handle error here
-      console.error("An error occurred:", error);
+      if (error.response) {
+        console.log(error.response.data.error);
+      } else {
+        console.log("An error occurred during the login process.");
+      }
     }
   };
-
   return (
     <div className="sign-form">
       <div className="create-ead-txt">Login</div>
@@ -106,7 +98,7 @@ const SigninForm = () => {
               placeholder={"Input email address"}
               type={"email"}
               value={email}
-              onChange={handleUsernameChange}
+              onChange={handleEmailChange}
             />
           </div>
         )}
