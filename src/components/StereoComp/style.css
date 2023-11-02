@@ -188,6 +188,30 @@
   position: absolute;
   top: -10%;
 }
+.numb-bx {
+  gap: 10px;
+}
+.num-txt {
+  font-size: 15px;
+}
+.borderd-bx img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.seah-con {
+  cursor: pointer;
+}
+.join-str {
+  top: 100%;
+  z-index: 1111;
+  right: 0;
+  background: #fff;
+}
+.colorrr {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
 @media only screen and (max-width: 325px) {
   .images-details-song img {
     width: 60px;

@@ -24,7 +24,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: fill;
 }
 .pure-profile-con {
   background: #fff;
@@ -145,14 +145,64 @@
 .new-vb {
   left: 42%;
 }
+.add-profil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #aba9a9b9;
+}
+.auth-act {
+  gap: 10px;
+  font-size: 18px;
+  background: #f2e9fa;
+  width: 60%;
+  padding: 5px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.au-act-txt {
+  font-size: 12px;
+}
+.gen-sel-btn {
+  border: none;
+  border-radius: 8px;
+  border: 1px solid rgba(40, 40, 40, 0.15);
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  outline: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.but-bx {
+  gap: 10px;
+  width: 100%;
+}
+.acttvv {
+  background: #4f0da3;
+  color: #fff;
+}
+.select-gender-container {
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  gap: 10px;
+}
 @media only screen and (max-width: 1000px) {
   .btn-stick-box-row {
     margin-bottom: 40px;
+  }
+  .auth-act {
+    width: 85%;
   }
 }
 @media only screen and (max-width: 720px) {
   .posts-row-cont {
     justify-content: center;
+  }
+  .auth-act {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -176,6 +226,18 @@
   .stick-counter {
     width: 40%;
     height: 45px;
+  }
+}
+@media only screen and (max-width: 373px) {
+  .gen-sel-btn {
+    width: 40%;
+  }
+  .ad-wd {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .but-bx {
+    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 350px) {

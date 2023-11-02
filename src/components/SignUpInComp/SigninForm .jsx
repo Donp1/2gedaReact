@@ -5,20 +5,33 @@ import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API_BASE_URL } from "../../App";
 
 const SigninForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isUsingPhone, setIsUsingPhone] = useState(false);
   const [isUsingUsername, setIsUsingUsername] = useState(false);
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  console.log(API_BASE_URL);
   const goToForgot = () => {
     navigate("/forgot");
   };
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -32,7 +45,31 @@ const SigninForm = () => {
     setIsUsingUsername(!isUsingUsername);
     setIsUsingPhone(false);
   };
+  const phone_number = phone;
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    let formData = new FormData();
+    formData.append("username", username || phone_number || email);
+    formData.append("password", password);
+    try {
+      const response = await axios.post(`${API_BASE_URL}/login/`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      console.log(phone_number);
+      localStorage.setItem("authToken", response.data?.token);
+
+      console.log(response.data); // assuming the response is JSON
+      // Handle successful login, e.g., store the token in local storage
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data.error);
+      } else {
+        console.log("An error occurred during the login process.");
+      }
+    }
+  };
   return (
     <div className="sign-form">
       <div className="create-ead-txt">Login</div>
@@ -40,7 +77,7 @@ const SigninForm = () => {
         Welcome back. Enter your details to continue.
       </div>
 
-      <form action="">
+      <form action="" onSubmit={handleLogin}>
         {isUsingPhone && !isUsingUsername && (
           <div className="inp-phone">
             <PhoneInput
@@ -61,7 +98,7 @@ const SigninForm = () => {
               placeholder={"Input email address"}
               type={"email"}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
             />
           </div>
         )}
@@ -72,7 +109,7 @@ const SigninForm = () => {
               placeholder={"Username"}
               type={"text"}
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={handleUsernameChange}
             />
           </div>
         )}
@@ -81,6 +118,7 @@ const SigninForm = () => {
           <InputField
             placeholder={"Password"}
             type={passwordVisible ? "text" : "password"}
+            onChange={handlePasswordChange}
           />
           <div className="eye-box" onClick={togglePasswordVisibility}>
             {passwordVisible ? (

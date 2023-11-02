@@ -5,6 +5,8 @@ const ProfileModalMenu = ({
   handleModalMenuClose,
   handleImelClick,
   handleManAdClick,
+  handleEditProClick,
+  handleRequestClick,
 }) => {
   return (
     <>
@@ -18,10 +20,14 @@ const ProfileModalMenu = ({
         </div>
 
         <div className="all-menu-txt-all">
-          <div className="each-menu-txt">Account Settings</div>
+          <div className="each-menu-txt" onClick={handleEditProClick}>
+            Account Settings
+          </div>
           <div className="each-menu-txt">Manage Businesses</div>
           <div className="each-menu-txt">Saved Posts</div>
-          <div className="each-menu-txt">Request Verification</div>
+          <div className="each-menu-txt" onClick={handleRequestClick}>
+            Request Verification
+          </div>
           <div className="each-menu-txt" onClick={handleManAdClick}>
             Manage Adverts
           </div>

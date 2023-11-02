@@ -1,7 +1,10 @@
 import { AiFillDelete } from "react-icons/ai";
 import "./style.css";
 import { useState } from "react";
+
 import { FaCircle } from "react-icons/fa";
+import { BsMicFill, BsSoundwave } from "react-icons/bs";
+import { IoMdMicOff } from "react-icons/io";
 import { useRef } from "react";
 const PostFormRecModal = () => {
   const [audioBlob, setAudioBlob] = useState(null);
@@ -41,6 +44,7 @@ const PostFormRecModal = () => {
       mediaRecorder.current.stop();
     }
   };
+  const iconArray = new Array(70).fill(null);
 
   const handleDeleteItem = () => {
     setAudioBlob(null);
@@ -63,19 +67,43 @@ const PostFormRecModal = () => {
           </div>
         ) : (
           <>
-            {isRecording && (
+            <>
+              {isRecording && (
+                <div
+                  className="recording-indicator fnt"
+                  style={{ overflow: "hidden", width: "100%" }}
+                >
+                  <div className="con-sl img-box">
+                    {iconArray.map((_, index) => (
+                      <BsSoundwave key={index} className="nn" />
+                    ))}
+                  </div>
+
+                  {/* .:::...::::..:::::::....::::.......:.....:..:::::..:::...::::..::::::::....::::.......:.....:..:::::..:::...::::..::::::::....::::.......:.....:..:::::..:::...::::..::::::::....::::.......:.....:..:::::..:::...::::..::::::::....::::.......:.....:..:::::..:::...::::..::::::::....::::.......:.....:..:::::..:::...::::..::::::::....::::.......:.....:..:::::. */}
+                </div>
+              )}
+            </>
+            {/* {isRecording && (
               <div className="recording-indicator">
                 <FaCircle className="pulsating-circle" />
                 Recording...
               </div>
-            )}
+            )} */}
             <button
               onClick={isRecording ? stopRecording : startRecording}
-              className={`${isRecording ? "stop-record" : "start-record"} ${
-                isRecording ? "recording" : ""
-              }`}
+              className={`rec-bbtn ${
+                isRecording ? "stop-record" : "start-record"
+              } ${isRecording ? "recording" : ""}`}
             >
-              {isRecording ? "Stop Recording" : "Start Recording"}
+              {isRecording ? (
+                <>
+                  Stop <IoMdMicOff />
+                </>
+              ) : (
+                <>
+                  Start <BsMicFill />
+                </>
+              )}
             </button>
           </>
         )}

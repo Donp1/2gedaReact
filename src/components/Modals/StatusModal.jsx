@@ -1,52 +1,44 @@
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa6";
 import EachStatus from "../Commons/EachStatus";
-import Slider from "react-slick";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const images = [
   "https://3.bp.blogspot.com/-km-24oMrcqo/Wv3Kj82uFtI/AAAAAAAAWBQ/Tw8RBvpyaBU3dtpIcyp1Opr4nKgzrufEACLcBGAs/s1600/STREET%2BPHOTOGRAPHY%2Bwith%2BPeter%2BMcKinnon.jpg",
   "https://1.bp.blogspot.com/-SRfm7uawCzI/XEeaeZkTp1I/AAAAAAAAX0s/0bZ0jwlbVtgHke6igAsXJInLs-Z32UBjwCLcBGAs/s1600/3%2Bcamera%2Btricks%2BNO%2BONE%2Bwill%2Bsuspect%2521.jpg",
-  // Add more image URLs as needed
+  "images/pic3.png",
+  "https://cdn-s-www.bienpublic.com/images/4AFF773E-4799-4A4F-8609-93C26E4883D6/NW_raw/les-compagnons-de-la-loucholle-comptent-quatre-intronises-de-plus-au-sein-de-leur-confrerie-photo-pierre-aubrun-1652788419.jpg",
+  "images/pic2.png",
+  "https://3.bp.blogspot.com/-km-24oMrcqo/Wv3Kj82uFtI/AAAAAAAAWBQ/Tw8RBvpyaBU3dtpIcyp1Opr4nKgzrufEACLcBGAs/s1600/STREET%2BPHOTOGRAPHY%2Bwith%2BPeter%2BMcKinnon.jpg",
+  "https://1.bp.blogspot.com/-SRfm7uawCzI/XEeaeZkTp1I/AAAAAAAAX0s/0bZ0jwlbVtgHke6igAsXJInLs-Z32UBjwCLcBGAs/s1600/3%2Bcamera%2Btricks%2BNO%2BONE%2Bwill%2Bsuspect%2521.jpg",
+  "images/pic3.png",
 ];
-const Arrow = ({ direction, onClick }) => (
-  <div className={`arrow ${direction}`} onClick={onClick}>
-    {direction === "left" ? "<" : ">"}
-  </div>
-);
 
 const StatusModal = ({ handleCloseMainContainerClick }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1, // Number of slides to show at once
-    slidesToScroll: 1,
-    autoplay: true, // Autoplay the carousel
-    autoplaySpeed: 20000, // Autoplay speed in milliseconds
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
-  function PrevArrow(props) {
-    const { onClick } = props;
-    return (
-      <div className="arrow left" onClick={onClick}>
-        <FaArrowLeft />
-      </div>
-    );
-  }
+  useEffect(() => {
+    let interval;
+    if (currentIndex < images.length - 1) {
+      interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }, 10000);
+    }
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
-  function NextArrow(props) {
-    const { onClick } = props;
-    return (
-      <div className="arrow right" onClick={onClick}>
-        <FaArrowRight />
-      </div>
-    );
-  }
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
+  };
   return (
     <div className="postFormModal-container status-modal-container">
       <div className="status-nav">
@@ -71,6 +63,15 @@ const StatusModal = ({ handleCloseMainContainerClick }) => {
         </div>
         <div className="all-the-sticker-status">
           <div className="the-sticker-status-cont">
+            <div className="th-sticker-status">
+              <div className="sticker-pic">
+                <img src="images/pic2.png" alt="" />
+              </div>
+              <div className="sticker-name-s">You</div>
+              <div className="new-time">
+                <span>25 m</span>
+              </div>
+            </div>
             <EachStatus />
             <EachStatus />
             <EachStatus />
@@ -85,37 +86,38 @@ const StatusModal = ({ handleCloseMainContainerClick }) => {
           </div>
         </div>
       </div>
-      <div className="status-img-container">
-        <div className="status-back-box">
-          <div className="arrow-control">
+
+      <div className="connect-profile-view-box">
+        <div className="cont-view-connect">
+          <div
+            className={`arrr-ctrl ${currentIndex === 0 ? "disable" : ""} flex`}
+            onClick={handlePrevious}
+          >
             <AiOutlineLeft />
           </div>
-          <div className="status-images-cont-bbx">
-            <img src="images/pic2.png" alt="" />
+          <div className="image-bx-cont">
+            <div className="indicator-bx">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className={`ind-con ${
+                    index === currentIndex ? "actv-life loading-indicator" : ""
+                  }`}
+                ></div>
+              ))}
+            </div>
+            <div className="flex all-ma-box">
+              <img src={images[currentIndex]} alt="" />
+            </div>
           </div>
-          <div className="arrow-control">
+          <div
+            className={`arrr-ctrl flex ${
+              currentIndex === images.length - 1 ? "disable" : ""
+            }`}
+            onClick={handleNext}
+          >
             <AiOutlineRight />
           </div>
-          {/* <Slider {...settings}>
-            <div className="test">
-              <img
-                src="https://3.bp.blogspot.com/-km-24oMrcqo/Wv3Kj82uFtI/AAAAAAAAWBQ/Tw8RBvpyaBU3dtpIcyp1Opr4nKgzrufEACLcBGAs/s1600/STREET%2BPHOTOGRAPHY%2Bwith%2BPeter%2BMcKinnon.jpg"
-                alt=""
-              />
-            </div>
-            <div className="test">
-              <img
-                src="https://1.bp.blogspot.com/-SRfm7uawCzI/XEeaeZkTp1I/AAAAAAAAX0s/0bZ0jwlbVtgHke6igAsXJInLs-Z32UBjwCLcBGAs/s1600/3%2Bcamera%2Btricks%2BNO%2BONE%2Bwill%2Bsuspect%2521.jpg"
-                alt=""
-              />
-            </div>
-            <div className="test">
-              <img
-                src="https://3.bp.blogspot.com/-km-24oMrcqo/Wv3Kj82uFtI/AAAAAAAAWBQ/Tw8RBvpyaBU3dtpIcyp1Opr4nKgzrufEACLcBGAs/s1600/STREET%2BPHOTOGRAPHY%2Bwith%2BPeter%2BMcKinnon.jpg"
-                alt=""
-              />
-            </div>
-          </Slider> */}
         </div>
       </div>
     </div>

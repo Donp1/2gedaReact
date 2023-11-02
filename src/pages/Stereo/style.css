@@ -97,6 +97,34 @@
   background: #4f0da3;
   color: #fff;
 }
+.artisit-nm {
+  font-size: 16px;
+  font-weight: 600;
+}
+.artist-bio-info {
+  font-size: 14px;
+  margin-top: 15px;
+}
+.right-artist-pro img {
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+  border-radius: 25px;
+}
+.artists-pro-bx {
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg,
+    rgba(79, 13, 163, 0) 26.04%,
+    rgba(79, 13, 163, 0.2) 100%
+  );
+  padding: 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.sear-stereo-bxb {
+  position: relative;
+}
 @media only screen and (max-width: 1300px) {
   .reduce-wi {
     min-width: 130px;
@@ -147,6 +175,16 @@
   .more-welc-str {
     font-size: 12px;
   }
+  .artisit-nm {
+    font-size: 13px;
+  }
+  .artist-bio-info {
+    font-size: 11px;
+  }
+  .right-artist-pro img {
+    width: 150px;
+    height: 150px;
+  }
 }
 @media only screen and (max-width: 650px) {
   .ster-container-man {
@@ -171,6 +209,10 @@
   }
 }
 
+.artist-bio-info {
+  margin-top: 5px;
+}
+
 @media only screen and (max-width: 430px) {
   .left-side-container {
     margin: 0 18px;
@@ -189,6 +231,17 @@
   }
   .header-stereo-component img {
     height: 160px;
+  }
+  .artisit-nm {
+    font-size: 10px;
+  }
+  .artist-bio-info {
+    font-size: 9px;
+  }
+  .right-artist-pro img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
   }
 }
 @media only screen and (max-width: 410px) {
@@ -265,6 +318,16 @@
   }
   .header-stereo-component img {
     height: 140px;
+  }
+  .artists-pro-bx {
+    flex-direction: column;
+  }
+  .right-artist-pro img {
+    width: 90%;
+    height: 200px;
+  }
+  .right-artist-pro {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 290px) {

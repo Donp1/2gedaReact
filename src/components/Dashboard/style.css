@@ -146,11 +146,13 @@
 }
 .post-media img {
   width: 100%;
-  max-height: 300px;
-  min-height: 100px;
+  height: 200px;
+  /* min-height: 100px; */
 }
 .dob-img {
-  gap: 10px;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
 }
 .lay-post {
   position: relative;
@@ -691,7 +693,8 @@
 }
 @media only screen and (max-width: 940px) {
   .first-side-container {
-    display: none;
+    /* display: none; */
+    margin-bottom: 30px;
   }
   .edit-comment-to-post {
     left: 86%;
@@ -757,6 +760,7 @@
   .icon-post-feed {
     font-size: 16px;
     gap: 8px;
+    flex-wrap: wrap;
   }
   .post-btn {
     width: 80px;

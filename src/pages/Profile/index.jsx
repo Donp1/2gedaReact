@@ -21,6 +21,8 @@ import PhoneImelCreate from "../../components/Modals/PhoneImelCreate";
 import ManageAdvert from "../../components/Modals/ManageAdvert";
 import AllStickers from "../../components/Commons/AllStickers";
 import AllSticking from "../../components/Commons/AllSticking";
+import EditProfile from "../../components/Modals/EditProfile";
+import VerificationAcc from "../../components/Modals/VerificationAcc";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("All posts");
@@ -29,9 +31,24 @@ const Profile = () => {
   const [isImelListOpen, setIsImelListOpen] = useState(false);
   const [isImelCreateOpen, setIsImelCreateOpen] = useState(false);
   const [isManAdOpen, setIsManAdOpen] = useState(false);
+  const [isEditProOpen, setIsEditProOpen] = useState(false);
   const [isAllStickerOpen, setIsAllStickerOpen] = useState(false);
   const [isAllStickingOpen, setIsAllStickingOpen] = useState(false);
+  const [isRequestOpen, setIsRequestOpen] = useState(false);
 
+  const handleRequestClick = () => {
+    setIsRequestOpen(true);
+  };
+  const handleRequestClose = () => {
+    setIsRequestOpen(false);
+  };
+
+  const handleEditProClick = () => {
+    setIsEditProOpen(true);
+  };
+  const handleEditProClose = () => {
+    setIsEditProOpen(false);
+  };
   const handleAllStickingClick = () => {
     setIsAllStickingOpen(true);
   };
@@ -90,9 +107,11 @@ const Profile = () => {
       {/* <div className="modal-full-container">
         <ChangePassWord />
       </div> */}
-      {/* <div className="modal-full-container">
-        <VerificationAcc />
-      </div> */}
+      {isRequestOpen && (
+        <div className="modal-full-container">
+          <VerificationAcc handleRequestClose={handleRequestClose} />
+        </div>
+      )}
       {isImelOpen && (
         <div className="modal-full-container">
           <PhoneImel
@@ -108,6 +127,11 @@ const Profile = () => {
             handleImelListClose={handleImelListClose}
             handleImelCreateClick={handleImelCreateClick}
           />
+        </div>
+      )}
+      {isEditProOpen && (
+        <div className="modal-full-container">
+          <EditProfile handleEditProClose={handleEditProClose} />
         </div>
       )}
       {isImelCreateOpen && (
@@ -143,6 +167,8 @@ const Profile = () => {
                         handleModalMenuClose={handleModalMenuClose}
                         handleImelClick={handleImelClick}
                         handleManAdClick={handleManAdClick}
+                        handleEditProClick={handleEditProClick}
+                        handleRequestClick={handleRequestClick}
                       />
                     )}
                   </div>

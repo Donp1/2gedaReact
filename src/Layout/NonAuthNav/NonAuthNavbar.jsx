@@ -26,7 +26,7 @@ const data = [
     to: "/contact",
   },
 ];
-const NonAuthNavbar = () => {
+const NonAuthNavbar = ({ nono }) => {
   const [toggleIcon, setToggleIcon] = useState(false);
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
@@ -44,7 +44,7 @@ const NonAuthNavbar = () => {
               <li className="nav-li">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "nk" : "navbar_links"
+                    isActive ? "nk" : "navbar_links nk"
                   }
                   to={item.to}
                 >
@@ -87,7 +87,7 @@ const NonAuthNavbar = () => {
           <button className="log-btn">Create account</button>
         </NavLink>
       </div>
-      <div className="nav-icon" onClick={handleToggleIcon}>
+      <div className={`nav-icon ${nono}`} onClick={handleToggleIcon}>
         {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
       </div>
     </div>
