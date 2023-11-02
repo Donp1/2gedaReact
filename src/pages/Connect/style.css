@@ -22,7 +22,7 @@
   width: 50%;
   height: 90%;
   position: relative;
-  /* background: #302f2f91; */
+  background: #302f2f91;
   border-radius: 5px;
 }
 .image-bx-cont img {
@@ -55,7 +55,7 @@
   background: rgba(255, 255, 255, 0.5);
 }
 .indicator-bx {
-  margin-left: 7px;
+  margin-left: 10px;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -133,7 +133,11 @@
 .ora-btn {
   background: #ff8a15;
 }
-
+.all-ma-box {
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
 @media only screen and (max-width: 940px) {
   .arrr-ctrl {
     display: none;

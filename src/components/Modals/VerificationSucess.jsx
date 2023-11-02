@@ -1,7 +1,13 @@
 import { FaCheck } from "react-icons/fa";
 import ActionButton from "../Commons/Button";
+import { useNavigate } from "react-router-dom";
 
-const VerificationSucess = () => {
+const VerificationSucess = ({ handleRequestSucessClose }) => {
+  // const navigate = useNavigate();
+
+  // const gotoProfile = () => {
+  //   navigate("/profile");
+  // };
   return (
     <div className="verif-sucess-container flex">
       <div className="checked-sucss flex">
@@ -11,7 +17,9 @@ const VerificationSucess = () => {
       <div className="pass-info">
         Profile Verification takes up to a weeks or more at times.
       </div>
-      <ActionButton label={"Done"} />
+      <div className="dd-btn" onClick={handleRequestSucessClose}>
+        <ActionButton label={"Done"} />
+      </div>
     </div>
   );
 };

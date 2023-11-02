@@ -6,7 +6,7 @@ import "./style.css";
 const Signup = () => {
   return (
     <div className="signup-container">
-      <NonAuthNavbar />
+      <NonAuthNavbar nono={"nono"} />
       <div className="welc-form-containr">
         <WelcomeComp />
         <SignForm />

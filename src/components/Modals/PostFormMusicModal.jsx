@@ -2,8 +2,8 @@ import { AiFillDelete } from "react-icons/ai";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 import "./style.css";
 import { useState } from "react";
-const PostFormMusicModal = () => {
-  const [audioFile, setAudioFile] = useState(null);
+const PostFormMusicModal = ({ setAudioFile, audioFile }) => {
+  // const [audioFile, setAudioFile] = useState(null);
 
   const handleAudioChange = (e) => {
     const selectedAudioFile = e.target.files[0];

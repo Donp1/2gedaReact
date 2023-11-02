@@ -45,6 +45,9 @@
   color: #4f0da3;
   width: 100%;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .em-im {
   width: 60px;

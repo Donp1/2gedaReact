@@ -5,7 +5,7 @@ import { MdEdit } from "react-icons/md";
 import { BsPersonFill } from "react-icons/bs";
 import { useState } from "react";
 
-const EditProfile = () => {
+const EditProfile = ({ handleEditProClose }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [selectedMainFile, setSelectedMainFile] = useState(null);
 
@@ -25,7 +25,7 @@ const EditProfile = () => {
           <div className="busi-bxs">
             <AiOutlineArrowLeft
               className="cls-post"
-              //   onClick={handleClaimClickClose}
+              onClick={handleEditProClose}
             />
             <div className="fels">
               <div className="claim">Edit profile</div>
@@ -160,7 +160,7 @@ const EditProfile = () => {
           </div>
 
           <div className="act-bttn-cl">
-            <ActionButton label={"Proceed to claim"} />
+            <ActionButton label={"Save"} />
           </div>
         </div>
       </div>

@@ -2,8 +2,12 @@ import { AiFillDelete } from "react-icons/ai";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 import "./style.css";
 import { useState } from "react";
-const PostFormPhotoModal = ({ handleClosePhotoModalClick }) => {
-  const [images, setImages] = useState([]);
+const PostFormPhotoModal = ({
+  handleClosePhotoModalClick,
+  images,
+  setImages,
+}) => {
+  // const [images, setImages] = useState([]);
 
   const handleImageChange = (e) => {
     const selectedImages = Array.from(e.target.files);
@@ -36,7 +40,7 @@ const PostFormPhotoModal = ({ handleClosePhotoModalClick }) => {
             if (file.type.startsWith("image/")) {
               // Display images using <img> element
               return (
-                <div className="im-vi-bxb">
+                <div className="im-vi-bxb" key={index}>
                   <div
                     className="delete-item"
                     onClick={() => handleDeleteItem(index)}

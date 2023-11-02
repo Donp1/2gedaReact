@@ -1,13 +1,28 @@
 import { AiOutlineArrowLeft, AiOutlineCamera } from "react-icons/ai";
 import ActionButton from "../Commons/Button";
 import VerificationSucess from "./VerificationSucess";
+import { useState } from "react";
 
-const VerificationAcc = () => {
+const VerificationAcc = ({ handleRequestClose }) => {
+  const [isRequestSucessOpen, setIsRequestSucessOpen] = useState(false);
+
+  const handleRequestSucessClick = () => {
+    setIsRequestSucessOpen(true);
+  };
+  const handleRequestSucessClose = () => {
+    handleRequestClose();
+    setIsRequestSucessOpen(false);
+  };
+
   return (
     <>
-      {/* <div className="modal-full-container">
-        <VerificationSucess />
-      </div> */}
+      {isRequestSucessOpen && (
+        <div className="modal-full-container">
+          <VerificationSucess
+            handleRequestSucessClose={handleRequestSucessClose}
+          />
+        </div>
+      )}
       <div className="postFormModal-container status-modal-container">
         <div className="over-scr">
           {" "}
@@ -15,7 +30,7 @@ const VerificationAcc = () => {
             <div className="busi-bxs">
               <AiOutlineArrowLeft
                 className="cls-post"
-                //   onClick={handleClaimClickClose}
+                onClick={handleRequestClose}
               />
               <div className="fels">
                 <div className="claim">Verification</div>
@@ -100,7 +115,7 @@ const VerificationAcc = () => {
               </button>
               <div className="uploaded-nanme">doosoo.jpg</div>
             </div>
-            <div className="conntc">
+            <div className="conntc" onClick={handleRequestSucessClick}>
               <ActionButton label={"Send request"} />
             </div>
           </div>
