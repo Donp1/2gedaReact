@@ -6,12 +6,13 @@ import "./style.css";
 import ConnectSearch from "../../components/ConnectComp/ConnectSearch";
 import SelectCategory from "../../components/Dashboard/SelectCategory";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-// import Carousel from "react-bootstrap/Carousel";
+import Carousel from "react-bootstrap/Carousel";
 import { GiShare } from "react-icons/gi";
 import ProfileStick from "../../components/Commons/ProfileStick";
 import SearchBusinessCard from "../../components/SearchComp/SearchBusinessCard";
 import BusinessStick from "../../components/Commons/BusinessStick";
 import ClamBuss from "../BussinessDirectory/ClamBuss";
+import CarouselBox from "./CarouselBox";
 
 const Data = [
   {
@@ -24,6 +25,7 @@ const Data = [
 
 const Connect = () => {
   const [activeTab, setActiveTab] = useState("People nearby");
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isBussinessOpen, setIsBussinessOpen] = useState(false);
   const [isClaimModalOpen, setIsClaimModalOpen] = useState(false);
@@ -31,6 +33,93 @@ const Connect = () => {
   const [isClaimModalOpenTwo, setIsClaimModalOpenTwo] = useState(false);
   const [isClaimModalOpenThree, setIsClaimModalOpenThree] = useState(false);
   const [isClaimModalOpenDone, setIsClaimModalOpenDone] = useState(false);
+
+  const people = [
+    {
+      image: "images/pic2.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic3.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic2.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic3.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic2.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic3.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic2.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic3.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic2.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic3.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic2.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+    {
+      image: "images/pic3.png",
+      name: "Mercy Alake",
+      username: "mercyalkkk",
+      location: "Abeokuta, 56km From you",
+      bio: "Adewalw wed addyjum Adewalw wed addyjum Adewal...",
+    },
+  ];
 
   const handleClaimClickDone = (e) => {
     e.preventDefault();
@@ -91,6 +180,17 @@ const Connect = () => {
   const handleTabClick = (text) => {
     setActiveTab(text);
   };
+
+  const moveRight = () => {
+    setActiveIndex((prevIndex) => prevIndex + 1);
+    if (activeIndex >= people?.length - 1) setActiveIndex(people?.length - 1);
+    // alert(activeIndex);
+  };
+  const moveLeft = () => {
+    setActiveIndex((prevIndex) => prevIndex - 1);
+    if (activeIndex <= 0) setActiveIndex(0);
+    // alert(activeIndex);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -150,43 +250,26 @@ const Connect = () => {
                   {activeTab === "People nearby" ? (
                     <div className="connect-profile-view-box">
                       <div className="cont-view-connect">
-                        <div className="arrr-ctrl disable flex">
+                        <div
+                          className={`arrr-ctrl flex ${
+                            activeIndex <= 0 && "disable"
+                          }`}
+                          onClick={moveLeft}
+                        >
                           <AiOutlineLeft />
                         </div>
-                        <div className="image-bx-cont">
-                          <div className="share-bx flex">
-                            <GiShare />
-                          </div>
-                          <div className="indicator-bx">
-                            <div className="ind-con actvv"></div>
-                            <div className="ind-con"></div>
-                            <div className="ind-con"></div>
-                          </div>
-                          <div className="flex all-ma-box">
-                            <img src="images/pic3.png" alt="" />
-                            <img src="images/pic2.png" alt="" />
-                          </div>
-                          <div className="prof-bx-connect">
-                            <img
-                              src="images/pic1.png"
-                              alt=""
-                              onClick={handleProfileClick}
-                            />
-                            <div className="user-nmm">Mercy Alake</div>
-                            <div className="username-txtt">@mercyalkkk</div>
-                            <div className="username-txtt">
-                              Abeokuta, 56km From you
-                            </div>
-                            <div className="username-txtt biiio">
-                              Adewalw wed addyjum Adewalw wed addyjum Adewal...
-                            </div>
-                          </div>
-                          <div className="chat-stick-btn-bx flex">
-                            <button className="ch-st-btn ora-btn">Chat</button>
-                            <button className="ch-st-btn">Stick</button>
-                          </div>
-                        </div>
-                        <div className="arrr-ctrl flex">
+                        <CarouselBox
+                          handleProfileClick={handleProfileClick}
+                          people={people}
+                          activeIndex={activeIndex}
+                          setActiveIndex={setActiveIndex}
+                        />
+                        <div
+                          className={`arrr-ctrl flex ${
+                            activeIndex >= people?.length - 1 && "disable"
+                          }`}
+                          onClick={moveRight}
+                        >
                           <AiOutlineRight />
                         </div>
                       </div>
